@@ -1,0 +1,56 @@
+{
+  "issueNo": "1",
+  "noofArticles": "4",
+  "articles": {
+    "article1": {
+      "articleNo": "1",
+      "noofreferences": "11",
+      "references": [
+        "[1] E. Clemente, \"PAIN: A SIXTH SENSE WE CAN’T LIVE WITHOUT?,\" 29 November 2018. [Online]. Available: <a href=\"http://magazine.ar.fchampalimaud.org/pain-a-sixth-sense-we-cant-live-without/\" target=\"_blank\">http://magazine.ar.fchampalimaud.org/pain-a-sixth-sense-we-cant-live-without/</a> [Accessed 2 May 2020].",
+        "[2] G. I. Lee and M. W. Neumeister, \"Pain: Pathways and Physiology,\" Clin Plastic Surg, pp. 173-180, 2020.",
+        "[3] National Research Council, \"Mechanisms of Pain,\" in Recognition and Alleviation of Pain in Laboratory Animals, 2009, pp. 33-44.",
+        "[4] Physiopedia contributors, \"Nociception,\" 23 February 2020. [Online]. Available: <a href=\"https://www.physio-pedia.com/index.php?title=Nociception&oldid=231639\" target=\"_blank\">https://www.physio-pedia.com/index.php?title=Nociception&oldid=231639</a>. [Accessed 10 May 2020].",
+        "[5] P. A. Young, P. H. Young and D. L. Tolbert, \"CHAPTER 11: The Somatosensory System: Anesthesia and Analgesia,\" in Basic Clinical Neuroscience, 2015, pp. 132-159.",
+        "[6] C. Yokoyama, S. Herculano, F. Jensen and J. Morrison, \"Senses & Perception,\" in Brain Facts Eighth Edition, 2018, p. 14.",
+        "[7] US National Library of Medicine, \"Congenital insensitivity to pain,\" 28 April 2020. [Online]. Available: <a href=\"https://ghr.nlm.nih.gov/condition/congenital-insensitivity-to-pain\" target=\"_blank\">https://ghr.nlm.nih.gov/condition/congenital-insensitivity-to-pain</a>. [Accessed 6 May 2020].",
+        "[8] M. Navya, G. Pramod, G. Sujatha and L. Ashok, \"Congenital insensitivity to pain in a 1-year-old boy,\" Journal of Indian Society of Pedodontics and Preventive Dentistry, vol. 37, no. 3, pp. 308-310, 2019.",
+        "[9] J. Butler, P. Fleming and D. Webb, \"Congenital insensitivity to pain—review and report of a case,\" Dublin Dental School and hospital, Dublin, 2006.",
+        "[10] M. M. S. Schalka, M. S. N. P. Corrêa and A. L. Ciamponi, \"Congenital insensitivity-to-pain with anhidrosis (CIPA): A case report with 4-year follow-up,\" University of Sao Paulo, Sao Paulo, 2005.",
+        "[11] D. Cox, \"The curse of the people who never feel pain,\" 27 April 2017. [Online]. Available: <a href=\"https://www.bbc.com/future/article/20170426-the-people-who-never-feel-any-pain\" target=\"_blank\">https://www.bbc.com/future/article/20170426-the-people-who-never-feel-any-pain</a>. [Accessed 10 May 2020]."
+      ]
+    },
+    "article2": {
+      "articleNo": "2",
+      "noofreferences": "5",
+      "references": [
+        "[1] M. Chorney et al., \"A Quantitative Trait Locus Associated With Cognitive Ability in Children\", Psychological Science, vol. 9, no. 3, pp. 159-166, 1998. Available: 10.1111/1467-9280.00032 [Accessed 23 July 2020].",
+        "[2] R. Siegler, \"The other Alfred Binet.\", Developmental Psychology, vol. 28, no. 2, pp. 179-190, 1992. Available: 10.1037/0012-1649.28.2.179 [Accessed 23 July 2020].",
+        "[3] M. Sacks, \"THE MISMEASURE OF MAN—Stephen Jay Gould; Norton, New York, 1981, 352 pages, $14.95\", Psychiatric Services, vol. 33, no. 4, pp. 314-315, 1982. Available: 10.1176/ps.33.4.314.",
+        "[4] D. Kevles, \"Testing the Army's Intelligence: Psychologists and the Military in World War I\", The Journal of American History, vol. 55, no. 3, p. 565, 1968. Available: 10.2307/1891014 [Accessed 23 July 2020]",
+        "[5] R. Sternberg, J. Castejón, M. Prieto, J. Hautamäki and E. Grigorenko, \"Confirmatory Factor Analysis of the Sternberg Triarchic Abilities Test in Three International Samples\", European Journal of Psychological Assessment, vol. 17, no. 1, pp. 1-16, 2001. Available: 10.1027//1015-5759.17.1.1 [Accessed 23 July 2020]."
+      ]
+    },
+    "article3": {
+      "articleNo": "3",
+      "noofreferences": "6",
+      "references": [
+        "[1] H. X. Bai, B. Hsieh, Z. Xiong, K. Halsey, J. W. Choi, T. M. L. Tran, I. Pan, L.-B. Shi, D.-C. Wang, J. Mei, X.-L. Jiang, Q.-H. Zeng, T. K. Egglin, P.-F. Hu, S. Agarwal, F. Xie, S. Li, T. Healey, M. K. Atalay, and W.-H. Liao, “Performance of radiologists in differentiating COVID-19 from viral pneumonia on chest CT,” Radiology, Mar. 2020.",
+        "[2] B. Marr, “What Is Deep Learning AI? A Simple Guide With 8 Practical Examples,” Forbes, 12-Dec-2018. [Online]. Available: <a href=\"https://www.forbes.com/sites/bernardmarr/2018/10/01/what-is-deep-learning-ai-a-simple-guide-with-8-practical-examples/\" target=\"_blank\">https://www.forbes.com/sites/bernardmarr/2018/10/01/what-is-deep-learning-ai-a-simple-guide-with-8-practical-examples/</a>. [Accessed: 26-Jun-2020].",
+        "[3] T. T. Nguyen, “Artificial Intelligence in the Battle against Coronavirus (COVID-19): A Survey and Future Research Directions,” Preprint, Apr. 2020.",
+        "[4] W. Naudé, “Artificial Intelligence against COVID-19: An Early Review,” IZA Discussion Series, no. 13110, Apr. 2020.",
+        "[5] H. S. Maghdid, K. Z. Ghafoor, A. S. Sadiq, K. Curran, D. B. Rawat, and K. Rabie, “A Novel AI-enabled Framework to Diagnose Coronavirus COVID-19 using Smartphone Embedded Sensors: Design Study,” Preprint, Mar. 2020.",
+        "[6] A. Ross, S. Banerjee, C. Chen, A. Chowdhury, V. Mirjalili, R. Sharma, T. Swearingen, and S. Yadav, “Some Research Problems in Biometrics: The Future Beckons,” 2019 International Conference on Biometrics (ICB), 2019."
+      ]
+    },
+    "article4": {
+      "articleNo": "4",
+      "noofreferences": "4",
+      "references": [
+        "[1] R. REISFELD and S. NEUMAN, \"Planar solar energy converter and concentrator based on uranyl-doped glass,\" Nature, no. 274, p. 144–145, 1978.",
+        "[2] M. A. Green, Third Generation Photovoltaics: Advanced Solar Energy Conversion, Springer Science & Business Media, 2003.",
+        "[3] M. Askari, V. Mirzaei Mahmoud Abadi and M. Mirhabibi, \"Types of Solar Cells and Application,\" American Journal of Optics and Photonics, vol. 3, 2015.",
+        "[4] M. Jørgensen, K. Norrman and F. C.Krebs, \"Stability/degradation of polymer solar cells,\" Solar Energy Materials and Solar Cells, vol. 92, no. 7, pp. 686-714, 2008"
+      ]
+    }
+  }
+}

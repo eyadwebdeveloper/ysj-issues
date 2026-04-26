@@ -1,0 +1,81 @@
+{
+  "issueNo": "4",
+  "noofArticles": "5",
+  "articles": {
+    "article1": {
+      "articleNo": "1",
+      "noofreferences": "12",
+      "references": [
+        "[1] Sarrouti M, El Alaoui SO. A generic document retrieval framework based onUMLS similarity for biomedical question answering system. In: Proceedingsof the 8th KES International Conference on Intelligent Decision Technologies;2016 Jun 15–17; Puerto de la Cruz, Spain; 2016. p. 207–16.",
+        "[2] Shahar Y. Timing is everything: temporal reasoning and temporal data maintenance in medicine. In: Horn W, ShaharY, Lindberg G, Andreassen S, Wyatt J, editors. Artificial intelligence in medicine. Berlin: Springer; 1999. p.30–46.",
+        "[3] Sarrouti M, Ouatik El Alaoui S. A machine learning-based method for question type classification in biomedical question answering. Methods Inf Med 2017;56(3):209–16.",
+        "[4] Rodriguez-Esteban R, Iossifov I, Rzhetsky A. Imitating manual curation of text-mined facts in biomedicine. PLoS Comput Biol 2006;2(9):e118.",
+        "[5] Athenikos SJ, Han H. Biomedical question answering: a survey. Comput Methods Programs Biomed 2010;99(1):1–24.",
+        "[6] Zhou L, Hripcsak G. Temporal reasoning with medical data—a review with emphasis on medical natural language processing. J Biomed Inform 2007;40(2):183–202",
+        "[7] Sridharan NS. Guest editorial. Artificial Intelligence. 1978;11(1–2):1–4. [Google Scholar]",
+        "[8] Handelman GS, Kok HK, Chandra RV, Razavi AH, Lee MJ, Asadi H. eDoctor: machine learning and the future of medicine. J Intern Med 2018;284 (6):603–19.",
+        "[9] Molla M, Waddell M, Page D, Shavlik J. Using machine learning to design and interpret gene-expression microarrays. AI Mag 2004;25(1):23–44.",
+        "[10] Sajda P. Machine learning for detection and diagnosis of disease. Annu RevBiomed Eng 2006;8:537–65.",
+        "[11] Shi TW, Kah WS, Mohamad MS, Moorthy K, Deris S, Sjaugi MF, et al. A reviewof gene selection tools in classifying cancer microarray data. Curr Bioinform2017;12(3):202–12.",
+        "[12] Pham TD, Wells C, Crane DI. Analysis of microarray gene expression data. CurrBioinform 2006;1(1):37–53."
+      ]
+    },
+    "article2": {
+      "articleNo": "2",
+      "noofreferences": "8",
+      "references": [
+        "[1] Przybylski, A. K., &amp; Nash, V. (2018). Internet Filtering and Adolescent Exposure to Online Sexual Material. Cyberpsychology, Behavior, and Social Networking, 21(7), 405-410. doi:10.1089/cyber.2017.0466",
+        "[2] Marcum, C. D. (2007). Interpreting the Intentions of Internet Predators: An Examination of Online Predatory Behavior. Journal of Child Sexual Abuse, 16(4), 99-114. doi:10.1300/j070v16n04_06",
+        "[3] Teimouri, M., Benrazavi, S.R., Griffiths, M.D., et al. (2018). A Model of Online Protection to Reduce Children’s Online Risk Exposure: Empirical Evidence from Asia. Sexuality & Culture 22, 1205–1229. doi:10.1007/s12119-018-9522-6",
+        "[4] Savirimuthu J. (2012) Online Child Safety, Civil Society and the Private Sector: Alternative Strategies. In: Online Child Safety. Palgrave Macmillan, London. doi:10.1057/9780230361003_6",
+        "[5] Mathiesen, K. (2013). The Internet, children, and privacy: the case against parental monitoring. Ethics Inf Technol 15, 263–274. Doi:10.1007/s10676-013-9323-4",
+        "[6] C. (n.d.). CHILDREN’S INTERNET USAGE STUDY. Retrieved January 3, 2021, from <a href=\"https://iamcybersafe.org/s/parent-research\" target=\"_blank\">https://iamcybersafe.org/s/parent-research</a>",
+        "[7] Davis, M. M. (2015, August 10). Top 10 Child Health Problems: More Concern for Sexting, Internet Safety (Rep.). Retrieved <a href=\"http://mottnpch.org/sites/default/files/documents/081015_top10.pdf11\" target=\"_blank\">http://mottnpch.org/sites/default/files/documents/081015_top10.pdf11</a>",
+        "[8] K., Roberts, A., Cui, J., Smith, M., AIR; Bullock Mann, F., Barmer, A., and Dilig, R., RTI, H. (n.d.). (Rep. No. 2020144)"
+      ]
+    },
+    "article3": {
+      "articleNo": "3",
+      "noofreferences": "2",
+      "references": ["[1] C. V. Bell and S. J. Pape, “Scaffolding the Development of Self-Regulated Learning in Mathematics Classrooms,” Middle School Journal, vol. 45, no. 4, pp. 23–32, 2014.", "[2] D. N. Asri, P. Setyosari, I. Hitipeuw, and T. Chusniyah, “The Academic Procrastination in Junior High School Students’ Mathematics Learning: A Qualitative Study,”International Education Studies, vol. 10, no. 9, p. 70, 2017."]
+    },
+    "article4": {
+      "articleNo": "4",
+      "noofreferences": "17",
+      "references": [
+        "[1] K. Zuse, \"Chapter 3,\" in The Computer - My Life, Springer, 1993, pp. 33–53.",
+        "[2] H. H. Goldstine and A. Goldstine, \"The Electronic Numerical Integrator and Computer (ENIAC),\" Mathematical Tables and Other Aids to Computation, vol. 2, no. 15, p. 97, 1946.",
+        "[3] F. Koushanfar, V. Prabhu, M. Potkonjak and J. M. Rabaey, \"Processors for mobile applications,\" Proceedings 2000 International Conference on Computer Design, Austin, TX, USA, 2000, pp. 603-608, doi: 10.1109/ICCD.2000.878354.",
+        "[4] E. Mollick, \"Establishing Moore's Law,\" IEEE Annals of the History of Computing, vol. 28, no. 3, pp. 62–75, 2006.",
+        "[5] E. Shein, \"Moore's Law turns 55: Is it still relevant?,\"TechRepublic, 17-Apr-2020. [Online]. Available: <a href=\"https://www.techrepublic.com/article/moores-law-turns-55-is-it-still-relevant/\" target=\"_blank\">https://www.techrepublic.com/article/moores-law-turns-55-is-it-still-relevant/</a>. [Accessed: 10-Feb-2021].",
+        "[6] “Intel® Core™ i9-10900K Processor,” Intel, 2020. [Online]. Available: <a href=\"https://www.intel.com/content/www/us/en/products/processors/core/i9-processors/i9-10900k.html\" target=\"_blank\">https://www.intel.com/content/www/us/en/products/processors/core/i9-processors/i9-10900k.html</a>. [Accessed: 06-Feb-2021].",
+        "[7] M. A. Nielsen and I. L. Chuang, Quantum Computation and Quantum Information, 10th Anniversary. Cambridge: Cambridge University Press, 2010.",
+        "[8] “Basic Logic Gates with Truth Tables - Digital Logic Circuits,” ElProCus, 07-Dec-2020. [Online]. Available: <a href=\"https://www.elprocus.com/basic-logic-gates-with-truth-tables/\" target=\"_blank\">https://www.elprocus.com/basic-logic-gates-with-truth-tables/</a>. [Accessed: 05-Feb-2021].",
+        "[9] L. Bartee, W. Shriner, and C. Creech, \"Comparing Prokaryotic and Eukaryotic Cells,\" Principles of Biology. [Online]. Available: <a href=\"https://openoregon.pressbooks.pub/mhccmajorsbio/chapter/comparing-prokaryotic-and-eukaryotic-cells/\" target=\"_blank\">https://openoregon.pressbooks.pub/mhccmajorsbio/chapter/comparing-prokaryotic-and-eukaryotic-cells/</a>. [Accessed: 05-Feb-2021].",
+        "[10] A. Seabaugh, \"The Tunneling Transistor,\" IEEE Spectrum: Technology, Engineering, and Science News, 30-Sep-2013. [Online]. Available: <a href=\"https://spectrum.ieee.org/semiconductors/devices/the-tunneling-transistor\" target=\"_blank\">https://spectrum.ieee.org/semiconductors/devices/the-tunneling-transistor</a>. [Accessed: 05-Feb-2021].",
+        "[11] R. G. Lerner and G. L. Trigg, \"Tunneling,\" in Encyclopedia of physics, Weinheim: Wiley-VCH, 2005, p. 1308.",
+        "[12] W. C. Holton, \"Quantum computer,\" EncyclopædiaBritannica. [Online]. Available: <a href=\"https://www.britannica.com/technology/quantum-computer\" target=\"_blank\">https://www.britannica.com/technology/quantum-computer</a>. [Accessed: 10-Feb-2021].",
+        "[13] J. Gambetta, \"IBM's Roadmap For Scaling Quantum Technology,\" IBM Research Blog, 15-Sep-2020. [Online]. Available: <a href=\"https://www.ibm.com/blogs/research/2020/09/ibm-quantum-roadmap/\" target=\"_blank\">https://www.ibm.com/blogs/research/2020/09/ibm-quantum-roadmap/</a>. [Accessed: 10-Feb-2021].",
+        "[14] L. K. Grover, \"A fast quantum mechanical algorithm for database search,\" Proceedings of the twenty-eighth annual ACM symposium on Theory of computing - STOC '96, p. 212, Jul. 1996.",
+        "[15] A. M. Qadir and N. Varol, \"A Review Paper on Cryptography,\" 2019 7th International Symposium on Digital Forensics and Security (ISDFS), 2019.",
+        "[16] C. Cheng, R. Lu, A. Petzoldt, and T. Takagi, \"Securing the Internet of Things in a Quantum World,\" IEEE Communications Magazine, vol. 55, no. 2, pp. 116–120, 2017.",
+        "[17] R. Stubbs, \"Quantum Computing and its Impact on Cryptography,\" Cryptomathic, 29-Apr-2018. [Online]. Available: <a href=\"https://www.cryptomathic.com/news-events/blog/quantum-computing-and-its-impact-on-cryptography\" target=\"_blank\">https://www.cryptomathic.com/news-events/blog/quantum-computing-and-its-impact-on-cryptography</a>. [Accessed: 10-Feb-2021]."
+      ]
+    },
+    "article5": {
+      "articleNo": "5",
+      "noofreferences": "9",
+      "references": [
+        "[1] “How Are Solar Panels Produced?” greenmatch.co.uk, 2019, <a href=\"https://www.greenmatch.co.uk/blog/2014/12/how-are-solar-panels-made\" target=\"_blank\">https://www.greenmatch.co.uk/blog/2014/12/how-are-solar-panels-made</a>. Accessed 03 february 2021.",
+        "[2] “Monocrystalline and polycrystalline solar panels: what you need to know.” energysage.com, 2020,",
+        "[3] <a href=\"https://www.energysage.com/solar/101/monocrystalline-vs-polycrystalline-solar-panels/\" target=\"_blank\">https://www.energysage.com/solar/101/monocrystalline-vs-polycrystalline-solar-panels/</a>. Accessed 03 february 2021.",
+        "[4]Fazal Muhammad, Muhammad Waleed Raza, Surat Khan, Aziz Ahmed, editor. “Low Efficiency of the Photovoltaic Cells: Causes and Impacts.” International Journal of Scientific & Engineering Research, vol. volume 8, no. Issue 11, 2017, p. 7. ijser.org, <a href=\"https://www.ijser.org/researchpaper/Low-Efficiency-of-the-Photovoltaic-Cells-Causes-and-Impacts.pdf\" target=\"_blank\">https://www.ijser.org/researchpaper/Low-Efficiency-of-the-Photovoltaic-Cells-Causes-and-Impacts.pdf</a>.",
+        "[5] technology, solar. “What are tandem cells? Introduction to solar technology. Part 3.” metsolar.eu, 2018, <a href=\"https://metsolar.eu/blog/what-are-tandem-cells-introduction-to-solar-technology-part-3/\" target=\"_blank\">https://metsolar.eu/blog/what-are-tandem-cells-introduction-to-solar-technology-part-3/</a>. Accessed 03 february 2021.",
+        "[6] Susumu Yoshida,. “TANDEM SOLAR CELL.” United States Patent (19) Yoshida,",
+        "[7] Tapas Kumar Mallick,, Senthilarasu Sundaram, David Benson,. “Potential Environmental Impacts.” Solar Energy Technologies, 2016, 23-45, sciencedirect.com, <a href=\"https://www.sciencedirect.com/science/article/pii/B9780128029534000032\" target=\"_blank\">https://www.sciencedirect.com/science/article/pii/B9780128029534000032</a>. Accessed 11 February 2021.",
+        "[8] Natalya V. Yastrebova,. “High-efficiency multi-junction solar cells: Current status and future potential.” , Centre for Research in Photonics, University of Ottawa, 2007, High-efficiency multi-junction solar cells:.",
+        "[9] Takayuki Hiraia *, Masumi Higashidea , Hirohisa Kurosakia , Shirou Kawakitab , Sunao Hasegawac , Yuki Mandod , Shota Yamaguchie , and Koji Tanakac. “Re-examination of electrical failure risk on satellite’s power harnesses caused by space debris impacts: simultaneous measurements of sustained discharge and plasma density.” ScienceDirect, 2017, <a href=\"https://pdf.sciencedirectassets.com/278653/1-s2.0-S1877705817X00386/1-s2.0-S1877705817342935/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCICEkbpG16AMrHtQagsbZGnhlZ9fIo5L%2FA5K6ArnmyGZNAiAHrv8tJAz2YP%\" target=\"_blank\">https://pdf.sciencedirectassets.com/278653/1-s2.0-S1877705817X00386/1-s2.0-S1877705817342935/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCICEkbpG16AMrHtQagsbZGnhlZ9fIo5L%2FA5K6ArnmyGZNAiAHrv8tJAz2YP%</a>. Accessed 11 February 2021."
+      ]
+    }
+  }
+}

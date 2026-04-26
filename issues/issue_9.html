@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZTYWSZHJ4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8ZTYWSZHJ4");
+    </script>
+
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Description -->
+    <meta name="description" content="Issue 9 of the Youth Science Journal" />
+
+    <!-- TITLE -->
+    <title>YSJ | Issue 9</title>
+
+    <!-- LINKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+  </head>
+  <body issue-no="9">
+    <div class="loaded-content">
+      <div id="app">
+        <!-- START: TABLE OF CONTENTS (OFFCANVAS) -->
+        <button class="offcanvas-opener shadow-sm" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#contents_offcanvas" title="Table of Contents">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <defs>
+            <style>
+              .fa-secondary {
+                opacity: 0.4;
+              }
+            </style>
+          </defs>
+          <path class="fa-primary"
+            d="M137.4 105.4c12.5-12.5 32.75-12.5 45.25 0l128 128c12.5 12.5 12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0C131.1 400.4 128 392.2 128 384s3.125-16.38 9.375-22.62L210.8 288H32C14.31 288 0 273.7 0 256s14.31-32 32-32h178.8L137.4 150.6C124.9 138.1 124.9 117.9 137.4 105.4z" />
+          <path class="fa-secondary"
+            d="M384 96v320c0 17.69 14.31 32 32 32s32-14.31 32-32V96c0-17.69-14.31-32-32-32S384 78.31 384 96z" />
+        </svg>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="contents_offcanvas" data-bs-scroll="true">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Table of Contents</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+          <div class="offcanvas-body">
+            <ul id="offcanvas-nav-list" no-of-sections="21">
+              <p class="offcanvas-section-title">Introduction</p>
+              <div>
+                <li>
+                  <a href="#section-1"><button data-bs-dismiss="offcanvas" section-no="1">Letter From the Journal</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Author">Founders</span>
+                </p>
+              </div>
+              <!-- START: OFFCANVAS SECTIONS -->
+              <!-- <p class="offcanvas-section-title">Honorable Mentions</p> -->
+              <div>
+                <li>
+                  <a href="#section-2"><button data-bs-dismiss="offcanvas" section-no="2" @click="currentSection = 'section-2'">Integration of Mechanical and Chemical Treatment in the Hydrological Cycle of the Paper and Pulp Industry.</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category"> Environmental Engineering</span><br />
+                  <span title="Author">Abdullah Gamal Moustafa Elafifi | Adam Ahmed</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Mentor Name</span> -->
+                </p>
+              </div>
+
+          <div>
+                <li>
+                  <a href="#section-3"><button data-bs-dismiss="offcanvas" section-no="3" @click="currentSection = 'section-3'">The Impact of Mass and Length Variations on Chaos in the Double Pendulum System: A Numerical Study</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Dynamical Systems and Chaos Theory</span><br />
+                  <span title="Author">Mohamed Abd El-Hamid</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Prof. Surjeet Rajendran (Johns Hopkins University)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-4"><button data-bs-dismiss="offcanvas" section-no="4" @click="currentSection = 'section-4'">The Relation Between One and Two-Dimensional Random Walks to Pascal’s Triangle and Analogous Higher-Dimensional Structures.</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Computational Physics</span><br />
+                  <span title="Author">Habiba Sorrour</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Prof. Surjeet Rajendran (Johns Hopkins University)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-5"><button data-bs-dismiss="offcanvas" section-no="5" @click="currentSection = 'section-5'">The Relationship Between Drug Abuse and Academic Stress Among Egyptian Undergraduate and High School Students</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Educational Psychology</span><br />
+                  <span title="Author">Mohamed Abdelghani</span><br />
+                  <span title="Mentor" class="fst-italic">Prof. Tochukwu Nweze, The University of Cambridge</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-6"><button data-bs-dismiss="offcanvas" section-no="6" @click="currentSection = 'section-6'">Extractive Jojobyl Alcohol as a Pesticide for Cotton’s Main Pest, Spodoptera Littoralis a Study on Environmental, Economic, and Global Implications</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Environmental Studies</span><br />
+                  <span title="Author">Adham Taha</span><br />
+                  <span title="Mentor" class="fst-italic">Prof. Abhinav Choudhry, Cornell University</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-7"><button data-bs-dismiss="offcanvas" section-no="7" @click="currentSection = 'section-7'">Utilizing Aoh1996 With Chemotherapy Delivered via Drug Nanocarriers; an Advanced Novel Approach for Cancer Treatment Especially Inflammatory Breast Cancer</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Cancer Biology and Pharmaceutical Chemistry</span><br />
+                  <span title="Author">Mazen Behairy</span><br />
+                  <span title="Mentor" class="fst-italic">Prof. Chelsea Fearce, Yale University</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-8"><button data-bs-dismiss="offcanvas" section-no="8" @click="currentSection = 'section-8'">Hybrid Thermal Management Systems for Lithium-ion Battery-based Electric Vehicles: A Review</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Engineering</span><br />
+                  <span title="Author">Ahmed Ahmed</span><br />
+                  <span title="Mentor" class="fst-italic">Stepan Ozerov, Purdue University</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-9"><button data-bs-dismiss="offcanvas" section-no="9" @click="currentSection = 'section-9'">The Formation and Coalescence of Binary Systems</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Stellar Astrophysics</span><br />
+                  <span title="Author">Hazem Abdel-Mughni | Mustafa Mohammad</span><br />
+                  <span title="Mentor" class="fst-italic">Sama Nooh (Sharkya STEM School)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-10"><button data-bs-dismiss="offcanvas" section-no="10" @click="currentSection = 'section-10'">Improved RSA Algorithm Counterparts by Exploiting Implementation Attacks</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Cryptography</span><br />
+                  <span title="Author">Karim Mohamed | Adham Ahmed</span><br />
+                  <span title="Mentor" class="fst-italic">Youssef Amir Abdelazem Salem, Freshman at Nile University</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-11"><button data-bs-dismiss="offcanvas" section-no="11" @click="currentSection = 'section-11'">The Origin of Life and Terraforming Mars</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Abiogenesis, Astrobiology</span><br />
+                  <span title="Author">Kevin Atef | Lena Walid</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Sama Nooh (Sharkya STEM School)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-12"><button data-bs-dismiss="offcanvas" section-no="12" @click="currentSection = 'section-12'">Contributions of Machine Learning and Image Processing to Astronomical Data</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Astrophotography</span><br />
+                  <span title="Author">Ahmed Walid | Ibrahim Emad</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Aya Shaaban (Maadi STEM High School for Girls)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-13"><button data-bs-dismiss="offcanvas" section-no="13" @click="currentSection = 'section-13'">Comparing Piston, Turboprop, Turbojet, and Turbofan Engines in Terms of Mechanism, Fuel Consumption, Optimal Cruising Conditions, and Opportunities for Future Development.</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Aeronautical Engineering</span><br />
+                  <span title="Author">Mohamed Abd El-Hamid | Marawan Askar</span><br />
+                  <span title="Mentor" class="fst-italic">Aya Shaaban (Maadi STEM High School for Girls)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-14"><button data-bs-dismiss="offcanvas" section-no="14" @click="currentSection = 'section-14'">Symmetry and Tessellation in Islamic Art</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Arts, Math</span><br />
+                  <span title="Author">Belal Hasan | Hazem Nasr | Samar El-Sayad</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Aya Shaaban (Maadi STEM High School for Girls)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-15"><button data-bs-dismiss="offcanvas" section-no="15" @click="currentSection = 'section-15'">Utilizing Chemotactics to Stimulate Collective Cell Migration of Keratinocytes to Speed Second-degree Burn Wound Healing</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Biomathematics</span><br />
+                  <span title="Author">Hassan Ayman | Mohamed Nasser</span><br />
+                  <span title="Mentor" class="fst-italic">Shahd Nooh (Sharkya STEM School)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-16"><button data-bs-dismiss="offcanvas" section-no="16" @click="currentSection = 'section-16'">The Role of Narcissism in Driving Ariel Castor’s Notorious Cleveland Kidnappings, and the Effect His Actions Had on His Second Victim, Amanda Berry.</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Psychology</span><br />
+                  <span title="Author">Reem M. Khalifa | Mohamed Emad | Ziad Ahmed</span><br />
+                  <span title="Mentor" class="fst-italic">Youanna Bassem (Maadi STEM High School for Girls)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-17"><button data-bs-dismiss="offcanvas" section-no="17" @click="currentSection = 'section-17'">Dark Energy and its Influence on Cosmological Aspects</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Cosmology</span><br />
+                  <span title="Author">Belal Bahaa | Omar El-Wakeel</span><br />
+                  <!-- <span title="Mentor" class="fst-italic">Aya Shaaban (Maadi STEM High School for Girls)</span> -->
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-18"><button data-bs-dismiss="offcanvas" section-no="18" @click="currentSection = 'section-18'">An Overview of Image Segmentation Algorithms Used in the Medical Field</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Computer science</span><br />
+                  <span title="Author">Omar Zayed | Mohammed Ragab</span><br />
+                  <span title="Mentor" class="fst-italic">Youssef Amir (STEM High School for Boys – 6th of October)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-19"><button data-bs-dismiss="offcanvas" section-no="19" @click="currentSection = 'section-19'">The Future of Startups in the Arab Region</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Business</span><br />
+                  <span title="Author">Abdelhamid Ahmed | Mostafa Ibrahim Mohamed Ibrahim Mostafa</span><br />
+                  <span title="Mentor" class="fst-italic">Mohamed Emad Solima (Washington and Lee University)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-20"><button data-bs-dismiss="offcanvas" section-no="20" @click="currentSection = 'section-20'">Music Therapy Presenting New Medical Treatments for Neurological Diseases</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Neuroscience</span><br />
+                  <span title="Author">Ziad Bahaa Eldien Ibrahim | Ahmed Sameh Kahla</span><br />
+                  <span title="Mentor" class="fst-italic"> Jonathan Maged (STEM High School for Boys - 6th October)</span>
+                </p>
+              </div>
+
+              <div>
+                <li>
+                  <a href="#section-21"><button data-bs-dismiss="offcanvas" section-no="21" @click="currentSection = 'section-21'">The Impact of Current Transportation Infrastructure on the Environment and Human Health, as well as the Solutions Developed by Scientists to Circumvent its Security.</button></a>
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Biomedical Engineering, Civil Engineering</span><br />
+                  <span title="Author">Basel Ezz El-Arab | Seif Eldin Azazy</span><br />
+                  <span title="Mentor" class="fst-italic">Rahma Ibrahim, (Maadi STEM High School for Girls)</span>
+                </p>
+              </div>
+
+
+              <!-- END: OFFCANVAS SECTIONS -->
+            </ul>
+          </div>
+        </div>
+        <!-- END: TABLE OF CONTENTS (OFFCANVAS) -->
+
+          <!-- START: NAV -->
+                    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+              <div class="d-flex align-items-center"> <!-- Container div for logo and flag -->
+                <a class="navbar-brand text-uppercase" href="../">
+                  <img loading="lazy" src="..\images/Logo.png" width="52" height="25" class="d-inline-block align-top" loading="lazy" />
+                </a>
+                <!-- Add the Palestine flag here -->
+                <img src="..\images\Palestine 2.png" alt="Palestine Flag" height="30" style="margin-left: 10px;">
+              </div>
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+              <a class="nav-link" href="https://ys-journal.org">Home</a>
+                  </li>
+                  <li class="nav-item">
+              <a class="nav-link" href="https://issues.ys-journal.org">Issues</a>
+                  </li>
+                  <li class="nav-item">
+              <a class="nav-link" href="https://ys-journal.org/Contact">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+              <a class="nav-link" href="https://ys-journal.org/Programl">Our Program</a>
+                  </li>
+                  <li class="nav-item">
+              <a class="nav-link pub-btn" href="https://ys-journal.org/IFYR">
+                      <div>IFYR</div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+              <a class="nav-link pub-btn" href="https://ys-journal.org/Publish">
+                      <div>Publish</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- END: NAV -->
+
+
+        <!-- START: HERO -->
+        <div class="hero">
+          <div class="container-xxl p-0">
+            <div class="row g-0 h-100">
+              <div class="hero-content col-lg-6">
+                <p class="text-bg">Issue 9</p>
+                <p class="display-1 mb-0">Issue 9</p>
+                <p class="fs-4 text-muted">2023</p>
+                <button class="btn mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#contents_offcanvas">Table of Contents</button>
+                <!-- <a class="text-decoration-none text-muted small" href="pdf/7/index.html">Switch to PDF View</a> -->
+              </div>
+              <div class="hero-bg col-lg-6">
+                <img loading="lazy" src="assets\imgs\issue9\Full Cover 2.jpg" alt="Issue 9" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: HERO -->
+
+        <!-- START: SECTION 1 -->
+        <section class="section-1" id="section-1">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Letter from the Journal
+              </h2>
+              <div class="content">
+                  <p>Dear readers,</p>
+              
+                  <p>
+                      We are delighted to present the outstanding works showcased in this issue, a culmination of the efforts exerted during our research program in the past year. Additionally, we are proud to include highly-rated submissions received through our journal website.
+                  </p>
+              
+                  <p>
+                      The research program was an enriching experience for our junior researchers, involving a comprehensive 3-week training course. During this period, participants acquired fundamental skills in scientific research, idea generation, and paper writing. Engaging in collaborative group projects with peers who shared similar interests, each team successfully produced an article within the tight timeframe. Furthermore, every group benefited from the guidance of a senior researcher, participating in 6 mentoring sessions focused on developing their inaugural review papers.
+                  </p>
+              
+                  <p>
+                      Following the completion of the projects, each group presented their findings in concise 10-minute sessions to a distinguished panel of judges. The depth of ideas and the quality of the projects were truly commendable. Participants received constructive feedback that highlighted their performance in key areas such as defining a research question, methodology, and presentation skills. It was evident that these groups exhibited great dedication to their academic pursuits.
+                  </p>
+              
+                  <p>
+                      In addition to the group projects, our editorial team diligently reviewed numerous papers submitted to the Youth Science Journal website for publication. After undergoing a rigorous revision process, the team reached out to the authors of papers that demonstrated academic novelty and significant contributions to their respective fields. We are excited to feature articles from various STEM and Humanities disciplines, including interdisciplinary ones, and we look forward to the continued review of submitted articles.
+                  </p>
+              
+                  <p>
+                      This issue showcases the exceptional group projects created during the training program and the accepted submissions. We express our gratitude to our senior researchers for their invaluable mentoring and extend our thanks to all the members who contributed to making this publication possible.
+                  </p>
+              
+                  <p>Best Regards,</p>
+                  <p>Youth Science Journal Community</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 1 -->
+
+        <!-- START: SECTION 2 -->
+        <section class="section-2" id="section-2" v-show="currentSection == 'section-2'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Integration of Mechanical and Chemical Treatment in the Hydrological Cycle of the Paper and Pulp Industry
+              </h2>
+              <p class="section-author text-center text-muted">Abdullah Gamal Moustafa Elafifi (Ismailia STEM High School)<br />Adam Ahmed (Ismailia STEM High School)</p>
+              <div class="content">
+                <embed src="pdf\9\Integration of Mechanical and Chemical Treatment in the Hydrological Cycle of the Paper and Pulp Industry.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;">
+                  </embed>
+                  
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 2 -->
+
+        <!-- START: SECTION 3 -->
+       <section class="section-3" id="section-3" v-show="currentSection == 'section-3'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Impact of Mass and Length Variations on Chaos in the Double Pendulum System: A Numerical Study
+              </h2>
+              <p class="section-author text-center text-muted">Mohamed Abd El-Hamid</p>
+              <div class="content">
+                <embed src="pdf\9\The Impact of Mass and Length Variations on Chaos in the Double Pendulum System - A Numerical Study (word).pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 3 -->
+
+        <!-- START: SECTION 4 -->
+        <section class="section-4" id="section-4" v-show="currentSection == 'section-4'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Relation Between One and Two-Dimensional Random Walks to Pascal’s Triangle and Analogous Higher-Dimensional Structures.
+              </h2>
+              <p class="section-author text-center text-muted">Habiba Sorrour (Maadi STEM High School for Girls)</p>
+              <div class="content">
+                <embed src="pdf\9\The Relation Between One and Two-Dimensional Random Walks to Pascal’s Triangle and Analogous Higher-Dimensional Structures.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 4 -->
+
+        <!-- START: SECTION 5 -->
+        <section class="section-5" id="section-5" v-show="currentSection == 'section-5'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Relationship Between Drug Abuse and Academic Stress Among Egyptian Undergraduate and High School Students     </h2>         
+              <p class="section-author text-center text-muted">Mohamed Abdelghani (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Mohamed_Abdelghani_YSJ_Educational_Psychology.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 5 -->
+
+        <!-- START: SECTION 6 -->
+        <section class="section-6" id="section-6" v-show="currentSection == 'section-6'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Extractive Jojobyl Alcohol as a Pesticide for Cotton’s Main Pest, Spodoptera Littoralis a Study on Environmental, Economic, and Global Implications              </h2>
+              <p class="section-author text-center text-muted">Adham Taha (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Extractive jojobyl alcohol as a pesticide for cotton’s main pest, Spodoptera Littoralis a study on environmental, economic, and global implications.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 6 -->
+
+        <!-- START: SECTION 7 -->
+        <section class="section-7" id="section-7" v-show="currentSection == 'section-7'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Utilizing AOH1996 with chemotherapy delivered via drug nanocarriers; an advanced novel approach for cancer treatment especially Inflammatory Breast Cancer
+              </h2>
+              <p class="section-author text-center text-muted">Mazen Behairy (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Utilizing AOH1996 with chemotherapy delivered via drug nanocarriers; an advanced novel approach for cancer treatment especially Inflammatory Breast Cancer.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 7 -->
+
+        <!-- START: SECTION 8 -->
+       <section class="section-8" id="section-8" v-show="currentSection == 'section-8'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Hybrid Thermal Management Systems for Lithium-ion Battery-based Electric Vehicles: A Review
+              </h2>
+              <p class="section-author text-center text-muted">Ahmed Ahmed (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Hybrid Thermal Management Systems for Lithium-ion Battery-based Electric Vehicles a Review.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 8 -->
+
+        <!-- START: SECTION 9 -->
+        <section class="section-9" id="section-9" v-show="currentSection == 'section-9'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Formation and Coalescence of Binary Systems
+              </h2>
+              <p class="section-author text-center text-muted">Hazem Abdel-Mughni (STEM High School for Boys - 6th of October)<br />Mustafa Mohammad (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Stellar Astrophysics - The Formation and Coalescence of Binary Systems (version).pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 9 -->
+
+        <!-- START: SECTION 10 -->
+        <section class="section-10" id="section-10" v-show="currentSection == 'section-10'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Improved RSA Algorithm Counterparts by Exploiting Implementation Attacks
+              </h2>
+              <p class="section-author text-center text-muted">Karim Mohamed (STEM High School for Boys – 6th of October)<br />Adham Ahmed (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Improved_RSA_Algorithm_Counterparts_by_Exploiting_Implementation_Attacks.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 10 -->
+
+        <!-- START: SECTION 11 -->
+        <section class="section-11" id="section-11" v-show="currentSection == 'section-11'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Origin of Life and Terraforming Mars
+              </h2>
+              <p class="section-author text-center text-muted">Kevin Atef (STEM High School for Boys - 6th of October)<br />Lena Walid (Maadi STEM High School for Girls)</p>
+              <div class="content">
+                <embed src="pdf\9\The Origin of Life and Terraforming Mars.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 11 -->
+
+        <!-- START: SECTION 12 -->
+        <section class="section-12" id="section-12" v-show="currentSection == 'section-12'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Contributions of Machine Learning and Image Processing to Astronomical Data     </h2>         
+              <p class="section-author text-center text-muted">Ahmed Walid (STEM High School for Boys - 6th of October)<br />Ibrahim Emad (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf/9/Contributions of Machine Learning and Image processing to astronomical data.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 12 -->
+      
+        <!-- START: SECTION 13 -->
+        <section class="section-13" id="section-13" v-show="currentSection == 'section-13'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Comparing Piston, Turboprop, Turbojet, and Turbofan Engines in Terms of Mechanism, Fuel Consumption, Optimal Cruising Conditions, and Opportunities for Future Development.     </h2>         
+              <p class="section-author text-center text-muted">Mohamed Abd El-Hamid (STEM High School for Boys - 6th of October)<br />Marawan Askar (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Comparing Piston, Turboprop, Turbojet, and Turbofan Engines in Terms of Mechanism, Fuel Consumption, Optimal Cruising Conditions, and Opportunities for Future Development..pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 13 -->
+
+        <!-- START: SECTION 14 -->
+        <section class="section-14" id="section-14" v-show="currentSection == 'section-14'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Symmetry and Tessellation in Islamic Art     </h2>         
+              <p class="section-author text-center text-muted">Belal Hasan (STEM High School for Boys - 6th of October)<br />Hazem Nasr (STEM High School for Boys - 6th of October)<br/>Samar El-Sayad (Sharqia STEM School)</p>
+              <div class="content">
+                <embed src="pdf/9/Symmetry and tessellation in Islamic art (1).pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 14 -->
+
+        <!-- START: SECTION 15 -->
+        <section class="section-15" id="section-15" v-show="currentSection == 'section-15'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Utilizing Chemotactics to Stimulate Collective Cell Migration of Keratinocytes to Speed Second-degree Burn Wound Healing     </h2>         
+              <p class="section-author text-center text-muted">Hassan Ayman (STEM High School for Boys - 6th of October)<br />Mohamed Nasser (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Utilizing Chemotactics to Stimulate Collective Cell Migration of Keratinocytes to Speed Second-degree Burn Wound Healing.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 15 -->
+
+        <!-- START: SECTION 16 -->
+        <section class="section-16" id="section-16" v-show="currentSection == 'section-16'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Role of Narcissism in Driving Ariel Castor’s Notorious Cleveland Kidnappings, and the Effect His Actions Had on His Second Victim, Amanda Berry.              </h2>
+              <p class="section-author text-center text-muted">Ziad Ahmed (STEM High School for Boys - 6th of October)<br />Mohamed Emad (STEM High School for Boys - 6th of October)<br />Reem M. Khalifa (Maadi STEM High School for Girls)</p>
+              <div class="content">
+                <embed src="pdf\9\The_role_of_narcissism_in_driving_Ariel_Castor’s_notorious_Cleveland_kidnappings,_and_the_effect_his_actions_had_on_his_second_victim,_Amanda_Berry.pdf" type="application/pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 16 -->
+
+        <!-- START: SECTION 17 -->
+        <section class="section-17" id="section-17" v-show="currentSection == 'section-17'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Dark Energy and its Influence on Cosmological Aspects     </h2>         
+              <p class="section-author text-center text-muted">Belal Bahaa (STEM High School for Boys - 6th of October)<br />Omar El-Wakeel (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\Dark Energy and its Influence on Cosmological Aspects.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 17 -->
+
+        <!-- START: SECTION 18 -->
+        <section class="section-18" id="section-18" v-show="currentSection == 'section-18'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                An Overview of Image Segmentation Algorithms Used in the Medical Field     </h2>         
+              <p class="section-author text-center text-muted">Mohammed Ragab (STEM High School for Boys - 6th of October)<br />Omar Zayed (Nile Egyptian Schools - 6th of October Branch)</p>
+              <div class="content">
+                <embed src="pdf\9\An Overview of Image Segmentation Algorithms Used in the Medical Field.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 18 -->
+
+        <!-- START: SECTION 19 -->
+        <section class="section-19" id="section-19" v-show="currentSection == 'section-19'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Future of Startups in the Arab Region     </h2>         
+              <p class="section-author text-center text-muted">Abdelhamid Ahmed (STEM High School for Boys - 6th of October)<br />Mostafa Ibrahim Mohamed Ibrahim Mostafa (STEM High School for Boys - 6th of October)</p>
+              <div class="content">
+                <embed src="pdf\9\The Future of Startups in the Arab Region.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 19 -->
+
+        <!-- START: SECTION 20 -->
+        <section class="section-20" id="section-20" v-show="currentSection == 'section-20'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Music Therapy Presenting New Medical Treatments for Neurological Diseases     </h2>         
+              <p class="section-author text-center text-muted">Ziad Bahaa Eldien Ibrahim (STEM High School for Boys - 6th of October)<br />Ahmed Sameh Kahla (Dakahlia STEM School)</p>
+              <div class="content">
+                <embed src="pdf\9\Music therapy - presenting new medical treatments for the neurological diseases.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 20 -->
+
+        <!-- START: SECTION 21 -->
+        <section class="section-21" id="section-21" v-show="currentSection == 'section-21'">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg class="copy-section-link" section-href="9.21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                The Impact of Current Transportation Infrastructure on the Environment and Human Health, as well as the Solutions Developed by Scientists to Circumvent its Security.     </h2>         
+              <p class="section-author text-center text-muted">Seif Eldin Azazy (STEM High School for Boys - 6th of October)<br />Basel Ezz El-Arab (Gharbia STEM School)</p>
+              <div class="content">
+                <embed src="pdf\9\The impact of current transformation structure on the environment and human health.pdf" width="100%" height="1200px" style="background:white; overflow:hidden;"></embed>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 21 -->
+
+        <!--start footer section-->
+        <footer class="mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 pb-3">
+                <img loading="lazy" src="../images/Logo-rev.png" class="img-fluid" />
+                <h4>Contact Us</h4>
+                <p>Reach to us about ideas, suggestion or any questions you have!</p>
+              </div>
+
+              <div class="col-md-8">
+                <div class="jobs">
+                  <p class="text-center">Website Managers: <span>Mikhael Mounay | Mohanad Elagan</span></p>
+                </div>
+                <div class="social text-center">
+                  <a href="https://www.facebook.com/YouthScienceJournall/"><i class="fa-brands fa-facebook"></i>&nbsp; Facebook</a>
+                  <a href="https://www.instagram.com/ysciencejournal/"><i class="fa-brands fa-instagram"></i>&nbsp; Instagram</a>
+                  <a href="https://www.linkedin.com/company/ysj/"><i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <div class="rights">&copy; 2020-2024 All Rights reserved | Youth Science Journal</div>
+          </div>
+        </footer>
+      </div>
+      <!-- id="app" -->
+
+      <!-- START: TOAST (CLIPBOARD) -->
+      <div class="toast-container position-fixed bottom-0 end-0 pb-4 pe-3">
+        <div class="toast align-items-center" id="copied-toast" role="alert" data-bs-delay="2000">
+          <div class="d-flex">
+            <div class="toast-body">Link copied to clipboard!</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+      <!-- END: TOAST (CLIPBOARD) -->
+    </div>
+    <!-- class="loaded-content" -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.prod.js" integrity="sha256-kgmHr8X3NCK+tP7+Mlnaxylp5JoAt1tcOAfa6WvELRg=" crossorigin="anonymous"></script>
+    <script src="../js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
