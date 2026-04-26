@@ -1,0 +1,2709 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8ZTYWSZHJ4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8ZTYWSZHJ4");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YSJ | Issue 4</title>
+    <link
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/issue4/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/issue4/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/issue4/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/imgs/issue4/favicon/site.webmanifest" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+  </head>
+
+  <body issue-no="4">
+    <!-- START: LOADER -->
+    <!-- <div class="loader-container">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div> -->
+    <!-- END: LOADER -->
+
+    <div class="loaded-content">
+      <div id="app">
+        <!-- START: TABLE OF CONTENTS (OFFCANVAS) -->
+        <button
+          class="offcanvas-opener shadow-sm"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#contents_offcanvas"
+          title="Table of Contents"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <defs>
+              <style>
+                .fa-secondary {
+                  opacity: 0.4;
+                }
+              </style>
+            </defs>
+            <path
+              class="fa-primary"
+              d="M137.4 105.4c12.5-12.5 32.75-12.5 45.25 0l128 128c12.5 12.5 12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0C131.1 400.4 128 392.2 128 384s3.125-16.38 9.375-22.62L210.8 288H32C14.31 288 0 273.7 0 256s14.31-32 32-32h178.8L137.4 150.6C124.9 138.1 124.9 117.9 137.4 105.4z"
+            />
+            <path
+              class="fa-secondary"
+              d="M384 96v320c0 17.69 14.31 32 32 32s32-14.31 32-32V96c0-17.69-14.31-32-32-32S384 78.31 384 96z"
+            />
+          </svg>
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="contents_offcanvas"
+          data-bs-scroll="true"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Table of Contents</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="offcanvas-nav-list" no-of-sections="6">
+              <p class="offcanvas-section-title">Introduction</p>
+              <div>
+                <li>
+                  <a href="#section-1"
+                    ><button data-bs-dismiss="offcanvas" section-no="1">
+                      Letter From the Journal
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Author">Founders</span>
+                </p>
+              </div>
+              <p class="offcanvas-section-title">Articles</p>
+              <div>
+                <li>
+                  <a href="#section-2"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="2"
+                      @click="currentSection = 'section-2'"
+                    >
+                      Biomedical Applications of Artificial Intelligence
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Artificial Intelligence</span><br />
+                  <span title="Author">Mahmoud Ayman</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-3"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="3"
+                      @click="currentSection = 'section-3'"
+                    >
+                      AI-assisted Online Child Protection
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Artificial Intelligence</span><br />
+                  <span title="Authors">Bassel Walid | Saif Ahmed</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-4"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="4"
+                      @click="currentSection = 'section-4'"
+                    >
+                      Academic procrastination in high school juniors learning
+                      Mathematics
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Psychology</span><br />
+                  <span title="Author">Salah Mamdouh</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-5"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="5"
+                      @click="currentSection = 'section-5'"
+                    >
+                      Quantum Computing and Its Effect on Cryptography
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Computer Science</span><br />
+                  <span title="Author">Ahmed Muharram</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-6"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="6"
+                      @click="currentSection = 'section-6'"
+                    >
+                      Solar Panels: Thorough Review and its uses
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Physics</span><br />
+                  <span title="Author">Mandavi Tiwari</span>
+                </p>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- END: TABLE OF CONTENTS (OFFCANVAS) -->
+
+        <!-- START: NAV -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container">
+            <div class="d-flex align-items-center">
+              <!-- Container div for logo and flag -->
+              <a class="navbar-brand text-uppercase" href="../">
+                <img
+                  loading="lazy"
+                  src="..\images/Logo.png"
+                  width="52"
+                  height="25"
+                  class="d-inline-block align-top"
+                  loading="lazy"
+                />
+              </a>
+              <!-- Add the Palestine flag here -->
+              <img
+                src="..\images\Palestine 2.png"
+                alt="Palestine Flag"
+                height="30"
+                style="margin-left: 10px"
+              />
+            </div>
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://issues.ys-journal.org"
+                    >Issues</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Contact"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Programl"
+                    >Our Program</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/IFYR"
+                  >
+                    <div>IFYR</div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/Publish"
+                  >
+                    <div>Publish</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- END: NAV -->
+
+        <!-- START: HERO -->
+        <div class="hero">
+          <div class="container-xxl p-0">
+            <div class="row g-0 h-100">
+              <div class="hero-content col-lg-6">
+                <p class="text-bg">Issue 4</p>
+                <!-- <a href="../index.html"><img loading="lazy" src="assets/imgs/Logo.png" alt="YSJ Logo" /></a> -->
+                <p class="display-1 mb-0">Issue 4</p>
+                <p class="fs-4 text-muted">March 2021</p>
+                <button
+                  class="btn mb-3"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#contents_offcanvas"
+                >
+                  Table of Contents
+                </button>
+                <a
+                  class="text-decoration-none text-muted small"
+                  href="pdf/4/issue-4.pdf"
+                  >Switch to PDF View</a
+                >
+              </div>
+              <div class="hero-bg col-lg-6">
+                <img
+                  loading="lazy"
+                  src="assets/imgs/issue4/issue4_bg.jpeg"
+                  alt="Issue 4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: HERO -->
+
+        <!-- <div data-bs-spy="scroll" data-bs-target="#offcanvas-nav-list" data-bs-smooth-scroll="true" tabindex="0" data-bs-rootMargin="0px 0px -10000px"> -->
+        <!-- START: SECTION 1 -->
+        <section class="section-1" id="section-1">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Letter from the Journal
+              </h2>
+              <div class="content">
+                Dear readers,<br />
+                <span
+                  >The fourth issue of the Youth Science Journal is here! It has
+                  been long-coming but it is worth it as it is filled with
+                  fruitful articles from various fields like Artificial
+                  Intelligence and Psychology. As you might notice, we have
+                  changed our format once more to eliminate themes from the
+                  issue we release. This is due to the high number of articles
+                  we have received from submissions and the want of our writers
+                  to write in diverse fields. It was only inevitable to allow
+                  the journal to thrive with the various fields.</span
+                >
+                <span
+                  >Furthermore, as we announced in our previous issue, we are
+                  open for submission for future issues. You can now publish
+                  your article on our website about any topic in science
+                  through:
+                  <a href="www.ys-journal.com/publish" target="_blank"
+                    >www.ys-journal.com/publish</a
+                  >. Publishing a review article about a specific topic will not
+                  only let you learn about it more, but also share awareness for
+                  that topic! All you have to do is to make sure that your
+                  article is following our guidelines that are available on our
+                  website. We are excited to say that we have received our first
+                  international submission to the journal. We thank Mandavi for
+                  being the first to submit their article on our journal, and we
+                  are looking forward for more articles in the future.</span
+                >
+                <span
+                  >Finally, we thank you for taking a look at this issue, and
+                  hope you have an enjoyable read.</span
+                >
+                Best Regards,<br />
+                Youth Science Journal Community
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 1 -->
+
+        <!-- START: SECTION 2 -->
+        <section
+          class="section-2"
+          id="section-2"
+          v-show="currentSection == 'section-2'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Biomedical Applications of Artificial Intelligence
+              </h2>
+              <p class="section-author text-center text-muted">
+                Mahmoud Ayman<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Artificial intelligence as a concept is used in many
+                    uncountable fields. From the essential fields that AI is
+                    used in is the biomedicine field. AI can recognize the
+                    stresses in the muscles of the body, predict the overload,
+                    predict the blood pressure, predict the body temperature,
+                    and many other beneficial uses. In the coming sections many
+                    related concepted are defined as the uses and examples about
+                    these applications, how these technologies are used and some
+                    other beneficial information about this field.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Artificial intelligence has been used in many beneficial
+                      fields. One of those fields is the biomedical field. The
+                      first AI application in the medical field was in the
+                      1970s, when the field of AI was 15 years old. Early AI in
+                      medicine (AIM) researchers had discovered the
+                      applicability of AI methods to life sciences. The general
+                      AI research community was fascinated by the applications
+                      being developed in the medical world, noting that
+                      significant new AI methods were emerging as AIM
+                      researchers struggled with challenging biomedical
+                      problems. In fact, by 1978, the leading journal in the
+                      field (Artificial Intelligence, Elsevier, Amsterdam) had
+                      devoted a special issue
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Sridharan NS. Guest editorial. Artificial Intelligence. 1978;11(1–2):1–4."
+                        reference-no="1.7"
+                        >[7]</tooltip
+                      >
+                      solely to AIM research papers. Over the next decade, the
+                      community continued to grow, and with the formation of the
+                      American Association for Artificial Intelligence in 1980,
+                      a special subgroup on medical applications (AAAI-M) was
+                      created. Field of (AIM) is been developing all over the
+                      years and it is coming better.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    II. AI in biomedical information process
+                  </p>
+                  <p>
+                    <span
+                      >Information processing in biomedicine had many
+                      breakthroughs by using traditional information processing
+                      ways. As a result, there should be a step forward to make
+                      these processes as fast as it can. Inthe area of
+                      biomedical question answering (BioQA), the aim is to find
+                      fast and accurate answers to user formulated questions
+                      from a reservoir of documents and datasets. To begin with,
+                      the biomedical questions must be classified into different
+                      categories in order to extract appropriate information
+                      from the answer. ML can categorize biomedical questions
+                      into four basic types with an accuracy of nearly 90%
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Sarrouti M, Ouatik El Alaoui S. A machine learning-based method for question type classification in biomedical question answering. Methods Inf Med 2017;56(3):209–16."
+                        reference-no="1.3"
+                        >[3] </tooltip
+                      >. Next, an intelligent biomedical document retrieval
+                      system can efficiently retrieve sections of the documents
+                      that are most likely to contain the answers to the
+                      biomedical questions
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Sarrouti M, El Alaoui SO. A generic document retrieval framework based onUMLS similarity for biomedical question answering system. In: Proceedingsof the 8th KES International Conference on Intelligent Decision Technologies;2016 Jun 15–17; Puerto de la Cruz, Spain; 2016. p. 207–16."
+                        reference-no="1.1"
+                        >[1]</tooltip
+                      >. For biomedical information collected from different
+                      sources over an elongated period of time, many important
+                      tasks can dominate; these are clinical information
+                      merging, comparison, and conflict resolution
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Shahar Y. Timing is everything: temporal reasoning and temporal data maintenance in medicine. In: Horn W, ShaharY, Lindberg G, Andreassen S, Wyatt J, editors. Artificial intelligence in medicine. Berlin: Springer; 1999. p.30–46."
+                        reference-no="1.2"
+                        >[2]</tooltip
+                      >. These have long been time consuming, labor-intensive,
+                      and unsatisfying tasks performed by humans. To improve
+                      efficiency and accuracy, AI has been demonstrated to be
+                      capable of performing these tasks with results as accurate
+                      as professional evaluator can do
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Rodriguez-Esteban R, Iossifov I, Rzhetsky A. Imitating manual curation of text-mined facts in biomedicine. PLoS Comput Biol 2006;2(9):e118"
+                        reference-no="1.4"
+                        >[4]</tooltip
+                      >. Also, natural language processing of medical narrative
+                      data is needed to free humans from the challenging task of
+                      keeping track of temporal events while simultaneously
+                      maintaining structures and reasons
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" Zhou L, Hripcsak G. Temporal reasoning with medical data—a review with emphasis on medical natural language processing. J Biomed Inform 2007;40(2):183–202"
+                        reference-no="1.6"
+                        >[6]</tooltip
+                      >. ML can be used to process high-complexity clinical
+                      information (e.g., text and various kinds of linked
+                      biomedical data), incorporate logic reasoning into the
+                      dataset, and utilize the learned knowledge for a myriad of
+                      purposes
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Athenikos SJ, Han H. Biomedical question answering: a survey. Comput Methods Programs Biomed 2010;99(1):1–24."
+                        reference-no="1.5"
+                        >[5]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. AI in biomedical research</p>
+                  <p>
+                    <span
+                      >In addition to being able to act as an ‘‘eDoctor” for
+                      disease diagnosis, management, and prognosis, AI has
+                      uncharted usage as a powerful tool in biomedical research
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Handelman GS, Kok HK, Chandra RV, Razavi AH, Lee MJ, Asadi H. eDoctor: machine learning and the future of medicine. J Intern Med 2018;284 (6):603–19."
+                        reference-no="1.8"
+                        >[8]</tooltip
+                      >. In medical research, AI is most commonly employed to
+                      analyze and identify patterns in large, complicated
+                      datasets. This data can be analyzed in a meaningfully
+                      precise, faster, and more cost-effective way than
+                      traditional analytical methods, reducing spend and
+                      improving outcomes. AI can be used to search through huge
+                      troves of scientific literature to find related studies,
+                      as well as combining different datasets. Researchers at
+                      the institute of cancer have developed a unique cancer
+                      database that is able to combine patients’ clinical and
+                      genetical data with independent chemistry, biology,
+                      patient, and disease information.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Disease diagnostic and prediction</p>
+                  <p>
+                    <span
+                      >The most urgent need for AI in biomedicine is in the
+                      diagnostics of diseases. AI allows health professionals to
+                      give earlier and more accurate diagnostics for many kinds
+                      of diseases
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Sajda P. Machine learning for detection and diagnosis of disease. Annu RevBiomed Eng 2006;8:537–65."
+                        reference-no="1.10"
+                        >[10]</tooltip
+                      >. Propper image processing, appropriate selection of
+                      features and AI methods can support medical diagnostic.
+                      This topic has been the subject of much research in recent
+                      years. One main class of diagnosis is based on in vitro
+                      diagnostics using biosensors or biochips. For instance,
+                      gene expression, which is a significant diagnosis tool,
+                      can be analyzed by ML, in which AI interprets microarray
+                      data to classify and detect abnormalities
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Molla M, Waddell M, Page D, Shavlik J. Using machine learning to design and interpret gene-expression microarrays. AI Mag 2004;25(1):23–44."
+                        reference-no="1.9"
+                        >[9]</tooltip
+                      >,
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" Pham TD, Wells C, Crane DI. Analysis of microarray gene expression data. CurrBioinform 2006;1(1):37–53."
+                        reference-no="1.12"
+                        >[12] </tooltip
+                      >. One new application is to classify cancer microarray
+                      data for cancer diagnosis
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Shi TW, Kah WS, Mohamad MS, Moorthy K, Deris S, Sjaugi MF, et al. A reviewof gene selection tools in classifying cancer microarray data. Curr Bioinform2017;12(3):202–12."
+                        reference-no="1.11"
+                        >[11] </tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Health care</p>
+                  <p>
+                    <span
+                      >AI nowadays had many approaches like predicting the
+                      health status of the body rabidly. Using AI, we could
+                      predict and measure blood pressure, heartbeats, body
+                      temperature, and more health care status that are
+                      significant.</span
+                    >
+                    <span
+                      >Blood pressure (BP): many people are daily tracking their
+                      blood pressure. Mostly measured to get insights into their
+                      health condition or to communicate with their doctor for
+                      follow up. Nowadays they measure their BP with a
+                      sphygmomanometer, a tool with inflatable cuffs, but it is
+                      not a good choice, as it is not a user-friendly measuring
+                      tool, also faults may be caused by wrong placement, and it
+                      is only a single moment measurement. “experts stress the
+                      importance of accurate blood pressure screenings “.
+                      Varheart wanted to create an AI-solution that could work
+                      with dataset of one sensor. This to fit into the already
+                      known applications like smartwatches. It also makes it a
+                      lot easier to implement in future applications.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >AI was first used in 1950s; it entered the biomedical
+                      field in 1970s. AI in biomedical fields had many
+                      approaches and beneficial applications. AI can be used in
+                      biomedical information process. In the BioQA, the aim is
+                      to find an answer in a reservoir of documents. AI helped
+                      making the process of searching for these questions easier
+                      than earlier. AI is also used in biomedical research in
+                      analyzing and identifying patterns in large, complicated
+                      datasets. This data can be analyzed in a meaningfully
+                      precise, faster, and more cost-effective way than
+                      traditional analytical methods, reducing spend and
+                      improving outcomes. From the most relevant uses of AI in
+                      biomedical fields is the diagnosis and prediction of
+                      disease. AI allows health professionals to give earlier
+                      and more accurate diagnostics for many kinds of diseases.
+                      Also, it can measure health status of the body as heart
+                      rates, body temperature and body pressure.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VII. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="1.1"></p>
+                        <p reference-no="1.2"></p>
+                        <p reference-no="1.3"></p>
+                        <p reference-no="1.4"></p>
+                        <p reference-no="1.5"></p>
+                        <p reference-no="1.6"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="1.7"></p>
+                        <p reference-no="1.8"></p>
+                        <p reference-no="1.9"></p>
+                        <p reference-no="1.10"></p>
+                        <p reference-no="1.11"></p>
+                        <p reference-no="1.12"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 2 -->
+
+        <!-- START: SECTION 3 -->
+        <section
+          class="section-3"
+          id="section-3"
+          v-show="currentSection == 'section-3'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                AI-assisted Online Child Protection
+              </h2>
+              <p class="section-author text-center text-muted">
+                Bassel Walid | Saif Ahmed<br />STEM High School for boys 6<sup
+                  >th</sup
+                >
+                of October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >No one can deny the internet’s great effect on the progress
+                    that we see around us. Despite all the benefits of the
+                    internet, it has its dark side, when misused the internet
+                    represents a threat, especially for children. Lacking child
+                    internet safety is a hazardous problem that people usually
+                    ignore or simply underestimate. According to the Center for
+                    Cyber Safety and Education, 53% of kids in grades 4-8
+                    revealed their number to a stranger, and about 11% have met
+                    a stranger
+                    <tooltip
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="manual"
+                      data-bs-placement="bottom"
+                      data-bs-html="true"
+                      title="Loading ..."
+                      reference-no="2.1"
+                      >[1]</tooltip
+                    >. These statistics are skyrocketing, which is scary. In
+                    this research paper, a prototype for an online child safety
+                    software that utilizes AI to identify obscene photos. The
+                    reasoning behind writing this research is to explore one of
+                    the ways that a child protection software can be created and
+                    to explore and empathize the importance of maintaining child
+                    privacy while protecting them. The software here will mainly
+                    focus on limiting the threats from these sources. The
+                    algorithm is designed to block all unwanted websites with
+                    any unfriendly or aggressive content that does not suit
+                    children. Unblocked websites are continuously analyzed,
+                    where users receive the results of these updates
+                    periodically. As for the videos, AI can recognize and
+                    analyze videos to ensure the safest online experience for
+                    the child. The chatrooms are the last approach we are taking
+                    into consideration in our project. We are scanning the chats
+                    to recognize any obscene or immoral content, when any
+                    prohibited content is detected the parents are alerted at
+                    once.
+                  </span>
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >In recent years children’s usage of the internet has
+                      skyrocketed now that 80-98% of American children aged 3-18
+                      have internet access in their homes. This presents parents
+                      with a problem that has been getting more dangerous over
+                      the years, child internet safety.</span
+                    >
+                    <span
+                      >Child internet safety has been listed as the 4th “biggest
+                      problem” according to a survey done by the C.S Mott
+                      children hospital in Michigan, going up from the 8th most
+                      prominent problem in the year prior, and this makes sense,
+                      as more and more children get their hands-on electronic
+                      devices that can access the internet.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article2/table_1.jpeg"
+                        alt="Table 1"
+                      />
+                      <figcaption>
+                        Table 1: The percentage of children exposed to sexual
+                        content
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >As a result of the high percentage of children with
+                      access to the internet exposure to sexual content has also
+                      risen. It was shown in two surveys conducted in the UK
+                      that the percentage of children exposed to sexual content
+                      has risen across the years as shown in [Table 1].</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >This shows the need to both start educating parents on
+                      the dangers of unsupervised internet usage and to start
+                      creating and implementing online child protection
+                      solutions.</span
+                    >
+                    <span
+                      >The main challenge that would face any developer trying
+                      to achieve such a goal is to maintain the privacy of the
+                      children while allowing the parents to easily supervise
+                      the children’s usage. As a result, a low
+                      information-to-results ratio had to be achieved to make
+                      sure not too much of the child’s information is accessed
+                      and still gets the required results. After that, the
+                      second challenge is maintaining the overall privacy of the
+                      information, something which would require the software to
+                      be either disrupted according to a Software as a service
+                      model or to be locally hosted, a combination of both
+                      approaches was selected for this prototype. The third
+                      problem would be the number of places that a child’s
+                      safety can be compromised, this problem comes as a result
+                      of the many places a child can interact with strangers,
+                      from anonymous chatrooms to online game lobbies, this
+                      limits the places this A.I can help. The last problem is
+                      the many platforms that children use, this problem is not
+                      as big as the others, but it still increases the work
+                      required to integrate the A.I with different platforms
+                      like Android, IOS, and Windows.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Implementation methods</p>
+                  <p>
+                    <span
+                      >In the creation of the software, already existing ideas
+                      and code modules were used in combination with new ideas
+                      to maximize efficiency. The project is separated into
+                      three main parts, general internet content moderation,
+                      video caption analysis, and predatory behavior chat
+                      scanning.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Main programming languages and programs used.
+                  </p>
+                  <p>
+                    <span
+                      >In the project, Python was used as the primary
+                      programming language due to its versatility when it comes
+                      to A.I and algorithms, quick integration with other
+                      programming languages, and the wide range of already
+                      existing modules and programs. This allows for more
+                      development time to be dedicated to adding features and
+                      optimizing them instead of making custom versions of these
+                      programs (i.e. the image detection algorithm). In
+                      professionally developed software, it is of course
+                      preferred to use custom-made software though to allow for
+                      deeper integration and optimization.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    IV. General Internet Content Moderation
+                  </p>
+                  <p>
+                    <span
+                      >This is the first and simplest part of this project, the
+                      moderation algorithm is very simple but quite
+                      effective.</span
+                    >
+                    <span
+                      >On the first run, the program presents a list of other
+                      child safety measures that they can deploy to enhance
+                      their child’s safety, for example, it recommends users to
+                      use a DNS that offers a family plan or a child safety
+                      blocklist (i.e. OpenDNS Family Shield, Cloudflare 1.1.1.1
+                      For Families, etc.) which simplifies the work needed for
+                      the project because they already block a majority of adult
+                      content, the program also recommends users to make sure
+                      they are using Google SafeSearch to prevent explicit
+                      images from popping out in Google’s image search.</span
+                    >
+                    <span
+                      >Using a simple extension that grabs the URLs of the
+                      webpages that the child visits and sends it to the python
+                      extension so it can look to see if this website is part of
+                      a trusted website list that includes sites like Wikipedia,
+                      government websites, etc. which we are sure don’t include
+                      adult content, if the website isn’t a part of that list
+                      the program it’ll search through the website’s content to
+                      see if it has any of the blacklisted words that exist in a
+                      list defined by the child’s parent and this list includes
+                      terms like references of pornography, swear words, etc.,
+                      if it doesn’t find any matches it deletes the entry and
+                      waits for another link, if it finds any of these words the
+                      program it fetches the URLs of all images in the website
+                      using the Beautiful Soup module for python and sends them
+                      to the explicit image detection algorithm to scan these
+                      photos to check if the website has any explicit photos,
+                      after it checks the photos on the website it saves all the
+                      results of this scan (all blacklist matches, explicit
+                      photo scan results) to a file sent with the alert that is
+                      sent to the parent when the website the scan is
+                      done.</span
+                    >
+                    <span
+                      >The program also saves these URLs to an online
+                      open-source database that can be community checked to
+                      improve the program.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Video Caption Analysis</p>
+                  <p>
+                    <span
+                      >When the HTML parser finds that the domain name is
+                      YouTube it instead calls for the video caption analysis,
+                      the video caption analysis program first gets the unique
+                      video ID given to all videos uploaded to YouTube, it then
+                      uses the YouTube API to fetch the captions for the video
+                      which it then sends to Google’s Natural Language
+                      Processing API and it calls its content classification to
+                      classify the themes in the captions to figure out whether
+                      the video contains any age-inappropriate subjects (i.e.
+                      gambling), after it receives the themes from the API it
+                      saves them in a text file with the video title and
+                      ID.</span
+                    >
+                    <span
+                      >This is not an arguably bad way to analyze YouTube
+                      videos, but it has a flaw that is being slowly fixed.
+                      auto-generated captions, while a very useful feature to
+                      have, it makes mistakes all the time which can affect the
+                      results for videos that do not contain human-written
+                      captions and while a lot more channels are starting to add
+                      captions to their videos, we still include the name of the
+                      video so the parents can check the watch history to review
+                      the video again.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Predatory Behavior Chat Scanning</p>
+                  <p>
+                    <span
+                      >Now that this is the hardest part of the program due to
+                      how there are no existing resources on this except
+                      ChildSafe.ai which is still not even in beta, but this
+                      also means that there is a whole new field of child safety
+                      that is barely explored. While currently there is no
+                      open-source solution available, one can be made with
+                      enough resources as is going to be discussed here.</span
+                    >
+                    <span
+                      >First, we propose training an NLP API to detect specific
+                      behaviors that connect with online exploitation (i.e.
+                      persuasion, manipulation,deception, etc.) and that gets
+                      easier due to the abundance of chat logs that the
+                      Pervert-Justice foundation has compiled over 15 years of
+                      decoy operations that allowed them to achieve over 623
+                      convictions, only one of which was from research, that
+                      means that we have over 600 full chat logs of actual
+                      convicted online predators which when paired with the
+                      multiple research papers available on the techniques that
+                      online predators utilize to lure young children one can
+                      train a very reliable model by feeding these chat logs and
+                      tagging them with appropriate tags, secondly the proposed
+                      A.I have to have a predator identification and police
+                      reporting algorithm which tries to look up the predator
+                      using the given username, altering the parents and
+                      reporting the case to local authorities immediately and
+                      giving them easy access to the results of the lookup if
+                      there are any, finally, there has to be a database that
+                      records these chatlogs anonymously with the parent’s
+                      permission to be available to further help development in
+                      this area of child safety, the database should be
+                      available to researchers, physiologists to help research
+                      newer behaviors and techniques that these predators are
+                      using, it should also be possible to A.I researchers so
+                      they can feed these into their models to improve
+                      them.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VII. Conclusion</p>
+                  <p>
+                    <span
+                      >As internet use is extending to younger children, there
+                      is an increasing need for research focusing on the risks
+                      young users are experiencing, as well as the
+                      opportunities, and how they should cope. The Internet
+                      represents a significant threat to children because many
+                      children lack the simplest protection ways. Approximately
+                      34% of students report experiencing cyberbullying during
+                      their lifetime. Over 60% of students who experience
+                      cyberbullying reported that it immensely impacted their
+                      ability to learn and feel safe while at school. We chose
+                      our approach to solve the problem, which is using AI to
+                      limit the threats caused by the internet, especially
+                      Chatrooms, websites, and videos. We use algorithms to
+                      recognize any spam and any unfriendly or immoral content.
+                      Any source that was found to fulfill these conditions will
+                      be prohibited immediately, and parents shall be alarmed.
+                      By working on decreasing these threats, we are helping in
+                      solving this terrible problem. We are providing a safer
+                      climate for children to use the internet without any fear.
+                      There are 71% of teens have hidden their online behavior
+                      from their parents so we provide parents with a program
+                      that will make them feel comfortable and rest assured that
+                      their children are in safe hands. We are working for a
+                      better future.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VI. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="2.1"></p>
+                        <p reference-no="2.2"></p>
+                        <p reference-no="2.3"></p>
+                        <p reference-no="2.4"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="2.5"></p>
+                        <p reference-no="2.6"></p>
+                        <p reference-no="2.7"></p>
+                        <p reference-no="2.8"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 3 -->
+
+        <!-- START: SECTION 4 -->
+        <section
+          class="section-4"
+          id="section-4"
+          v-show="currentSection == 'section-4'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Academic procrastination in high school juniors learning
+                Mathematics
+              </h2>
+              <p class="section-author text-center text-muted">
+                Salah Mamdouh<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Academic procrastination is a big problem having noticeable
+                    effects on both student’s mental health and academic
+                    development. Mathematics is really hard and is confusing to
+                    a big portion of high school students, along with other
+                    factors that are responsible for academic procrastination
+                    while learning the subject. These factors are either
+                    personal or are caused by the person like mood, unlike
+                    external factors which are mainly caused by the surrounding
+                    learning environment. studying these causes can help us find
+                    a solution to prevent the consequences.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Mathematics is a relatively difficult subject to learn or
+                      study for a lot of students especially in high school
+                      years. Problem-solving, reasoning and proof,
+                      communication, connections, and representation are five
+                      standards used in the process of studying as described by
+                      the National Council of Teachers of Mathematics [1], it is
+                      not that easy to understand some concepts of Mathematics
+                      more than 95% of junior high school students in Indonesia
+                      are having trouble reaching mid-levels of Math according
+                      to the results of the 2011 Trends in International
+                      Mathematics and Science Study (TIMSS) research in the
+                      fields of mathematics and science for the second graders
+                      of junior high schools. This low level can result from
+                      various factors, including the behavior of delaying tasks
+                      which are also known as “academic procrastination”,
+                      procrastination is the act of delaying or postponing any
+                      type of work (i.e., school tasks) in favor of doing an
+                      activity (i.e., going out with friends). These students
+                      procrastinating do not understand the importance of given
+                      tasks as some may find it not useful or not worth the
+                      hassle, some others see that these tasks are difficult or
+                      that they need a huge amount of time and power to
+                      finish.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Personality and Emotion</p>
+                  <p>
+                    <span
+                      >Academic procrastination has some impacts as well as
+                      causes. Perfectionism and a negative self-image are
+                      personally related factors while lack of knowledge and
+                      study skills and regulation of low self-esteem are
+                      competence-related, and there are many other factors like
+                      anxiety, boredom, lack of motivation, physical and mental
+                      health, and poor management skills. Factors like the
+                      quality of teachers, culture, and conditions of the
+                      school, and peer influences are external factors.</span
+                    >
+                    <span
+                      >A study was done to conclude a reason for the act of
+                      procrastination focusing on Mathematics as a subject for
+                      junior high school students
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.2"
+                        >[2] </tooltip
+                      >. This study tested the previous factors related to
+                      procrastinating by surveying six schools in Indonesia
+                      involving 154 students.</span
+                    >
+                    <span
+                      >The questionnaire asking students about their habits
+                      doing tasks resulted in 72 (46.8%) saying that they never
+                      delay or postpone a task, 58 (37.7%) had put off tasks
+                      before, and 24 (15.5%) always put off or postpone tasks.
+                      This means that about 53.2% of these students have
+                      experienced academic procrastination while studying
+                      mathematics, fewer than half of the students complete
+                      tasks on time, it is proven that some cheats tasks doing
+                      it in class before the session starts.</span
+                    >
+                    <span
+                      >The most noticeable problem was that most students were
+                      unaware of the importance of these tasks, complaining that
+                      it is time and power-consuming with no real benefit
+                      besides the fact that they are boring and confusing, and
+                      saying that they delayed it due to personal reasons like
+                      bad mood or stress from these tasks, this results in them
+                      to look for other activities to entertain them and try to
+                      escape from the reality and to reduce their stress, this
+                      is also caused by emotional discomfort from feelings like
+                      fear of failure and learning stress. These students often
+                      experience some form of depression or being overwhelmed
+                      doing school assignments.</span
+                    >
+                    <span
+                      >Surprisingly, academic procrastination is not only
+                      experienced by lower-performing pupils higher performers
+                      start to gain a feeling of perfectionism while doing tasks
+                      resulting in a perfectly answered assignment but turned in
+                      late blaming the time to finish the task. While this may
+                      seem better than other procrastinators who do not submit
+                      their tasks, it is still considered a form of academic
+                      procrastination. this indicates that some students may
+                      have bad time-management skills and low
+                      self-regulating.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Learning Environment and external factors
+                  </p>
+                  <p>
+                    <span
+                      >Not only that academic procrastination is caused and
+                      affected by personal factors, but it can also be affected
+                      by external factors like lack of social support or social
+                      networks, and the quality of teachers and the learning
+                      environment and culture. For example, inconducive studying
+                      or learning from home can cause academic procrastination
+                      as parents aren’t usually strict or discipline of learning
+                      at home and not paying enough attention to whether the
+                      child is doing his school tasks or not, they only see the
+                      child’s learning improvement and level from exam grades.
+                      This is not always the case as some families pay great
+                      attention to their child’s education.</span
+                    >
+                    <span
+                      >Parents can be a great factor while students are at home,
+                      the same goes for teachers at school. A good teacher
+                      controlling the class and paying attention to tasks can
+                      prevent some procrastinating, this discipline act is
+                      supported by the teacher encouraging students to complete
+                      their work and giving advice about time-management. On the
+                      other hand, teachers that do not discipline along with no
+                      motivation or competence can be troublesome causing
+                      students to go lazy finishing tasks.</span
+                    >
+                    <span
+                      >From the six schools included in the survey, two schools
+                      were not disciplined enough, these two had the highest
+                      levels of procrastination as they were not able to create
+                      a culture of achievement. Forty-seven (57.3%) of the
+                      eighty-two that did procrastinate were from these two
+                      schools. This level of academic procrastination results in
+                      noticeably lower grades, students procrastinating had an
+                      average of 7.40 in mathematics while students who never
+                      postpone their work averaged at 8.10.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Conclusion</p>
+                  <p>
+                    <span
+                      >Academic procrastination is caused by many factors like
+                      the students’ unawareness considering the importance of
+                      given tasks, complaining about the difficulty of the work,
+                      or the time offered to finish. Perfectionism, lack of
+                      self-regulation, self-esteem, ineffective learning
+                      environment, and indiscipline teachers are also main
+                      causes.</span
+                    >
+                    <span
+                      >Knowing these factors can help find a solution for each
+                      of them and take action, inventing new learning strategies
+                      is a great solution and can cover many factors as it isn’t
+                      always the same. For example, since mathematics is really
+                      hard and confusing, it can be implemented into activities
+                      to make its learning process more fun exterminating
+                      boredom. Other effective strategies can be used to prevent
+                      procrastination like coordinating with students’schools.
+                      Also, parents’ contribution is as important, students
+                      spend most of the time finishing tasks at home. If these
+                      solutions were to be implemented, it will mostly result in
+                      lower academic procrastination.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="3.1"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="3.2"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 4 -->
+
+        <!-- START: SECTION 5 -->
+        <section
+          class="section-5"
+          id="section-5"
+          v-show="currentSection == 'section-5'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Quantum Computing and Its Effect on Cryptography
+              </h2>
+              <p class="section-author text-center text-muted">
+                Ahmed Muharram<br />King Fahd Model Language School
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Programmable computers have been around for more than 7
+                    decades. They have almost reached their maximum potential
+                    because computer parts are becoming too small. More than two
+                    decades ago, researchers theorized the first quantum
+                    computer: a computer that uses different mechanics than
+                    digital computers and is way faster than them. This
+                    unimaginable power might lead to breaking current
+                    cryptography algorithms, which led researchers and field
+                    experts to work on new post-quantum cryptography algorithms
+                    to counter quantum computers' ability.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >The first freely programmable computer was created by
+                      German Konrad Zuse between 1936 and 1938
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. Later, ENIAC—or Electronic Numerical Integrator and
+                      Computer—was designed. ENIAC is the first programmable
+                      general-purpose digital computer ever created. It normally
+                      handled signed 10-digit numbers in the decimal system, but
+                      it was so well-constructed that it could handle operations
+                      with as many as 20 digits
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.2"
+                        >[2]</tooltip
+                      >. Less than 30 years later, in 1970, Intel introduced the
+                      first single-chip microprocessor, which had 2,600 manually
+                      placed transistors at 100 kHz
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.3"
+                        >[3] </tooltip
+                      >. Ever since, computers have evolved exponentially,
+                      getting smaller and more powerful rapidly. The number of
+                      atoms needed to represent a bit—short for binary
+                      digit—kept decreasing. Gordon Moore first observed this in
+                      1965 and became known as Moore's Law: the power of
+                      computers doubles every year or two
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.4"
+                        >[4]</tooltip
+                      >. However, it has slowed down since then, and some
+                      industry and field experts say it does not apply anymore
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5]</tooltip
+                      >. Now, Intel announced its Intel® Core™ i9-10900K
+                      Processor in 2020, which has 10 cores, 20 threads, and a
+                      max frequency of 5.3GHz
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.6"
+                        >[6]</tooltip
+                      >. However, computer parts are approaching sizes so small
+                      that our computers might reach their maximum potential
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. How Modern Processors Work</p>
+                  <p class="subtitle">1. CPU</p>
+                  <p>
+                    <span
+                      >A central processing unit (CPU) gives instructionsthat
+                      make up programs. It performs logic, arithmetic
+                      operations, input, and output. CPUs are generally composed
+                      of a memory unit consisting of ROM, RAM, Cache—, a Control
+                      Unit (CU), and an Arithmetic Logic Unit (ALU). These
+                      contain logic gates: electronic circuits that change one
+                      or more input to an output.</span
+                    >
+                  </p>
+                  <p class="subtitle">2. Logic Gates</p>
+                  <p>
+                    <span
+                      >There are 7 logic gates, and each has a different
+                      function: AND, OR, NOT, NAND, NOR, XOR, and XNOR.</span
+                    >
+                  </p>
+                  <ol style="list-style-type: lower-roman">
+                    <li>AND gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_1.jpeg"
+                          alt="Figure 1"
+                        />
+                        <figcaption>
+                          Figure 1: AND gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is only true if both
+                        inputs are true. (fig. 1)</span
+                      >
+                    </div>
+                    <li>OR gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_2.jpeg"
+                          alt="Figure 2"
+                        />
+                        <figcaption>
+                          Figure 2: OR gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is true if one or more
+                        inputs are true. (fig. 2)</span
+                      >
+                    </div>
+                    <li>NOT gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_3.jpeg"
+                          alt="Figure 3"
+                        />
+                        <figcaption>
+                          Figure 3: NOT gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is the opposite of the
+                        input (for example, if the input is true, the output
+                        will be false). (fig. 3)</span
+                      >
+                    </div>
+                    <li>NAND (NOT + AND) gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_4.jpeg"
+                          alt="Figure 4"
+                        />
+                        <figcaption>
+                          Figure 4: NAND gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is the opposite of the
+                        output of the AND gate (for example, if one input is
+                        false and one is true and we use the AND gate, it will
+                        be false, but since we use NAND, it will be the opposite
+                        of false which is true). (fig. 4)</span
+                      >
+                    </div>
+                    <li>NOR (NOT + OR) gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_5.jpeg"
+                          alt="Figure 5"
+                        />
+                        <figcaption>
+                          Figure 5: NOR gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is the opposite of the
+                        output of the OR gate (for example, if one input is
+                        false and one is true and we use the OR gate, it will be
+                        true, but since we use NOR, it will be the opposite of
+                        true which is false). (fig. 5)</span
+                      >
+                    </div>
+                    <li>XOR (Exclusive + OR) gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_6.jpeg"
+                          alt="Figure 6"
+                        />
+                        <figcaption>
+                          Figure 6: XOR gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is similar to the OR
+                        gate's output, except that if all of the inputs are
+                        true, it will be false. (fig. 6)</span
+                      >
+                    </div>
+                    <li>XNOR (Exclusive + NOR) gate:</li>
+                    <div class="floating-figure clearfix">
+                      <figure class="float-none float-lg-end order-last">
+                        <img
+                          loading="lazy"
+                          src="assets/imgs/issue4/article4/figure_7.jpeg"
+                          alt="Figure 7"
+                        />
+                        <figcaption>
+                          Figure 7: XNOR gate
+                          <tooltip
+                            data-bs-toggle="tooltip"
+                            data-bs-trigger="manual"
+                            data-bs-placement="bottom"
+                            data-bs-html="true"
+                            title="Loading ..."
+                            reference-no="4.8"
+                            >[8]
+                          </tooltip>
+                        </figcaption>
+                      </figure>
+                      <span class="order-0"
+                        >The output of this logic gate is similar to the NOR
+                        gate's output, except that if all of the inputs are
+                        true, it will be true. (fig. 7)
+                        <tooltip
+                          data-bs-toggle="tooltip"
+                          data-bs-trigger="manual"
+                          data-bs-placement="bottom"
+                          data-bs-html="true"
+                          title="Loading ..."
+                          reference-no="4.8"
+                          >[8]</tooltip
+                        ></span
+                      >
+                    </div>
+                  </ol>
+                  <p>
+                    <span
+                      >These logic gates are made by combining diodes,
+                      resistors, and transistors: semiconductor devices are
+                      considered one of the basic building blocks of modern
+                      electronics.</span
+                    >
+                  </p>
+                  <p class="subtitle">3. Transistors</p>
+                  <p>
+                    <span
+                      >CPUs can contain up to billions of transistors. A
+                      transistor can work either as an amplifier or as a
+                      switch:</span
+                    >
+                  </p>
+                  <ol style="list-style-type: lower-roman">
+                    <li>
+                      As an amplifier, it transforms a weak electric current
+                      into a stronger current. This is not commonly used in
+                      computers.
+                    </li>
+                    <li>
+                      It can be switched on or off as a switch, storing two
+                      different numbers: zero and one—which stand for off and on
+                      respectively—to either block or allow information coming
+                      through. These numbers are called bits, which stands for
+                      binary digits, the smallest unit of information used in
+                      electronics.
+                    </li>
+                  </ol>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article4/figure_8.jpeg"
+                        alt="Figure 8"
+                      />
+                      <figcaption>
+                        Figure 8: Quantum Tunneling
+                        <tooltip
+                          data-bs-toggle="tooltip"
+                          data-bs-trigger="manual"
+                          data-bs-placement="bottom"
+                          data-bs-html="true"
+                          title="Loading ..."
+                          reference-no="4.10"
+                          >[10]
+                        </tooltip>
+                      </figcaption>
+                    </figure>
+                    <span class="order-0">
+                      Today, transistors are typically 14nm. For reference:
+                      Eukaryotic cells normally range between 10-100µmin
+                      diameter
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.9"
+                        >[9] </tooltip
+                      >, or 714 to 7143 times larger than a transistor. This
+                      gives electrons the ability to penetrate the transistors'
+                      barriers, a phenomenon known as quantum tunneling. The
+                      smaller the size of transistors get, the easier it is for
+                      electrons to quantum tunnel (fig. 8)
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.11"
+                        >[11]</tooltip
+                      >.
+                    </span>
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Quantum Computing</p>
+                  <p>
+                    <span
+                      >In 1985, David Deutsch attempted to define a device that
+                      can efficiently simulate an arbitrary physical system.
+                      Because physics laws are ultimately quantum mechanical, he
+                      considered computing devices based upon quantum mechanics,
+                      which lead to our modern conception of a quantum computer
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >. A traditional digital computer uses bits in one of two
+                      states, on or off, 1 or 0, true or false. So, a 4-bit
+                      computer can hold any one of 16 (2<sup>4</sup>) possible
+                      numbers (0000, 0001, 0010…1111).
+                    </span>
+                    <span
+                      >However, quantum computers do not use bits. They use
+                      qubits or quantum bits (quantum binary digits). Qubits do
+                      not work the same as bits, they can be 0 or 1, but they
+                      can also be in proportions of each (between 0 and 1). This
+                      is what we call "superposition": a qubit cannot be defined
+                      as a specific value unless we measure it at a very
+                      specific point, that is, when it is either 0 or 1. A qubit
+                      can be any two-level quantum system: spin, magnetic field,
+                      or a single photon. A qubit, unlike bits, can be all these
+                      16 possible numbers at once. This number grows
+                      exponentially with each qubit, where a 30-qubit computer
+                      would be comparable to a digital computer performing 10
+                      trillion floating-point operations per second, or
+                      TFLOPS—comparable to our current supercomputers
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.12"
+                        >[12]</tooltip
+                      >. In 2020, IBM announced that they are working on a
+                      1,121-qubit quantum computer and expect to finish in 2023
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.13"
+                        >[13]</tooltip
+                      >. Quantum computers need only the square root of time
+                      required by standard computers to find something in a
+                      database. This is known as Grover's law (O(√𝑛))
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.14"
+                        >[14] </tooltip
+                      >. In February 2021, China launched its first quantum
+                      computer operating system.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Cryptography</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article4/figure_9.jpeg"
+                        alt="Figure 9"
+                      />
+                      <figcaption>
+                        Figure 9: Caesar Cipher
+                        <tooltip
+                          data-bs-toggle="tooltip"
+                          data-bs-trigger="manual"
+                          data-bs-placement="bottom"
+                          data-bs-html="true"
+                          title="Loading ..."
+                          reference-no="4.15"
+                          >[15]
+                        </tooltip>
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Cryptography, which means "secret/hidden writing" in
+                      Greek, is a technique used nowadays to provide privacy for
+                      individuals and organizations at a high level. Billions of
+                      people use cryptography to protect data and information.
+                      It has evolved throughout the age, from Julius Caesar's
+                      Caesar cipher—where plaintext letters are replaced by
+                      other letters with a fixed shift number (fig. 9)—to
+                      today's block ciphers and hash functions
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.15"
+                        >[15]</tooltip
+                      >.
+                    </span>
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    V. How quantum computers might affect cryptography
+                  </p>
+                  <p>
+                    <span
+                      >Many IT security aspects rely on encryption and
+                      public-key cryptography, which are essential forbusiness,
+                      e-commerce, protecting secret and confidential
+                      information. These are based on algorithms that are
+                      difficult to trick with modern computers and cannot be
+                      attacked by brute force like elliptic curve cryptosystems
+                      (ECCs)
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.16"
+                        >[16] </tooltip
+                      >. However, quantum computer algorithms like Shor's
+                      algorithm—a polynomial-time algorithm that can factor an
+                      integer—can heavily reduce the time required for computers
+                      to break these algorithms
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >However, scientists are working on algorithms that can
+                      resist quantum computers, known as quantum-resistant
+                      algorithms, which post-quantum cryptography will depend
+                      on. In August 2015, the U.S. National Security Agency
+                      (NSA) declared its plan to turn to quantum-resistant
+                      algorithms. Later at PQCrypto 2016, a conference for
+                      post-quantum cryptography, NIST called for
+                      quantum-resistant schemes, leading the way to new public
+                      key standards. These efforts were later followed by
+                      SAFEcrypto, supported by the European Union Horizon 2020
+                      project, and CryptoMathCREST, supported by Japan Science
+                      and Technology Agency
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.16"
+                        >[16] </tooltip
+                      >.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >Quantum computers are the next technological step for
+                      humanity. Digital computers are reaching their maximum
+                      potential because of their very small size and Moore's law
+                      became almost obsolete. Although digital computers are
+                      enough for our daily life, quantum computers will be used
+                      for accurate and fast simulations important in many
+                      fields, drug development, space exploration, artificial
+                      intelligence, solving difficult problems, and many more.
+                      However, quantum computers can also be used in breaking
+                      algorithms and ruining IT security, but scientists and
+                      field experts are working on creating quantum-resistant
+                      algorithms.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">IX. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="4.1"></p>
+                        <p reference-no="4.2"></p>
+                        <p reference-no="4.3"></p>
+                        <p reference-no="4.4"></p>
+                        <p reference-no="4.5"></p>
+                        <p reference-no="4.6"></p>
+                        <p reference-no="4.7"></p>
+                        <p reference-no="4.8"></p>
+                        <p reference-no="4.9"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="4.10"></p>
+                        <p reference-no="4.11"></p>
+                        <p reference-no="4.12"></p>
+                        <p reference-no="4.13"></p>
+                        <p reference-no="4.14"></p>
+                        <p reference-no="4.15"></p>
+                        <p reference-no="4.16"></p>
+                        <p reference-no="4.17"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 5 -->
+
+        <!-- START: SECTION 6 -->
+        <section
+          class="section-6"
+          id="section-6"
+          v-show="currentSection == 'section-6'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="4.6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Solar Panels: Thorough Review and its uses
+              </h2>
+              <p class="section-author text-center text-muted">
+                Mandavi Tiwari<br />Wendy High School
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Fossil fuels are non-renewable sources and cause pollution.
+                    Hence, it is mandatory to utilize another source of energy
+                    that is renewable and does not cause pollution. The energy
+                    from the sun is non-exhaustible and a better choice to make
+                    our future bright. If they can operate a massive spacecraft
+                    for so many years, they can replace fossil fuels soon. So,
+                    in this study, each aspect of solar panels has been
+                    discussed to get fundamental knowledge of solar
+                    panels.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Have you ever wondered why some solar panels are black
+                      while others are blue? The hue of the solar panels totally
+                      depends on the type of silicon crystal they are made of.
+                      Solar cells convert solar energy into electrical energy.
+                      Solar cells contain multiplelayers to perform this
+                      function. Usually, silicon is used in the manufacturing of
+                      solar cells, but their efficiency is very low. To boost
+                      the efficiency of solar panels, other semiconductors like
+                      gallium and germanium have been introduced to manufacture
+                      solar cells. Solar panels have seen a great improvement in
+                      their technology from the time they were invented.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. How are solar cells made?</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure 1: Structure of the solar cell
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Solar panels are made up of small blue squares called
+                      solar cells. Solar cells may look like a single sheet, but
+                      it consists of multiple layers. The outermost layer of the
+                      solar cells is made up of glass. Since glass is an
+                      insulator, it does not allow heat to pass through it. Only
+                      photons are passed to the next layers (as glass is
+                      transparent). The next layer is an anti-reflection coating
+                      (Ethylene Vinyl Acetate). Since the silicon layer beneath
+                      the EVA sheet is a very reflecting surface, more than 30%
+                      of sunlight will be reflected in the absence of this
+                      anti-reflecting layer, which will minimize the efficiency
+                      of the solar panel. But how does this layer prevent
+                      sunlight from reflecting? As we know that reflection
+                      occurs at both surfaces in a transparent material, the
+                      reflection at the upper surface and the lower surface is
+                      aligned. But the thickness of an anti-reflecting surface
+                      is so perfect that it allows the reflected rays to bend at
+                      an angle at which the upper reflected ray and the lower
+                      reflected ray misaligned and very little reflection
+                      occurs. The EVA sheet also plays an important role in
+                      preventing water and dirt from infiltrating into solar
+                      modules as well as protecting the cell from shocks and
+                      vibrations.</span
+                    >
+                    <span class="order-1"
+                      >Next, there are two layers made of silicon. To make these
+                      layers, first, the silicon is extracted from sand.</span
+                    >
+                  </div>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>
+                        Figure 2: The process of transferring sand into a solar
+                        cell
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >The sand from which the silicon is extracted is called
+                      silica sand or silicon dioxide which is made from crushed
+                      quartz rocks. The silica sand is then purified by
+                      extracting the unwanted oxygen and results in 99% pure
+                      silica. This process is called Carbon Arc Welding. It is
+                      then processed further to get 100% pure silica. This
+                      crystalline silica is cut into wafers to be converted into
+                      solar cells
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.1"
+                        >[1] </tooltip
+                      >.</span
+                    >
+                  </div>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_3.jpeg"
+                        alt="Figure 3"
+                      />
+                      <figcaption>
+                        Figure 3: The barrier formed by positively charged
+                        phosphorus atoms and negatively charged boron atoms
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >As silicon has four electrons in its valence shell, each
+                      silicon atom is bonded with four other silicon atoms in
+                      the wafer. These bonds cannot be broken down by the
+                      sunlight. So, electric current cannot be generated here
+                      due to the absence of free electrons. To generate an
+                      electric current, some atoms of phosphorus are doped
+                      between silicon atoms (it is called N-type silicon), to
+                      get extra electrons that can move around. Since phosphorus
+                      has five electrons in the valence shell, four of them make
+                      bonds with silicon atoms, and the extra one is excited by
+                      the sunlight and jumps from the valence band to its
+                      conduction band (now the electron is free to move). The
+                      motion of these electrons is random, but electrons need to
+                      move in a single direction to produce an electric current.
+                      So, one more wafer is introduced, which is doped with
+                      boron (it is called P-type silicon), to produce electric
+                      fields. Boron has 3 valence electrons and one hole (empty
+                      orbital). Although Aluminum is at the immediate left of
+                      silicon, the Aluminum atom is not preferred as it is too
+                      large to fill the gap between silicon atoms. As the N-type
+                      silicon comes in contact with P-type silicon, the extra
+                      electrons in Phosphorus atoms fill the holes in the boron.
+                      Positively charged phosphorus atoms and negatively charged
+                      boron atoms form a barrier on the two sides (see in fig.
+                      3) forming a depletion layer (all the atoms in this layer
+                      are electrically neutral).</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >When the photons strike the depletion layer, the
+                      electrons in the valence band of silicon jumps to its
+                      conduction band and the electron-hole pair generates. This
+                      is known as the Photoelectric Effect which is given by the
+                      formula: E = hv where, E =energy of photon, h =Planck’s
+                      constant (The Planck's constant, is the quantum of
+                      electromagnetic action that relates a photon's energy to
+                      its frequency. v =frequency of light</span
+                    >
+                    <span
+                      >The electric field (formed due to opposite charges on the
+                      two sides) drives the electrons towards the positive side
+                      while the holes towards the negative side and a strong
+                      potential difference are created.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_4.jpeg"
+                        alt="Figure 4"
+                      />
+                      <figcaption>
+                        Figure 4: A diagram showing the electrons flow in the
+                        wires
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Since all the free electrons are in N-type silicon (which
+                      is a semiconductor), the electrons cannot move easily in
+                      this layer. A conductor is needed for the better flow of
+                      electrons. So, the two silicon layers are sandwiched
+                      between the metal plates (the upper plate is gridded to
+                      allow sunlight to reach the underlying layers). When a
+                      bulb (or any load) is connected through a wire to these
+                      plates, the electrons start flowing in the circuit and the
+                      bulb glows (as shown in figure 4).</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >Now, it is to be noted that the N-type silicon layer
+                      (being placed above the P-type silicon layer) is always a
+                      thinner P-type silicon layer so that the sunlight reaches
+                      the depletion layer.</span
+                    >
+                    <span
+                      >All the solar cells are connected by silver (due to its
+                      highest conductivity) to make a solar panel. Then, solar
+                      panels are joined to make solar arrays.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Types of solar panels</p>
+                  <p>
+                    <span>There are three types of solar panels-</span>
+                  </p>
+                  <ol>
+                    <li>Monocrystalline solar panels</li>
+                    <li>Polycrystalline solar panels</li>
+                    <li>Thin-film solar panels</li>
+                  </ol>
+                  <p>
+                    <span
+                      >Monocrystalline- These types of panels are called
+                      “monocrystalline” because they are made up of
+                      single-crystal silicon. Silicon is formed into bars and
+                      cut into wafers to make the solar cells. Since they are
+                      made from single-crystal silicon, the electrons that
+                      generate a flow of electricity have room to move.
+                      Therefore, monocrystalline panels have the highest
+                      efficiency.</span
+                    >
+                    <span
+                      >Polycrystalline- Such panels are made by the melting of
+                      many fragments of silicon to form the panels.
+                      Polycrystalline panels are also known as
+                      “multicrystalline” because each solar cell is composed of
+                      many crystals of silicon. So, electrons do not get much
+                      freedom to move. As a result, these are less efficient
+                      than monocrystalline solar panels
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.2"
+                        >[2]</tooltip
+                      ></span
+                    >
+                    <span
+                      >Thin-Film- These panels are made up of thin films of
+                      semiconductors deposited on glass, plastic, and metal.
+                      These are about 20 times thinner than the other two types
+                      of solar panels. This makes them flexible and lightweight
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.3"
+                        >[3]
+                      </tooltip></span
+                    >
+                  </p>
+                  <figure class="figure-block mx-auto">
+                    <img
+                      loading="lazy"
+                      src="assets/imgs/issue4/article5/table_1.jpeg"
+                      alt="Table 1"
+                    />
+                  </figure>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    IV. Why Solar Panels have so low efficiency?
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_5.jpeg"
+                        alt="Figure 5"
+                      />
+                      <figcaption>
+                        Figure 5: A graph that shows the spectral intensity
+                        against wavelength
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >You might have noticed that the efficiencies of solar
+                      panels are very low. Even the best type of solar panels
+                      (that are monocrystalline solar panels) have a maximum
+                      efficiency of only 33%. What is the reason for it? William
+                      Shockley and Hans-Joachim Queisser made a discovery that
+                      solar panels with only one layer suffer efficiency
+                      limitations as they are unable to absorb solar light to
+                      its fullest. This discovery is now called the Shockley-
+                      Queisser limit. He noticed that photons from different
+                      parts of the spectrum have different natures (as shown in
+                      figure 5).
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.4"
+                        >[4]</tooltip
+                      >
+                    </span>
+                  </div>
+                  <p>
+                    <span
+                      >It is shown in the figure that 19% of the pink color of
+                      the spectrum does not get absorbed by the solar cells.
+                      This is because the photons in this part of the spectrum
+                      have too low energy to emit the electrons (energy must be
+                      equal to or higher than the bandgap energy). 33% of the
+                      blue color (photons) is lost inthermalization (conversion
+                      of the absorbed energy into heat). This happens when
+                      photons having energy much higher than the bandgap of a
+                      semiconductor strikes the solar cells. All the energy,
+                      above the bandgap, is converted into heat. The orange
+                      color spectrum (15%) is lost due to material
+                      imperfections. All these losses contribute to lower the
+                      efficiency of the solar cells. Shockley- Queisser
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.5"
+                        >[5]
+                      </tooltip>
+                      limit led to the invention of Tandem Solar Cells which has
+                      comparatively higher efficiency.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Tandem Solar Cells</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_6.jpeg"
+                        alt="Figure 6"
+                      />
+                      <figcaption>
+                        Figure 6: A diagram that shows how tandem solar cells
+                        absorb energy photons
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >In Tandem solar cells
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.6"
+                        >[6] </tooltip
+                      >, two cells are stacked one on top of the other, where
+                      the top cell is semi-transparent, which efficiently
+                      converts large energy photons into electricity, while the
+                      bottom cell converts small energy photons into
+                      electricity. The top cell is made up of a semiconductor
+                      that has high band energy while the bottom cell has low
+                      band energy.</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >Let us take an example of a tandem solar cell that is the
+                      perovskite-crystalline silicon tandem. Perovskite is a
+                      material that has the same crystal structure as the
+                      mineral calcium titanium oxide. Generally, perovskite
+                      compounds have a chemical formula ABX3, where ‘A’ and ‘B’
+                      represent cations and X is an anion that bonds to both.
+                      They are used to create semiconductors to manufacture
+                      solar cells. They are used as an alternative to silicon as
+                      they have a large bandgap.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_7.jpeg"
+                        alt="Figure 7"
+                      />
+                      <figcaption>
+                        Figure 7: An illustration of the difference between
+                        four-terminal tandem cell and the two-terminal tandem
+                        cell
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >In figure 7, the perovskite cell is placed above the
+                      crystalline silicon cell. The bandgap of perovskite is
+                      1.56 eV, and the bandgap of silicon is 1.1eV. As this
+                      solar cell contains two cells with different bandgaps, the
+                      photons of different parts of the spectrum can be absorbed
+                      (1.56 eV and 1.1eV corresponds to different wavelengths of
+                      the spectrum). In this way, the efficiency of tandem will
+                      increase because more parts of the spectrum can be
+                      absorbed and converted into electricity.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Multi-junction solar cells</p>
+                  <p>
+                    <span
+                      >The solar cells with one P-N junction are called
+                      single-junction solar cells while multi-junction solar
+                      cells have multiple P-N junctions of different
+                      semiconductors. Multi-junction solar cells are a type of
+                      tandem cells (with multiple cells stacked one upon
+                      another). Every cell in a multi-junction solar cell has a
+                      traditional design that includes one P-N junction. Each
+                      cell is made up of a different semiconductor (having
+                      different band gaps), with each material tuned to absorb
+                      different parts of the solar spectrum.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_8.jpeg"
+                        alt="Figure 8"
+                      />
+                      <figcaption>
+                        Figure 8: A diagram showing the parts of the
+                        multi-junction solar cells
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >You can see in the figure that the blue material (GaInP)
+                      has a high bandgap so it will absorb high-energy photons
+                      (like UV and a portion of visible light of spectrum). The
+                      yellow material has a lower bandgap (1.3-1.4 eV), so it
+                      will absorb the middle portion of the spectrum. The red
+                      material has the lowest bandgap (0.67eV), so it will
+                      absorb the least energetic part of the spectrum (infrared
+                      rays). In this way, multi-junction solar cells cover the
+                      whole spectrum, and a very less portion of it is lost
+                      which makes them most efficient. The more the number of
+                      layers (p-N junctions), the higher the efficiency of the
+                      solar cell. Theoretically, a two-layer solar cell has 42%
+                      while three-layer solar has 49% efficiency.</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >A solar cell with 5-6 layers may have an efficiency of up
+                      to 70%. Multi-junction solar cells
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >
+                      are made using materials like GaInP (gallium indium
+                      phosphide) for the top layer, GaAs (gallium arsenide) for
+                      the middle layer, and Ge(germanium) for the bottom. A
+                      tunnel junction is placed between two layers (as shown in
+                      the above figure) to allow the electrons to flow between
+                      the cells and keep the electric fields of the two cells
+                      separate. Multi-junction cells focus on gallium arsenide
+                      because it has a desirable bandgap
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.8"
+                        >[8]</tooltip
+                      >. It can better absorb high-energy photons, making it
+                      efficient and suitable for solar energy conversion. These
+                      multi-junction solar panels are used in spacecraft due to
+                      their highefficiency.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VII. Solar Panels in space</p>
+                  <p>
+                    <span
+                      >Due to the absence of atmosphere in space, sunlight is an
+                      abandoned form of energy. Solar panels have proved to be a
+                      reliable source of electricity for Spacecrafts. Until the
+                      early 1990s, crystalline silicon was used to make solar
+                      arrays for Spacecrafts. But after that period, crystalline
+                      silicon saw a replacement with Gallium Arsenide because
+                      silicon was not able to withstand excessive heat and cold
+                      and solar radiation in space.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue4/article5/figure_9.jpeg"
+                        alt="Figure 9"
+                      />
+                      <figcaption>
+                        Figure 9: A graph showing the relative array efficiency
+                        against temperature
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >In space, solar panels have to face extreme conditions
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="5.9"
+                        >[9]</tooltip
+                      >. Degradation of solar panels occurs due to temperature
+                      fluctuations. When the panel is facing the Sun, the
+                      temperature reaches up to 150°C while the temperature is
+                      as low as -100°C when it is not facing the sun (in the
+                      shade of the Earth).</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >Panels expand and contract due to this variation. As a
+                      result, cracks appear in the silicon crystal over the
+                      years.</span
+                    >
+                    <span
+                      >Gallium Arsenide is preferred over crystalline silicon
+                      solar cells due to its higher efficiency. Gallium Arsenide
+                      is one of the main components of a multi-junction solar
+                      cell, which is used in spacecraft. Multi-junction solar
+                      panels have higher efficiency which means smaller panels
+                      will be used for the same amount of power. This will be
+                      helpful in reducing the size and weight of the
+                      spacecraft.</span
+                    >
+                    <span
+                      >Moreover, gallium arsenide based solar cells degrade
+                      slowly in the space radiation environment as compared to
+                      silicon solar cells. There are four sources of space
+                      radiations:</span
+                    >
+                  </p>
+                  <ol>
+                    <li>Earth's radiation belt</li>
+                    <li>
+                      Galactic cosmic rays (high energy protons and heavy ions
+                      from outside our solar system)
+                    </li>
+                    <li>Solar wind</li>
+                    <li>Solar flares</li>
+                  </ol>
+                  <p>
+                    <span
+                      >These radiations play a vital role in degrading the
+                      efficiency of solar panels. But the degradation rate
+                      depends on the shielding technology of solar cells.
+                      Borosilicate glass panel covering see an efficiency loss
+                      of 5-10℅ per year while this loss is only 1℅ in the case
+                      of fused silica and lead glass covering.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VIII. Conclusion</p>
+                  <span
+                    >Gallium arsenide based solar cells have the following
+                    advantages over silicon solar cells:</span
+                  >
+                  <ol style="list-style-type: lower-roman">
+                    <li>Highly Efficient</li>
+                    <span
+                      >Gallium arsenide has the highest efficiency than any
+                      other solar material. It can produce a larger amount of
+                      electricity per square area.</span
+                    >
+                    <li>Lightweight and flexible</li>
+                    <span
+                      >It has high efficiency even when thin layers of gallium
+                      arsenide are used while silicon solar cells have to be
+                      thick to produce large amounts of electricity.</span
+                    >
+                    <li>Great resistance</li>
+                    <span
+                      >Gallium arsenide solar cells can withstand solar
+                      radiation and thermal fluctuations in space. Hence, it is
+                      good for the spacecraft.</span
+                    >
+                    <li>Low light performance</li>
+                    <span
+                      >It can work efficiently even when the light is low.</span
+                    >
+                  </ol>
+                  <p>
+                    <span
+                      >Although gallium arsenide-based solar panels are highly
+                      efficient, silicon solar panels are still used for
+                      household and commercial purposes due to the high cost of
+                      gallium arsenide solar cells.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">IX. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="5.1"></p>
+                        <p reference-no="5.2"></p>
+                        <p reference-no="5.3"></p>
+                        <p reference-no="5.4"></p>
+                        <p reference-no="5.5"></p>
+                        <p reference-no="5.6"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="5.7"></p>
+                        <p reference-no="5.8"></p>
+                        <p reference-no="5.9"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 6 -->
+
+        <!--start footer section-->
+        <footer class="mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 pb-3">
+                <img
+                  loading="lazy"
+                  src="../images/Logo-rev.png"
+                  class="img-fluid"
+                />
+                <h4>Contact Us</h4>
+                <p>
+                  Reach to us about ideas, suggestion or any questions you have!
+                </p>
+              </div>
+
+              <div class="col-md-8">
+                <div class="jobs">
+                  <p class="text-center">
+                    Website Managers:
+                    <span>Mikhael Mounay | Mohanad Elagan</span>
+                  </p>
+                </div>
+                <div class="social text-center">
+                  <a href="https://www.facebook.com/YouthScienceJournall/"
+                    ><i class="fa-brands fa-facebook"></i>&nbsp; Facebook</a
+                  >
+                  <a href="https://www.instagram.com/ysciencejournal/"
+                    ><i class="fa-brands fa-instagram"></i>&nbsp; Instagram</a
+                  >
+                  <a href="https://www.linkedin.com/company/ysj/"
+                    ><i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="rights">
+              &copy; 2020-2024 All Rights reserved | Youth Science Journal
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- </div> -->
+      <!-- ScrollSpy -->
+
+      <!-- START: TOAST (CLIPBOARD) -->
+      <div class="toast-container position-fixed bottom-0 end-0 pb-4 pe-3">
+        <div
+          class="toast align-items-center"
+          id="copied-toast"
+          role="alert"
+          data-bs-delay="2000"
+        >
+          <div class="d-flex">
+            <div class="toast-body">Link copied to clipboard!</div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <!-- END: TOAST (CLIPBOARD) -->
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <!-- SCRIPT -->
+    <script src="../js/code.jquery.com_jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script> -->
+    <script src="../js/vue.global.prod.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
