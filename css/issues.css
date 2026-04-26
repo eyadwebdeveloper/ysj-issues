@@ -1,0 +1,130 @@
+@import url("https://fonts.cdnfonts.com/css/sofia-pro");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sofia Pro", sans-serif;
+}
+
+/*start issues section*/
+
+.issues {
+  padding: 50px 0;
+}
+
+.issue-box {
+  background: #f2f2f2;
+  padding: 60px 35px;
+  border-radius: 40px;
+  font-family: cursive;
+  margin-top: -15px;
+  /* Mikha */
+  /* margin-bottom: 30px; */
+}
+
+.issue-box img {
+  width: 50px;
+  border-radius: 15px !important;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.issue-box h5 {
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.issue-box p {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 900;
+  margin-bottom: 50px;
+  line-height: 40px;
+}
+
+.issues img {
+  box-shadow: 0px 0px 40px #ddd;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+/* Mikha */
+.issues .section-card a:nth-child(1) {
+  z-index: 0;
+}
+
+.issues .section-card a:nth-child(2) {
+  z-index: 1;
+}
+
+.issues img:not(.issue-box-img):hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 50px #ddd;
+}
+
+/* .issue-box img:hover {} */
+
+.issues a.issue-info-parent:hover ~ a img {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 50px #ddd;
+}
+/* End Mikha */
+
+.issues .issue-info {
+  height: 90px;
+  background-color: rgba(238, 238, 238, 0.5);
+  border-radius: 0 0px 40px 40px;
+  padding: 25px;
+  width: 90%;
+  margin: -15px auto;
+  /* Mikha */
+  margin-bottom: 0;
+  /* margin-bottom: 30px; */
+}
+
+.issue-info h6 {
+  font-size: 25px;
+  margin-bottom: -5px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Mikha */
+/* .issue-info a {
+  text-decoration: none;
+} */
+
+.issue-info span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.issue-info i {
+  position: relative;
+  font-size: 21px;
+  right: -174px;
+  color: #000;
+  top: -15px;
+}
+
+/* Mikha */
+.row {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .row {
+    margin-bottom: 4rem;
+  }
+}
+/* End Mikha */
