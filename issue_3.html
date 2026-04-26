@@ -1,0 +1,2814 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8ZTYWSZHJ4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8ZTYWSZHJ4");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YSJ | Issue 3</title>
+    <link
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/issue3/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/issue3/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/issue3/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/imgs/issue3/favicon/site.webmanifest" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+  </head>
+
+  <body issue-no="3">
+    <!-- START: LOADER -->
+    <!-- <div class="loader-container">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div> -->
+    <!-- END: LOADER -->
+
+    <div class="loaded-content">
+      <div id="app">
+        <!-- START: TABLE OF CONTENTS (OFFCANVAS) -->
+        <button
+          class="offcanvas-opener shadow-sm"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#contents_offcanvas"
+          title="Table of Contents"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <defs>
+              <style>
+                .fa-secondary {
+                  opacity: 0.4;
+                }
+              </style>
+            </defs>
+            <path
+              class="fa-primary"
+              d="M137.4 105.4c12.5-12.5 32.75-12.5 45.25 0l128 128c12.5 12.5 12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0C131.1 400.4 128 392.2 128 384s3.125-16.38 9.375-22.62L210.8 288H32C14.31 288 0 273.7 0 256s14.31-32 32-32h178.8L137.4 150.6C124.9 138.1 124.9 117.9 137.4 105.4z"
+            />
+            <path
+              class="fa-secondary"
+              d="M384 96v320c0 17.69 14.31 32 32 32s32-14.31 32-32V96c0-17.69-14.31-32-32-32S384 78.31 384 96z"
+            />
+          </svg>
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="contents_offcanvas"
+          data-bs-scroll="true"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Table of Contents</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="offcanvas-nav-list" no-of-sections="5">
+              <p class="offcanvas-section-title">Introduction</p>
+              <div>
+                <li>
+                  <a href="#section-1"
+                    ><button data-bs-dismiss="offcanvas" section-no="1">
+                      Letter From the Journal
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Author">Founders</span>
+                </p>
+              </div>
+              <p class="offcanvas-section-title">Articles</p>
+              <div>
+                <li>
+                  <a href="#section-2"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="2"
+                      @click="currentSection = 'section-2'"
+                    >
+                      Bionic Eyes: the definitive solution for visually impaired
+                      individuals?
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Biomedical Engineering</span><br />
+                  <span title="Author">Ahmed Nassar</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-3"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="3"
+                      @click="currentSection = 'section-3'"
+                    >
+                      Genetically Modified Organisms
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Biotechnology</span><br />
+                  <span title="Author">Ziad Khaled</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-4"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="4"
+                      @click="currentSection = 'section-4'"
+                    >
+                      DNA Sequencing evolution
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Biotechnology</span><br />
+                  <span title="Author">Nabil Rateb</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-5"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="5"
+                      @click="currentSection = 'section-5'"
+                    >
+                      Brain-Machine Interface: Review of Current State and
+                      Clinical Applications
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Neuroengineering</span><br />
+                  <span title="Author">Gasser Alwasify</span>
+                </p>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- END: TABLE OF CONTENTS (OFFCANVAS) -->
+
+        <!-- START: NAV -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container">
+            <div class="d-flex align-items-center">
+              <!-- Container div for logo and flag -->
+              <a class="navbar-brand text-uppercase" href="../">
+                <img
+                  loading="lazy"
+                  src="..\images/Logo.png"
+                  width="52"
+                  height="25"
+                  class="d-inline-block align-top"
+                  loading="lazy"
+                />
+              </a>
+              <!-- Add the Palestine flag here -->
+              <img
+                src="..\images\Palestine 2.png"
+                alt="Palestine Flag"
+                height="30"
+                style="margin-left: 10px"
+              />
+            </div>
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://issues.ys-journal.org"
+                    >Issues</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Contact"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Programl"
+                    >Our Program</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/IFYR"
+                  >
+                    <div>IFYR</div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/Publish"
+                  >
+                    <div>Publish</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- END: NAV -->
+
+        <!-- START: HERO -->
+        <div class="hero">
+          <div class="container-xxl p-0">
+            <div class="row g-0 h-100">
+              <div class="hero-content col-lg-6">
+                <p class="text-bg">Issue 3</p>
+                <!-- <a href="../index.html"><img loading="lazy" src="assets/imgs/Logo.png" alt="YSJ Logo" /></a> -->
+                <p class="display-1 mb-0">Issue 3</p>
+                <p class="fs-4 text-muted">January 2021</p>
+                <button
+                  class="btn mb-3"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#contents_offcanvas"
+                >
+                  Table of Contents
+                </button>
+                <a
+                  class="text-decoration-none text-muted small"
+                  href="pdf/3/issue-3.pdf"
+                  >Switch to PDF View</a
+                >
+              </div>
+              <div class="hero-bg col-lg-6">
+                <img
+                  loading="lazy"
+                  src="assets/imgs/issue3/issue3_bg.jpeg"
+                  alt="Issue 3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: HERO -->
+
+        <!-- <div data-bs-spy="scroll" data-bs-target="#offcanvas-nav-list" data-bs-smooth-scroll="true" tabindex="0" data-bs-rootMargin="0px 0px -10000px"> -->
+        <!-- START: SECTION 1 -->
+        <section class="section-1" id="section-1">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="3.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Letter from the Journal
+              </h2>
+              <div class="content">
+                Dear readers,<br />
+                <span
+                  >We are proud to announce our third issue of the Youth Science
+                  Journal! We would like to thank all our readers for their
+                  support and feedback to improve our upcoming publishes. We
+                  also hope you enjoy reading this issue as our issue’s theme is
+                  Biotechnology/Biomedical Engineering! There are a lot of
+                  remarkable articles in this issue, covering from bionic eyes
+                  to DNA sequencing. You may notice that our format is different
+                  this issue. We have changed it to fit our needs and be easier
+                  for writers.</span
+                >
+                <span
+                  >Furthermore, we are excited to announce that 16 extraordinary
+                  students from different high schools are now part of our
+                  writers’ crew! We have been on hiatus for the past months,
+                  conducting training sessions for them by the senior writers.
+                  Now, they are ready to publish their articles in our upcoming
+                  issues. So, stay tuned!</span
+                >
+                <span
+                  >However, if you were not able to join our team, we are very
+                  proud to announce that the Youth Science Journal is open for
+                  publication! You can now publish your article on our website
+                  about any topic in science through:
+                  www.ys-journal.com/publish. Publishing a review article about
+                  a specific topic will not only let you learn about it more,
+                  but also share awareness for that topic! All you have to do is
+                  to make sure that your article is following our guidelines
+                  that are available on our website. We have already started
+                  accepting articles and we would like to thank Ziad Khaled for
+                  being the first to publish onto our journal!</span
+                >
+                Best Regards,<br />
+                Youth Science Journal Community
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 1 -->
+
+        <!-- START: SECTION 2 -->
+        <section
+          class="section-2"
+          id="section-2"
+          v-show="currentSection == 'section-2'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="3.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Bionic Eyes: the definitive solution for visually impaired
+                individuals?
+              </h2>
+              <p class="section-author text-center text-muted">
+                Ahmed Nassar<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Once a topic of folklore and science fiction, the notion of
+                    retaining vision to the blind is now much closer to becoming
+                    a reality than it ever was before. As the rise of
+                    microelectronics and microfabrication has given way to
+                    drastic improvements in the field of prosthetic devices. the
+                    developing technology has given rise to a plethora of
+                    approaches and designs to achieve said purpose. yet these
+                    visual prosthetics operate on the same premise: relying on
+                    intact neural circuitry whenever possible in order to take
+                    advantage of any intact sensory processing available
+                    <tooltip
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="manual"
+                      data-bs-placement="bottom"
+                      data-bs-html="true"
+                      title="G.Dagnelie, “Visual prosthetics 2006: assessment and expectations,” Expert Review of Medical Devices, vol. 3, no. 3, pp. 315–325, 2006"
+                      reference-no="1.1"
+                      >[1]</tooltip
+                    >. Thus, lowering the need to deal with the complexity of
+                    the neural code for perception. However, as a direct
+                    consequence of that, it is highly unlikely that this
+                    technology will ever see the light for patients diagnosed
+                    with congenital blindness as they often lack a fully
+                    developed neural perception system. Although a functioning
+                    mechanism may very well be feasible, the rehabilitation of
+                    the blind and reintegrating them into society will continue
+                    to be a challenge against establishing this technology as a
+                    viable solution for the blind.
+                  </span>
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Unlike what many would assume, Prosthetic eyes have, in
+                      fact, long been in development, with succeeding
+                      irritations improving using more microelectrodes that
+                      mimic the function of photoreceptors in the human cornea.
+                      The Argus II, for example, is the second generation of a
+                      prosthetic retinal implant with the goal of vision
+                      restoration for patients diagnosed with Retinitis
+                      pigmentosa. The implant study was first initiated back in
+                      2002 in which implantation in six patients in the trial
+                      proved to be successful. The implant has proven that the
+                      device has the potential to allow legally blind patients
+                      to detect light, and possibly distinguish between objects.
+                      The device is basically meant to take place of
+                      photoreceptors.</span
+                    >
+                    <span
+                      >However, the use of only 16 electrodes in
+                      first-generation devices was the most limiting factor in
+                      terms of vision fidelity. And henceforth the Argus II
+                      comprised 60 electrodes providing higher resolution
+                      images. The new device is approximately one-quarter the
+                      size of the original device, reducing surgery and recovery
+                      times by a significant margin.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Mechanism</p>
+                  <p>
+                    <span
+                      >In its very essence, the retina is merely a matrix of
+                      nerve cells firing signals upon being struck by lights of
+                      specific wavelengths and degrees. These neurons then send
+                      an electrical signal to the brain’s visual cortex in which
+                      color, light intensity, edges, and more information are
+                      processed to try and work out what the person is seeing.
+                      This processing part, in fact, does not simply translate
+                      these electrical signals into images interpretable by the
+                      human but rather edits out what may be irrelevant and
+                      focuses on the more significant pieces of the image such
+                      as motion: an incredible process in the very least.
+                      Obviously, vision involves much more complexity than is
+                      shown, but this complexity is beyond the scope of this
+                      paper. Our primary focus here is to make it clear how a
+                      prosthetic eye could manipulate this system in order to
+                      produce comprehensible images. The bioniceye can be viewed
+                      as a replacement for a retina that can no longer perform
+                      this function.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Improving Vision Quality</p>
+                  <p>
+                    <span
+                      >Several approaches have been devised to improve vision
+                      quality. The most obvious of which was to increase the
+                      number of implanted electrodes, allowing them to target
+                      certain neurons accounting for more pixels and thus better
+                      resolutions. However, normal sized-micro electrodes would
+                      not fit in such a confined space. For that reason,
+                      attempts at shrinking the size of the microelectrodes have
+                      been made [2]. By electrically stimulating retinal
+                      ganglion cells using thousands of microscale
+                      nitrogen-doped ultra-nanocrystalline diamond (N-UNCD)
+                      feedthroughs that act as electrodes. Aside from the
+                      expensiveness of the diamond coating, the use of such
+                      technology has not yet proven feasible and requires
+                      further research.</span
+                    >
+                    <span
+                      >Another technique is to artificially increase the
+                      resolution by sharing electrical current between
+                      electrodes, producing additional “virtual electrodes”.
+                      These new techniques can possibly improve visual fidelity,
+                      reduce blurriness, and give rudimentary control over
+                      color: a distinctive feature of natural eyesight.</span
+                    >
+                    <span
+                      >The ultimate goal would be to fully understand the code
+                      sent from the retina to the brain. Theoretically, If the
+                      firing patterns of the receptors can be replicated, vision
+                      will appear exactly as perceived by a healthy individual’s
+                      eye.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. The Future of Bionic Eyes</p>
+                  <p>
+                    <span
+                      >Taking the technology to the next level, there is a
+                      possibility to go beyond what a normal human eye could do.
+                      Once the code between the retina and the brain has been
+                      deciphered, there would be an unlimited potential for the
+                      technology from the ability to see infra-red, night
+                      vision, or x-ray. To magnifying images naturally, running
+                      software that processes images, blocking out bright
+                      sunlight, and substituting sunglasses. In fact, being able
+                      to watch a movie, scrolling through your newsfeed, or even
+                      playing a simple video game, seems equally plausible using
+                      the same technology that could, theoretically, help the
+                      blind see again.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Conclusion</p>
+                  <p>
+                    <span
+                      >Undoubtedly, the goal of restoring some degree of vision
+                      to the blind using bionic eyes certainly seems feasible,
+                      but providing them with fully detailed vision like that of
+                      healthy individuals while seemingly plausible with the
+                      progress the technology is seeing and with its
+                      technological challenges continuing to be solved, it is
+                      questionable whether these individuals will be able to
+                      fully interpret the images processed in the brain, and
+                      understand features like their depth, edges, and advanced
+                      details like color. Casting further doubt on the subject
+                      matter, it is yet to be understood how the brain of a once
+                      visually impaired individual would react to perceiving
+                      light once again and whether that would influence the
+                      recovery speed.</span
+                    >
+                    <span
+                      >Rehabilitation is certainly going to be needed for a
+                      successful recovery. Furthermore, this technology shows no
+                      potential for treating cognitive blindness, and it is
+                      unlikely to be cured in the next decade. While the bionic
+                      eye does not yet seem to be a definitive solution for the
+                      blind. There is certain ground to be optimistic about the
+                      technology. What is now clear is that the feasibility of
+                      this technology is dependent on the mandatory
+                      collaboration between physicians, doctors, and scientists
+                      from different fields.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VI. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="1.1"></p>
+                        <p reference-no="1.2"></p>
+                        <p reference-no="1.3"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="1.4"></p>
+                        <p reference-no="1.5"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 2 -->
+
+        <!-- START: SECTION 3 -->
+        <section
+          class="section-3"
+          id="section-3"
+          v-show="currentSection == 'section-3'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="3.3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Genetically Modified Organisms
+              </h2>
+              <p class="section-author text-center text-muted">
+                Ziad Khaled<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Genetically Modified Organisms have been around two
+                    decades, and they areconsidered safe for human, but on the
+                    other side, other studies show that GMO have some risks and
+                    deleterious effects on animals, GM food just like any new
+                    drug requires many tests to prove that these new organisms
+                    are safe for human and can exist in the markets. Ongoing
+                    independent studies to evaluate safety are needed.
+                    Scientific, economic, environmental, social, ethical, and
+                    political perspectives will need to be considered.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Genetically Modified Organisms (GMO) are organisms whose
+                      genetic information (DNA) has been changed by inserting a
+                      gene from another organism to give specific functions that
+                      it cannot do before this technique called “modern
+                      biotechnology” or “gene technology”, which improve the
+                      yield through introducing resistance to plant diseases or
+                      of increased tolerance of herbicides, GMO can also allow
+                      for reductions in food prices through improved yields and
+                      reliability
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. There are a lot of Genetic Modification Organisms that
+                      have been developed in recent time, all of them are
+                      inserted by genes from another organism for example the BT
+                      corn, a Bacteria called Bacillus thuringeinsis (BT)
+                      produce a protein toxic to the larvae of certain insects,
+                      such as the European corn borer. These Insects are found
+                      widely in Europe, North Africa, Canada, and most of the
+                      United States. These insects reduce the yield by 5%. The
+                      Bt corn is the corn that had the BT gene from Bacillus
+                      thuringeinsis inserted into its cells. This gene provides
+                      information that causes the plant cells themselves to
+                      produce the Bt protein. As a result, the offspring of the
+                      modified plants are protected from the corn borer.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    II. How does the process of genetic engineering happen?
+                  </p>
+                  <p class="subtitle">i. DNA isolation:</p>
+                  <p>
+                    <span
+                      >The needed gene is determined then they isolate the DNA
+                      from the organism that contains this gene by breaking the
+                      cell structure and this often happens physically by
+                      smashing the organism y, then protease (protein enzyme) is
+                      added to degrade DNA-associated proteins and other
+                      cellular proteins. After that the DNA separate by adding
+                      alcohol by this process all the cell material precipitate
+                      while the DNA become at the top and it will appear like
+                      white cotton.</span
+                    >
+                  </p>
+                  <p class="subtitle">ii. Use the plasmid as a vector:</p>
+                  <p>
+                    <span
+                      >A restriction enzyme is DNA-cutting enzymes. Each enzyme
+                      recognizes one or a few target sequences and cuts DNA at
+                      or near those sequences, this enzyme used to cut a
+                      specific sequence from the gene that has the needed treat,
+                      then the same restriction enzyme is used to cut the
+                      plasmid which is used as a vector to enter the gene to the
+                      organism, then the plasmid inter the organism by using a
+                      gene gun. After this process the cell will contain the
+                      foreign gene and when the cell division accrues the new
+                      daughter cells will contain this gene.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. What are the benefits of GMOs?</p>
+                  <p>
+                    <span
+                      >GM foods are developed because of some perceived benefits
+                      to the producers and the consumers The World Health
+                      Organization (WHO) and the United States Department of
+                      Agriculture (USDA) have outlined a comprehensive list of
+                      thebenefits of GM foods. This list is discussed
+                      below.</span
+                    >
+                  </p>
+                  <p class="subtitle">i. Insect resistance:</p>
+                  <p>
+                    <span
+                      >Agricultural biotechnology has been used to make the
+                      plants insect resistant, this is achieved by introducing
+                      the gene of a toxin called Bacillus thuringeinsis come
+                      from BT Bactria, this toxin is considered for humans and
+                      it currently uses as an insecticide, the plants that
+                      uptake this gene becomeresistance against borer insects.
+                      This technology makes the crop requires lower quantities
+                      of external insecticides. Such genetic modification can
+                      make crop production cheaper and more manageable, as well
+                      as make pest control safer. Additionally, there
+                      isdecreased contamination of the groundwater and the
+                      environment from pesticides.</span
+                    >
+                  </p>
+                  <p class="subtitle">ii. Disease Resistance:</p>
+                  <p>
+                    <span
+                      >Some diseases can be resisted by using genetic
+                      modification organisms, as these crops resist some
+                      diseases better than the normal crops
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.7"
+                        >[7]</tooltip
+                      >. For example, when many diseases significantly
+                      threatened the Hawaiian papaya industry, thepapayas were
+                      made disease-resistant through genetic engineering. This
+                      technology is expected to increase in the future, and it
+                      will be applied in many crops like potatoes, squash,
+                      tomatoes.</span
+                    >
+                  </p>
+                  <p class="subtitle">iii. Nutritional:</p>
+                  <p>
+                    <span
+                      >Some GMO can produce nutritionally enriched plants, as
+                      these organisms are uptake gene that will produce specific
+                      vitamin like golden rice, this rice is uptake
+                      biosynthesize beta-carotene gene, which is not normally
+                      produced in rice. The beta carotene gene is converted into
+                      Vitamin A when it is metabolized by the human body.
+                      Vitamin A is essential for healthier skin, immune systems,
+                      and vision.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. What are the risks of GMOs?</p>
+                  <p>
+                    <span
+                      >The world health organism has identified three main risks
+                      for the genetic modification organisms which are discussed
+                      below.</span
+                    >
+                  </p>
+                  <p class="subtitle">i. Allergenicity:</p>
+                  <p>
+                    <span
+                      >Some GM foods have the potential to cause allergic
+                      reactions, as the gene that is transferred to the food
+                      have the potential to cause allergic reactions, also
+                      another risk is introduced a new gene to the food that did
+                      not previously exist in the food chain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.6"
+                        >[6]</tooltip
+                      >. Many, but not all, genes that are used in GM foods are
+                      novel and do not have a history of safe food use. An
+                      example of the allergenicity, GM soybeans that uptake a
+                      gene from the brazilin nuts, this gene is considered
+                      causative to allergic reactions in some people.to prevent
+                      this risk, the transfer of genes from commonly allergenic
+                      foods is discouraged unless it can be proven that the
+                      protein produced by the introduced gene will not be
+                      allergenic, also some tests happen to be sure that the
+                      introduced gene is not allergenic.</span
+                    >
+                  </p>
+                  <p class="subtitle">ii. Gene transfer:</p>
+                  <p>
+                    <span
+                      >Another risk for GMOs is the transfer of genetic material
+                      from the GM food to the human cells, the DNA that comes
+                      from GM food is not completely digested by the digestion
+                      system and small fragments of the DNA have been found in
+                      different parts of the gastrointestinal tract
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.3"
+                        >[3]</tooltip
+                      >. This could result in gene transfer by absorption of the
+                      DNA fragments by the somatic cells. Scientists hypothesize
+                      that uptake of GM DNA into the cells will have no
+                      biological consequences due to degraded of this DNA by the
+                      cells, However, it is not clear if people with
+                      gastrointestinal diseases will be able to completely
+                      degrade this GM DNA. An example for gene transfer, in
+                      Canada they found the BT toxin in 93% of the pregnant
+                      women tested.</span
+                    >
+                  </p>
+                  <p class="subtitle">iii. Outcrossing:</p>
+                  <p>
+                    <span
+                      >Outcrossing means that the genes of GM foods move to the
+                      natural plants or the related species, this could make
+                      other plants uptake unwanted genes that could cause health
+                      problems to the human and damage the plant itself
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.7"
+                        >[7] </tooltip
+                      >. To avoid this problem, farmers use buffer zones, pollen
+                      barriers, crop rotation, and monitoring during harvest,
+                      storage, transport, and processing to manage
+                      outcrossing.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Conclusion</p>
+                  <p>
+                    <span
+                      >GM food has numerous potential risks and benefits, many
+                      studies have shown positive and negative results for GM
+                      food. GM food has positive impacts on health, economic,
+                      environmental, and social. Corn is extensively used in
+                      processed foods and animal feeds, and GM corn now makes up
+                      almost the entire U.S. crop. GM soybeans are not far
+                      behind
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.4"
+                        >[4]</tooltip
+                      >. A team of Italian scientists has summarized 1,783
+                      studies about the safety and environmental impacts of GM
+                      foods and did not find a single credible example
+                      demonstrating that GM foods pose any harm to humans or
+                      animals
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.5"
+                        >[5]</tooltip
+                      >. On the other side,GM food has many potential risks, to
+                      avoid theserisks this technology must be studied and
+                      tested before this food becomes available in the
+                      market.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VI. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="2.1"></p>
+                        <p reference-no="2.2"></p>
+                        <p reference-no="2.3"></p>
+                        <p reference-no="2.4"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="2.5"></p>
+                        <p reference-no="2.6"></p>
+                        <p reference-no="2.7"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 3 -->
+
+        <!-- START: SECTION 4 -->
+        <section
+          class="section-4"
+          id="section-4"
+          v-show="currentSection == 'section-4'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="3.4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                DNA Sequencing evolution
+              </h2>
+              <p class="section-author text-center text-muted">
+                Nabil Youssef<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >The genetic code is a universal language present in all
+                    known living organisms. The sequence of the four bases
+                    (adenine guanine thymine and cytosine) determines the
+                    genotype and phenotype of a living being. DNA sequencing can
+                    be used to determine the nucleotide sequence of specific
+                    genes, larger genetic regions, whole chromosomes, or the
+                    entire genome of an organism. Knowing this helps scientists
+                    answer fundamental biological questions about evolution and
+                    how life works. Known genomes in humans can be scanned for
+                    diseases and plants modified to create GM crops that are
+                    resistant to pests or have a higher yield. This technology
+                    is crucial to all genetic engineering. This article will
+                    cover the evolution of DNA Sequencing and explain the
+                    complete procedure of two of the most common methods of
+                    sequencing DNA, Sanger sequencing as well as next-generation
+                    sequencing.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <!-- <p></p> -->
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue3/article3/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure 1 Structure of the DNA molecule
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >The last five to 10 years have seen some extraordinary
+                      feats in biology, among them determination of the entire
+                      DNA sequences of several extinct species, including woolly
+                      mammoths, Neanderthals, and a 700,000-year-old horse.
+                      Pivotal to those discoveries was the sequencing of the
+                      human genome, essentially completed in 2003
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >. This endeavor marked a turning point in biology because
+                      it sparked remarkable technological advances in DNA
+                      sequencing. The primary human genome sequence took several
+                      years at a price of 1 billion dollars; the time and price
+                      of sequencing a genome are in free fall since then
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >.</span
+                    >
+                    <span class="order-1"
+                      >The discovery of the structure of the DNA molecule
+                      (Figure 1), with its two complementary strands, opened the
+                      door for the event of DNA sequencing and lots of other
+                      techniques utilized in scientific research today. Key to
+                      several of those techniques is macromolecule
+                      hybridization, the pairing of 1 strand of DNA to the
+                      complementary sequence on a strand from another DNA
+                      molecule.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. The invention of DNA Sequencing</p>
+                  <p>
+                    <span
+                      >Early attempts to sequence DNA were unwieldy. In 1968, Wu
+                      and Kaiser reported the utilization of primer extension
+                      methods to work out 12 bases of the cohesive ends of
+                      bacteriophage lambda
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.2"
+                        >[2]</tooltip
+                      >. In 1973, Gilbert and Maxam reported 24 bases of the
+                      lactose-repressor binding site, by copying it into RNA and
+                      sequencing those fragments. This took two years; one base
+                      per month
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.3"
+                        >[3]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >In around 1976, the development of two methods that would
+                      decode many bases in a day transformed the sector
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.4"
+                        >[4]</tooltip
+                      >. Both methods, the chain terminator procedure developed
+                      by Sanger and Coulson, and the chemical cleavage procedure
+                      developed by Maxam and Gilbert, used distances along a DNA
+                      molecule from a radioactive label to positions occupied by
+                      each base to find out nucleotide order. Sanger’s method
+                      involved four extensions of a labeled primer by DNA
+                      polymerase, each with trace amounts of 1 chain-terminating
+                      nucleotide, to supply fragments of various lengths
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.4"
+                        >[4]</tooltip
+                      >. Gilbert’s method took a terminally labeled
+                      DNA-restriction fragment, and, in four reactions, used
+                      chemicals to make base-specific partial cleavages
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.4"
+                        >[4]</tooltip
+                      >. For both methods, the sizes of fragments present in
+                      each base-specific reaction were measured by
+                      electrophoresis on polyacrylamide slab gels, which enabled
+                      the separation of the DNA fragments by size with
+                      single-base resolution. The gels, with one lane per base,
+                      were put onto X-ray film, producing a ladder image from
+                      which the sequence might be read off immediately, rising
+                      the four lanes by size to infer the order of bases.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Dideoxy Chain Termination Method for Sequencing DNA
+                    Todo!!!!!!!!!!!!!!!!!! -> Figure Caption
+                  </p>
+                  <p>
+                    <span
+                      >Sanger sequencing, also referred to as chain-termination
+                      sequencing, refers to a way of DNA sequencing developed by
+                      Sanger in 1977 (Figure 2). This method is predicated on
+                      the synthesis of a nested set of DNA strands complementary
+                      to one strand of a DNA fragment. Each new strand starts
+                      with an equivalent primer and ends with a dideoxy
+                      ribonucleotide (ddNTP), a modified deoxyribonucleotide
+                      (dNTP). The incorporation of a ddNTP terminates a growing
+                      DNA strand because it lacks a 3’ OH group, the location
+                      for attachment of subsequent nucleotide. within the set of
+                      latest strands, each nucleotide position along the first
+                      sequence is represented by strands ending at that time
+                      with the complementary ddNTP.</span
+                    >
+                  </p>
+                  <p class="subtitle text-decoration-underline">Procedure</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue3/article3/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <!-- <figcaption></figcaption> -->
+                    </figure>
+                    <ol class="order-0">
+                      <li>
+                        The fragment of DNA to be sequenced is denatured into
+                        single strands and incubated in a test tube with the
+                        necessary ingredients for DNA synthesis
+                      </li>
+                      <li>
+                        Synthesis of each new strand starts at the 3′ end of the
+                        primer and continues until a ddNTP happens to be
+                        inserted instead of the equivalent dNTP. The
+                        incorporated ddNTP prevents further elongation of the
+                        strand. Eventually, a set of labeled strands of every
+                        possible length is generated, with the color of the tag
+                        representing the last nucleotide in the sequence.
+                      </li>
+                      <li>
+                        The labeled strands in the mixture are separated by
+                        passage through a gel that allows shorter strands to
+                        move through more quickly than longer ones. For DNA
+                        sequencing, the gel is in a capillary tube, and its
+                        small diameter allows a fluorescence detector to sense
+                        the color of each fluorescent tag as the strands come
+                        through. Strands differing in length by as little as one
+                        nucleotide can be distinguished from each other.
+                      </li>
+                    </ol>
+                    <span class="order-1"
+                      >Because each type of ddNTP is tagged with a unique
+                      fluorescent label, the identity of the ending nucleotides
+                      of the new strands, and ultimately the entire original
+                      sequence, can be determined. The color of the fluorescent
+                      tag on each strand indicates the identity of the
+                      nucleotide at its 3’-end. The results can be printed out
+                      as a spectrogram.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Next-Generation Sequencing</p>
+                  <p>
+                    <span
+                      >The main difference between NGS (Figure 3) and Sanger
+                      sequencing is the construction of the sequencing library.
+                      Sanger sequencing libraries need multiple steps that
+                      combine molecular biology with microbiological culture to
+                      represent the DNA sample of interest as a series of
+                      subclones in a bacterial plasmid or phage vector. These
+                      subclones then need growth in culture and DNA isolation
+                      before sequencing. This multistep process can be completed
+                      in approximately one week, at which point the purified
+                      DNAs are ready for sequencing
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.3"
+                        >[3]</tooltip
+                      >. On the other hand, the simplicity and speed of NGS
+                      library construction are remarkable. Starting from a
+                      variety of input DNA sources ranging from high molecular
+                      weight genomic DNA to a pool of PCR products, to short
+                      stretches of histone-bound DNA released after chromatin
+                      immunoprecipitation (ChIP) or reverse
+                      transcriptase–converted RNA
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >.
+                    </span>
+                  </p>
+                  <p class="subtitle text-decoration-underline">Procedure</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue3/article3/figure_3.jpeg"
+                        alt="Figure 3"
+                      />
+                      <figcaption>
+                        Figure 3 Next-Generation Sequencing
+                      </figcaption>
+                    </figure>
+                    <ol class="order-0">
+                      <li>
+                        Genomic DNA is fragmented, and fragments of 400 to 1,000
+                        base pairs are selected.
+                      </li>
+                      <li>
+                        Each fragment is isolated with a bead in a droplet of
+                        aqueous solution.
+                      </li>
+                      <li>
+                        The fragment is copied over and over by a technique
+                        called PCR (to be described later). All the 5′ ends of
+                        one strand are specifically” captured” by the bead.
+                        Eventually, 106 identical copies of the same single
+                        strand, which will be used as a template strand, are
+                        attached to the bead.
+                      </li>
+                      <li>
+                        The bead is placed into a small well along with DNA
+                        polymerases and primers that can hybridize to the 3′ end
+                        of the single (template) strand.
+                      </li>
+                      <li>
+                        The well is one of 2 million on a multiwell plate, each
+                        containing a different DNA fragment to be sequenced. A
+                        solution of one of the four nucleotides is added to all
+                        wells and then washed off. This is done sequentially for
+                        all four nucleotides: dATP, dTTP, dGTP, and then dCTP.
+                        The entire process is then repeated.
+                      </li>
+                      <li>
+                        In each well, if the next base on the template strand (T
+                        in this example) is complementary to the added
+                        nucleotide (A, here), the nucleotide is joined to the
+                        growing strand, releasing PPi, which causes a flash of
+                        light that is recorded.
+                      </li>
+                      <li>
+                        The nucleotide is washed off and a different nucleotide
+                        (dTTP, here) is added. If the nucleotide is not
+                        complementary to the next template base (G, here), it is
+                        not joined to the strand and there is no flash.
+                      </li>
+                      <li>
+                        The process of adding and washing off the four
+                        nucleotides is repeated until every fragment has a
+                        complete complementary strand. The pattern of flashes
+                        reveals the sequence of the original fragment in each
+                        well.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Conclusion</p>
+                  <p>
+                    <span
+                      >Improved DNA sequencing techniques have transformed the
+                      way in which we can explore fundamental biological
+                      questions about evolution and how life works. Little more
+                      than a decade after the human genome sequence was
+                      announced, researchers had completed sequencing roughly
+                      4,000 bacterial, 190 archaeal, and 180 eukaryotic genomes,
+                      with more than 17,000 additional species underway
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >. Complete genome sequences have been determined for
+                      cells from several cancers, for ancient humans, and for
+                      the many bacteria that live in the human intestine.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="3.1"></p>
+                        <p reference-no="3.2"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="3.3"></p>
+                        <p reference-no="3.4"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 4 -->
+
+        <!-- START: SECTION 5 -->
+        <section
+          class="section-5"
+          id="section-5"
+          v-show="currentSection == 'section-5'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Brain-Machine Interface: Review of Current State and Clinical
+                Applications
+              </h2>
+              <p class="section-author text-center text-muted">
+                Gasser Alwasify<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Brain-machine interface (BMI) is a novel device that allows
+                    the translation of brain activity like action potentials in
+                    the neurons into commands and data that can be processed by
+                    machines and used. In the hope of helping neuromuscular
+                    patients with their severe disabilities, research has
+                    rapidly increased on BMIs in the past decade and a half.
+                    BMIs have been demonstrated to control robotic limbs,
+                    wheelchairs, computer cursors, and even allowed patients
+                    that are unable to talk to synthesize speech through them.
+                    In this review article, BMIs will be reviewed from its
+                    definition to the different types, invasive or
+                    noninvasive</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Brain-Machine Interfaces (BMIs) are novel devices that
+                      allow the translation of brain activity in terms of
+                      electric activity on the cortical surface of the brain,
+                      allowing the user to communicate with machines without
+                      moving peripheral nerves and muscles
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="G.Dagnelie, “Visual prosthetics 2006: assessment and expectations,” Expert Review of Medical Devices, vol. 3, no. 3, pp. 315–325, 2006"
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. These devices provide a novel method of communication
+                      and control for humans in general with the outside world
+                      like the ability to control external devices such as
+                      personal computers to play video games, robotic arms and
+                      wheelchairs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.2"
+                        >[2]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.3"
+                        >[3]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.4"
+                        >[4]</tooltip
+                      >. BMIs also show strong promise for critical
+                      neuromuscular disorders such as amyotrophic lateral
+                      sclerosis (ALS), Parkinson’s disease, multiple sclerosis,
+                      etc. as it allows the usage of different neural pathways.
+                    </span>
+                    <span
+                      >BMIs are typically characterized into dependentand
+                      independent BMIs. Dependent BMIs don’t use the brain’s
+                      normal output pathways to carry the message, but rather
+                      depends on the activity of the brain to detect a certain
+                      action. For example, in a visual experiment, instead of
+                      trying to track eye movement to activate a certain
+                      machine, dependent BMIs can detect the visual evoked
+                      potential (VEP) caused by said eye movement
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5]</tooltip
+                      >. On the other hand, an independent BMI does not depend
+                      in anyway on the normal brain pathways, but rather depend
+                      on the intent of a user to do an action instead of
+                      actually doing it
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5]</tooltip
+                      >. Like in the same example, an independent BMI would
+                      detect the intention to move your eyes and not the actual
+                      activity of the peripheral nerves and muscles to move the
+                      eye
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.6"
+                        >[6]</tooltip
+                      >. Because of this difference, independent BMIs have
+                      proven to have a lot more potential in clinical
+                      applications.
+                    </span>
+                    <span
+                      >Any BMIs, regardless of its purpose and application, goes
+                      through four main processes as shown in figure 1: signal
+                      acquisition, feature extraction, translation algorithm,
+                      and device output
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.42"
+                        >[42]</tooltip
+                      >. These four main processes allow the main translation of
+                      the brain signals to device output. This review will go
+                      through these four main processes byfocusing on
+                      Brain-Machine Interface’s characterization, the different
+                      brain signals, explanation of the four processes, and
+                      decoders.
+                    </span>
+                  </p>
+                  <figure class="figure-block mx-auto">
+                    <img
+                      loading="lazy"
+                      src="assets/imgs/issue3/article4/figure_1.jpeg"
+                      alt="Figure 1"
+                    />
+                    <figcaption>
+                      Figure 1
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.42"
+                        >[42] </tooltip
+                      >: The components of the BMI operation, which includes
+                      signal acquisition, feature extraction, feature
+                      translation and device output. This figure further shows
+                      the potential clinical applications of these BMIs.
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Noninvasive and Invasive BMIs</p>
+                  <p>
+                    <span
+                      >BMIs are also divided into two types: non-invasive and
+                      invasive. Non-invasive BMIs depend on
+                      electroencephalography (EEG) to detect electrical activity
+                      in the brain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. As neurons communicate through electric pulses in
+                      postsynaptic potentials, and thousands of neurons are
+                      firing per second, this activity is detectable through the
+                      use of small metal electrodes that are pasted on patients’
+                      scalp
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.8"
+                        >[8]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.9"
+                        >[9]</tooltip
+                      >. As the detected changes in voltage due to the many
+                      neurons’ firing is very small, the electric pulse is
+                      usually amplified and then printed as a sequence of
+                      voltage changes over a certain brain area
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.9"
+                        >[9]</tooltip
+                      >. The area over which the electrodes are placed depends
+                      on the purpose of the EEG as for example, if examining the
+                      reaction to visual stimuli, electrodes are placed over the
+                      occipital cortex
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.9"
+                        >[9]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >Invasive BMIs require surgical implantation of electrodes
+                      in the brain, which means they require opening the scalp
+                      and skull and penetrating the brain tissue
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. They are not preferred over non-invasive BMIs due to
+                      the possible risks like infection, especially if the
+                      implant is not entirely contained within the brain.
+                      Invasive BMIs are classified into five main types: local
+                      field potentials, single-unit activity, multi-unit
+                      activity, electrocorticography(ECoG) and calcium channel
+                      permeability
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >Local field potential (LFP) is the transient electrical
+                      signals, which are formed from the combination of large
+                      neuronal populations, in the order of tens of thousands
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.11"
+                        >[11]</tooltip
+                      >. While singe-unit invasive BMI detects the activity of
+                      single neuron’s action potentials, the multi-unit invasive
+                      BMIs detect the activity of multiple neurons at the same
+                      time. For instance, a single-unit BMI would only decode
+                      specific neuronal activity in an area like motor commands
+                      in M1 or cognitive signals in PP
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.12"
+                        >[12]</tooltip
+                      >.These methods usually employ extracellular methods to
+                      record and discriminate postsynaptic potentials generated
+                      by the hundreds of cortical neurons
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.12"
+                        >[12]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >Furthermore, the fourth type electrocorticography is
+                      sometimes considered a semi-invasive method because it
+                      requires surgical procedure to remove a part of the skull,
+                      but it doesn’t penetrate any brain tissue. ECoGs are
+                      basically EEGs attached to the surface of the brain
+                      itself, where a grid of electrodes detects the activity of
+                      the brain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.13"
+                        >[13]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.14"
+                        >[14]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.15"
+                        >[15]</tooltip
+                      >. ECoGs could be epidural or subdural, where the
+                      difference is that the latter’s dura mater is left open.
+                      This allows for better accuracy and detection as shown in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.16"
+                        >[16]</tooltip
+                      >. They are advantageous over normal EEG-BMIs because they
+                      have better spatial and temporal resolution
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17]</tooltip
+                      >. Still, its performance and accuracy can’t still rival
+                      with invasive BMIs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.16"
+                        >[16]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17]</tooltip
+                      >. Lastly, the calcium channel invasive BMIs (CaBMI) were
+                      developed in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.18"
+                        >[18]</tooltip
+                      >, where ten mice were genetically modified to express a
+                      calcium indicator gCaMP6f in L2/3 of both primary motor M1
+                      and somatosensory (S1) cortices. Two-photon calcium
+                      imaging were used to record activity in the small field of
+                      view
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.18"
+                        >[18]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Brain Signals Detectable by Noninvasive BMIs
+                  </p>
+                  <p>
+                    <span
+                      >Non-invasive BMIs detect seven types of signals: slow
+                      cortical potentials (SCP), sensorimotor rhythms, P300
+                      event-related potential, steady-state visual evoked
+                      potentials, error-related negative evoked potentials,
+                      blood oxygenation level and cerebral oxygenation
+                      changes.</span
+                    >
+                  </p>
+                  <p class="subtitle">i. Slow Cortical Potentials (SCP)</p>
+                  <p>
+                    <span
+                      >Slow cortical potentials are the occurrence of cortical
+                      polarization, which can be easily recorded using direct
+                      amplifiers from any location on the scalp
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5]</tooltip
+                      >. They usually occur over 0.5-10.0 seconds. Voltage
+                      changes across the scalp can be either positive or
+                      negative; while BMIs detect negative SCPs during movement
+                      causing cortical activation, they detect positive SCPs
+                      which are caused by reduced cortical activation
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.19"
+                        >[19]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.20"
+                        >[20]</tooltip
+                      >. In Birbaumer studies, it was shown that it is possible
+                      to control SCPs and even control the movement of a cursor
+                      on a computer screen
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.21"
+                        >[21]</tooltip
+                      >. In
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.22"
+                        >[22]</tooltip
+                      >, a thought translation device (TTD), a non-invasive BMI,
+                      has been developed, where it was able to deliver basic
+                      communication with late-stage ALS patients in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.23"
+                        >[23]</tooltip
+                      >.
+                    </span>
+                  </p>
+                  <p class="subtitle">ii. Mu and beta rhythms</p>
+                  <p>
+                    <span
+                      >Mu and beta rhythms from somatosensory cortexsinusoidal
+                      frequencies in ranges 8-13 Hz that are detected by BMIs at
+                      the somatosensory and motor cortical regions
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. These rhythms decrease in amplitude as movement of the
+                      body increases. Sensorimotor rhythms of Fp1, Fp2, F3, Fz,
+                      F4, T7, T8, C3, Cz, C4, Cp3, Cp4, P3, Pz, P4 and Oz were
+                      recorded using 16 EEG channels in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.24"
+                        >[24]</tooltip
+                      >
+                      to control cursor movement in a computer screen, which
+                      achieved more than 50% accuracy (p-value lower than
+                      0.001).
+                    </span>
+                  </p>
+                  <p class="subtitle">iii. P300 event-related potential</p>
+                  <p>
+                    <span
+                      >When the somatosensory cortex gets activated through
+                      significant auditory, visual, or any stimuli, it typically
+                      evokes the non-invasive BMI over the parietal cortex at
+                      about 300 milliseconds
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.25"
+                        >[25]</tooltip
+                      >. Thus, it was named P300 event-related potential as it
+                      only evokes at 300 ms when any event occurs causing a
+                      particularly significant stimuli to the patient
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5]</tooltip
+                      >. The signal of the potential increases in amplitude when
+                      the patient maintains greater attention to that specific
+                      stimuli
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. Using P300 event-related potentials in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.26"
+                        >[26]</tooltip
+                      >, a paradigm has been introduced that have been used as a
+                      BMI spelling application in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.27"
+                        >[27]</tooltip
+                      >,
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.28"
+                        >[28] </tooltip
+                      >, and
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.29"
+                        >[29]</tooltip
+                      >.
+                    </span>
+                  </p>
+                  <p class="subtitle">
+                    iv. Steady-state visual evoked potential (SSVEP)
+                  </p>
+                  <p>
+                    <span
+                      >Steady-state visual evoked potentials are signals evoked
+                      from the occipital cortex during the occurrence of
+                      periodic presentation of visual stimuli of 6 hertz
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. A survey showed that SSVEP can beutilized by presenting
+                      a rendered visual stimulus (RVS) to the user through
+                      alternating graphical patterns on computer screens
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.31"
+                        >[31]</tooltip
+                      >. Even more,
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.30"
+                        >[30]</tooltip
+                      >
+                      developed a novel independent SSVEP-BMI based on covert
+                      attention that helped locked-in syndrome patients.
+                      However, SSVEP BMIs are limited as they depend on
+                      attentional capacity and vision, which is mostly
+                      compromised in patients with more severe neurological
+                      diseases
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5] </tooltip
+                      >.
+                    </span>
+                  </p>
+                  <p class="subtitle">
+                    v. Error-related negative evoked potentials (ERNP)
+                  </p>
+                  <p>
+                    <span
+                      >ERNPs occur 200-250 miliseconds after “the detection of
+                      an erroneous response in a continuous stimulus-response
+                      sequence
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10] </tooltip
+                      >.” For instance, when a patient is subjected to
+                      continuous visual stimuli and then has to pick out a
+                      certain stimuli of the bunch, a P300 event-related
+                      potential is evoked if the target stimuli is found.
+                      However, if any stimuli occur other than the target, then
+                      the error-related negative evoked potential occurs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.32"
+                        >[32] </tooltip
+                      >.</span
+                    >
+                  </p>
+                  <p class="subtitle">vi. Blood Oxygenation Level</p>
+                  <p>
+                    <span
+                      >This type of BMI doesn’t depend on EEGs but instead of
+                      functional MRIs. Blood oxygen level-dependent fMRI detects
+                      the metabolic activity in the brain, which represent the
+                      changes in neural activity
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]
+                      </tooltip>
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.33"
+                        >[33]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.34"
+                        >[34]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.35"
+                        >[35]</tooltip
+                      >. BOLD was used in the past in patients with
+                      neuropsychiatric disorders in which a novel brain
+                      self-regulation technique that crosslinked psychological
+                      and neurobiological approaches through utilizing the
+                      neurofeedback of the fMRI
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.37"
+                        >[37]</tooltip
+                      >. The results were rather promising as the patients’
+                      Hamilton Rating Scale for Depression improved
+                      significantly in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.37"
+                        >[37]</tooltip
+                      >.Real-time control of robotic arm was demonstrated to be
+                      possible using real-time functional MRI that detected the
+                      blood oxygenation level dependent signals from the
+                      regional cortical activations in the primary motor area M1
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.36"
+                        >[36]</tooltip
+                      >. This allowed the movement of the robotic arm only
+                      through the subjects’ thought processes.
+                    </span>
+                  </p>
+                  <p class="subtitle">vii. Cerebral oxygenation changes</p>
+                  <p>
+                    <span
+                      >Near Infrared spectroscopy (NIRS) is an spectroscopic
+                      technique that measures light absorbance to calculate
+                      oxy-HB and deoxy-HB, which provides insight of brain
+                      activity
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.37"
+                        >[37]</tooltip
+                      >. NIRSis characterized with high temporal resolution and
+                      spatial resolution. NIRS has enabled non-invasive
+                      measurement of the cerebral oxygenation changesthrough BMI
+                      in patients
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.40"
+                        >[40]</tooltip
+                      >. As EEG-BMI have not succeeded with complete locked-in
+                      state patients
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.41"
+                        >[41]</tooltip
+                      >, metabolic brain-machine interfaces based on
+                      near-infrared spectroscopy has provided a novel method to
+                      allow the slightest communication for these patients.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Signal Acquisition</p>
+                  <p>
+                    <span
+                      >Signal acquisition is basically the measurement of the
+                      neurophysiologic state of the brain, where the BMI is
+                      tracking the aforementioned signals in the brain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.42"
+                        >[42]</tooltip
+                      >. These signals will reflect the person’s intent to do a
+                      certain action, which is used to drive the brain-machine
+                      interfaces
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="G.Dagnelie, “Visual prosthetics 2006: assessment and expectations,” Expert Review of Medical Devices, vol. 3, no. 3, pp. 315–325, 2006"
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. These signals will be acquired in various techniques,
+                      which include, but aren’t limited to, electrodes on the
+                      scalp recording EEG, electrodes beneath the skull and over
+                      the cortical surface of the brain recording
+                      electrocorticography, and, lastly, LFPs and neuronal
+                      action potentials recorded by invasive BMIs
+                      –microelectrodes - within the brain tissue
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. After that, these signals are amplified and then
+                      digitized to move into signal processing
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.42"
+                        >[42]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Feature Extraction</p>
+                  <p>
+                    <span
+                      >The first step of signal processing is feature
+                      extraction, which is the extraction of main changes in
+                      signals that are encoding the intent of the user
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.42"
+                        >[42]</tooltip
+                      >.To have the highest efficiency and effectiveness, the
+                      extracted features should be highly coherent with the
+                      user’s actual intent. The digitized signals from the
+                      signal acquisition step are passed through certain
+                      procedures like spatial filtering, voltage amplitude
+                      measurements, spectral analysis, or single-neuron
+                      separation
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. For example, the firing of a specific cortical neuron
+                      or the rhythmic synaptic activation in sensorimotor
+                      cortex, producing a mu rhythm. The location, size and
+                      function of this cortical area generating the evoked
+                      potential is essential to know how it should be recorded
+                      and how users will adapt to control its amplitude
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. To analyze the neuronal signals, time domain or
+                      frequency domain analyses is utilized with respect to time
+                      or how much a certain signal is present among a given
+                      frequency band respectively
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.43"
+                        >[43]</tooltip
+                      >. Both the time domain, such as evoked potential
+                      amplitudes or neuronal firing rates, and frequency domain,
+                      such as mu or beta-rhythm amplitudes, are used to analyze
+                      the signal features in BMIs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]
+                      </tooltip>
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.44"
+                        >[44]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.45"
+                        >[45]</tooltip
+                      >. Even more, a study has shown that both these domain and
+                      frequency-domain signal features, improving performance
+                      and accuracy
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.46"
+                        >[46]</tooltip
+                      >.Furthermore, BMI could use other pathways like
+                      autoregressive parameters, which correlate with the user’s
+                      intent but don’t necessarily represent what is actually
+                      happening in the brain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >. Finally, the signal is sent into the next step:
+                      translation algorithm
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Decoding of brain signals</p>
+                  <p>
+                    <span
+                      >After the BMIs extract the features of the signal, either
+                      invasive or non-invasive, computational algorithms are
+                      employed to translate these neuronal activities for direct
+                      communication with the brain
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17] </tooltip
+                      >. These algorithms, often called decoders, use
+                      statistical and machine-learned techniques to translate
+                      these signals. Decoders are especially utilized in BMIs
+                      that have multiple input and outputs, which are provided
+                      by neural recording channels
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17] </tooltip
+                      >. This algorithm might use linear methods like
+                      statistical analyses or nonlinear methods like neural
+                      networks
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.47"
+                        >[47] </tooltip
+                      >. Through this algorithm, the signal features are changed
+                      into commands that could be understood
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >When a new user first uses the BMI, the algorithm
+                      attempts to adapt to the user’s static features, adjusting
+                      to the user’s feature signal like mu-rhythm, P300
+                      event-related potentials and single cortical neuron’s
+                      firing rate
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1] </tooltip
+                      >. However, being subjected to different times of day,
+                      hormonal levels, recent events, fatigue, illness, and
+                      other factors causes short-term variations in the signals
+                      detected from BMIs. Therefore, another level of adaption
+                      is always employed that reduce those instant variations.
+                      To further increase adaption of the algorithm, effective
+                      interaction between the BMI and the user’s brain is
+                      accommodated by engaging the adaptive capacities of the
+                      brain. As you train the brain by achieving the expected
+                      results of BMI operation, the brain will adapt over time
+                      and modify the output signal due to its plasticity,
+                      improving the operation of the BMI. Usually, this has been
+                      done by rewarding the user by any means after successful
+                      use to help increase plasticity’s chance to favor
+                      strengthening the signal.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VII. Device Output</p>
+                  <p>
+                    <span
+                      >After signal acquisition, feature extraction and going
+                      through decoding algorithms, the signal is then passed
+                      through its final phase, which is the translation of that
+                      signal into an action. This action could be the selection
+                      of words through a computer screen
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.48"
+                        >[48]</tooltip
+                      >, move the cursor on a computer screen as tested in
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.49"
+                        >[49]</tooltip
+                      >,
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.50"
+                        >[50]</tooltip
+                      >
+                      and
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.51"
+                        >[51]</tooltip
+                      >, neuroprosthetic control of wheelchairs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.52"
+                        >[52]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.53"
+                        >[53]</tooltip
+                      >
+                      and robotic limbs
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.54"
+                        >[54]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.55"
+                        >[55]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.56"
+                        >[56]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VIII. Conclusion</p>
+                  <p>
+                    <span
+                      >Full recovery for patients with motor progressive
+                      diseases, as of right now, is not possible, as diseases
+                      like amyotrophic lateral sclerosis (ALS), Parkinson’s
+                      disease, multiple sclerosis still don’t have viable
+                      treatments that can stop the progression of them
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.57"
+                        >[57]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.58"
+                        >[58]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.59"
+                        >[59]</tooltip
+                      >. Patients with severe trauma caused by stroke, cerebral
+                      palsy, or injury to the spinal cord or brain also have
+                      little to no full motor recovery
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.60"
+                        >[60]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.61"
+                        >[61]</tooltip
+                      >. Thus, researchers have been attempting to develop ways
+                      to improve these patients’ quality of life as most of
+                      these neurological conditions are permeant.
+                    </span>
+                    <span
+                      >Brain-machine interfaces hold great promise for being
+                      that solution for these disabling neurological disorders,
+                      from helping completely locked-in patients achieve control
+                      of computer cursors, wheelchairs, robotic arms
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.54"
+                        >[54]
+                      </tooltip>
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.55"
+                        >[55]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.56"
+                        >[56]</tooltip
+                      >, and even speech synthesizers
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.62"
+                        >[62]</tooltip
+                      >. Although most of these ideas are still early for
+                      clinical application, most of them hold promise but are
+                      still just lacking due to the limited number of electrodes
+                      – no more than 256 electrodes - that can be used in
+                      invasive BMIs. However, this is all changing soon as
+                      Neuralink, a project started by Elon Musk, is proposing a
+                      scalable high-bandwith novel BMI system, that has as many
+                      as 3072 electrodes per array. In this ground-breaking
+                      project, they have also built a neurosurgical robot
+                      capable of inserting 192 electrodes per minute into
+                      patients’ brains
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.63"
+                        >[63]</tooltip
+                      >. This new BMI system will also house on-board
+                      amplification and digitization system in less than 27 x
+                      18.5 x 2 mm3
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.63"
+                        >[63] </tooltip
+                      >. This approach to BMIs has allowed an unprecedented
+                      packaging density and scalability and also in a small
+                      footprint that is clinically relevant
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.63"
+                        >[63]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">IX. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="4.1"></p>
+                        <p reference-no="4.2"></p>
+                        <p reference-no="4.3"></p>
+                        <p reference-no="4.4"></p>
+                        <p reference-no="4.5"></p>
+                        <p reference-no="4.6"></p>
+                        <p reference-no="4.7"></p>
+                        <p reference-no="4.8"></p>
+                        <p reference-no="4.9"></p>
+                        <p reference-no="4.10"></p>
+                        <p reference-no="4.11"></p>
+                        <p reference-no="4.12"></p>
+                        <p reference-no="4.13"></p>
+                        <p reference-no="4.14"></p>
+                        <p reference-no="4.15"></p>
+                        <p reference-no="4.16"></p>
+                        <p reference-no="4.17"></p>
+                        <p reference-no="4.18"></p>
+                        <p reference-no="4.19"></p>
+                        <p reference-no="4.20"></p>
+                        <p reference-no="4.21"></p>
+                        <p reference-no="4.22"></p>
+                        <p reference-no="4.23"></p>
+                        <p reference-no="4.24"></p>
+                        <p reference-no="4.25"></p>
+                        <p reference-no="4.26"></p>
+                        <p reference-no="4.27"></p>
+                        <p reference-no="4.28"></p>
+                        <p reference-no="4.29"></p>
+                        <p reference-no="4.30"></p>
+                        <p reference-no="4.31"></p>
+                        <p reference-no="4.32"></p>
+                        <p reference-no="4.33"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="4.34"></p>
+                        <p reference-no="4.35"></p>
+                        <p reference-no="4.36"></p>
+                        <p reference-no="4.37"></p>
+                        <p reference-no="4.38"></p>
+                        <p reference-no="4.39"></p>
+                        <p reference-no="4.40"></p>
+                        <p reference-no="4.41"></p>
+                        <p reference-no="4.42"></p>
+                        <p reference-no="4.43"></p>
+                        <p reference-no="4.44"></p>
+                        <p reference-no="4.45"></p>
+                        <p reference-no="4.46"></p>
+                        <p reference-no="4.47"></p>
+                        <p reference-no="4.48"></p>
+                        <p reference-no="4.49"></p>
+                        <p reference-no="4.50"></p>
+                        <p reference-no="4.51"></p>
+                        <p reference-no="4.52"></p>
+                        <p reference-no="4.53"></p>
+                        <p reference-no="4.54"></p>
+                        <p reference-no="4.55"></p>
+                        <p reference-no="4.56"></p>
+                        <p reference-no="4.57"></p>
+                        <p reference-no="4.58"></p>
+                        <p reference-no="4.59"></p>
+                        <p reference-no="4.60"></p>
+                        <p reference-no="4.61"></p>
+                        <p reference-no="4.62"></p>
+                        <p reference-no="4.63"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 5 -->
+
+        <!--start footer section-->
+        <footer class="mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 pb-3">
+                <img
+                  loading="lazy"
+                  src="../images/Logo-rev.png"
+                  class="img-fluid"
+                />
+                <h4>Contact Us</h4>
+                <p>
+                  Reach to us about ideas, suggestion or any questions you have!
+                </p>
+              </div>
+
+              <div class="col-md-8">
+                <div class="jobs">
+                  <p class="text-center">
+                    Website Managers:
+                    <span>Mikhael Mounay | Mohanad Elagan</span>
+                  </p>
+                </div>
+                <div class="social text-center">
+                  <a href="https://www.facebook.com/YouthScienceJournall/"
+                    ><i class="fa-brands fa-facebook"></i>&nbsp; Facebook</a
+                  >
+                  <a href="https://www.instagram.com/ysciencejournal/"
+                    ><i class="fa-brands fa-instagram"></i>&nbsp; Instagram</a
+                  >
+                  <a href="https://www.linkedin.com/company/ysj/"
+                    ><i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="rights">
+              &copy; 2020-2024 All Rights reserved | Youth Science Journal
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- </div> -->
+      <!-- ScrollSpy -->
+
+      <!-- START: TOAST (CLIPBOARD) -->
+      <div class="toast-container position-fixed bottom-0 end-0 pb-4 pe-3">
+        <div
+          class="toast align-items-center"
+          id="copied-toast"
+          role="alert"
+          data-bs-delay="2000"
+        >
+          <div class="d-flex">
+            <div class="toast-body">Link copied to clipboard!</div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <!-- END: TOAST (CLIPBOARD) -->
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <!-- SCRIPT -->
+    <script src="../js/code.jquery.com_jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script> -->
+    <script src="../js/vue.global.prod.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

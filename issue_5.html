@@ -1,0 +1,2974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8ZTYWSZHJ4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8ZTYWSZHJ4");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YSJ | Issue 5</title>
+    <link
+      href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/issue5/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/issue5/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/issue5/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/imgs/issue5/favicon/site.webmanifest" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+  </head>
+
+  <body issue-no="5">
+    <!-- START: LOADER -->
+    <!-- <div class="loader-container">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div> -->
+    <!-- END: LOADER -->
+
+    <div class="loaded-content">
+      <div id="app">
+        <!-- START: TABLE OF CONTENTS (OFFCANVAS) -->
+        <button
+          class="offcanvas-opener shadow-sm"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#contents_offcanvas"
+          title="Table of Contents"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <defs>
+              <style>
+                .fa-secondary {
+                  opacity: 0.4;
+                }
+              </style>
+            </defs>
+            <path
+              class="fa-primary"
+              d="M137.4 105.4c12.5-12.5 32.75-12.5 45.25 0l128 128c12.5 12.5 12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0C131.1 400.4 128 392.2 128 384s3.125-16.38 9.375-22.62L210.8 288H32C14.31 288 0 273.7 0 256s14.31-32 32-32h178.8L137.4 150.6C124.9 138.1 124.9 117.9 137.4 105.4z"
+            />
+            <path
+              class="fa-secondary"
+              d="M384 96v320c0 17.69 14.31 32 32 32s32-14.31 32-32V96c0-17.69-14.31-32-32-32S384 78.31 384 96z"
+            />
+          </svg>
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="contents_offcanvas"
+          data-bs-scroll="true"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Table of Contents</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="offcanvas-nav-list" no-of-sections="7">
+              <p class="offcanvas-section-title">Introduction</p>
+              <div>
+                <li>
+                  <a href="#section-1"
+                    ><button data-bs-dismiss="offcanvas" section-no="1">
+                      Letter From the Journal
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Author">Founders</span>
+                </p>
+              </div>
+              <p class="offcanvas-section-title">Articles</p>
+              <div>
+                <li>
+                  <a href="#section-2"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="2"
+                      @click="currentSection = 'section-2'"
+                    >
+                      Multitasking: the solution for keeping up with themodern
+                      world speed?
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Psychology</span><br />
+                  <span title="Author">Radwa Al-Ashwal</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-3"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="3"
+                      @click="currentSection = 'section-3'"
+                    >
+                      Lucid Dreams: Modifying Dream Content
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Neuroscience</span><br />
+                  <span title="Authors">Ahmed Farrag</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-4"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="4"
+                      @click="currentSection = 'section-4'"
+                    >
+                      Quantum Computers & Networks: An Overview
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Computer Science</span><br />
+                  <span title="Author">Saif Taher</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-5"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="5"
+                      @click="currentSection = 'section-5'"
+                    >
+                      Prion Diseases: A Journey Through Therapeutic Strategies
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Neuroscience</span><br />
+                  <span title="Author">Roaa El-fishawy</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-6"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="6"
+                      @click="currentSection = 'section-6'"
+                    >
+                      Quantum Teleportation: Applications and Challenges
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Computer Science</span><br />
+                  <span title="Author">Hamdy Amin</span>
+                </p>
+              </div>
+              <div>
+                <li>
+                  <a href="#section-7"
+                    ><button
+                      data-bs-dismiss="offcanvas"
+                      section-no="7"
+                      @click="currentSection = 'section-7'"
+                    >
+                      Industrial Scrubbers and Air pollution Control
+                    </button></a
+                  >
+                </li>
+                <p class="offcanvas-article-info text-muted">
+                  <span title="Category">Mechanical Engineering</span><br />
+                  <span title="Author">Omar Ayman</span>
+                </p>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- END: TABLE OF CONTENTS (OFFCANVAS) -->
+
+        <!-- START: NAV -->
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+          <div class="container">
+            <div class="d-flex align-items-center">
+              <!-- Container div for logo and flag -->
+              <a class="navbar-brand text-uppercase" href="../">
+                <img
+                  loading="lazy"
+                  src="..\images/Logo.png"
+                  width="52"
+                  height="25"
+                  class="d-inline-block align-top"
+                  loading="lazy"
+                />
+              </a>
+              <!-- Add the Palestine flag here -->
+              <img
+                src="..\images\Palestine 2.png"
+                alt="Palestine Flag"
+                height="30"
+                style="margin-left: 10px"
+              />
+            </div>
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://issues.ys-journal.org"
+                    >Issues</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Contact"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://ys-journal.org/Programl"
+                    >Our Program</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/IFYR"
+                  >
+                    <div>IFYR</div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link pub-btn"
+                    href="https://ys-journal.org/Publish"
+                  >
+                    <div>Publish</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- END: NAV -->
+
+        <!-- START: HERO -->
+        <div class="hero">
+          <div class="container-xxl p-0">
+            <div class="row g-0 h-100">
+              <div class="hero-content col-lg-6">
+                <p class="text-bg">Issue 5</p>
+                <!-- <a href="../index.html"><img loading="lazy" src="assets/imgs/Logo.png" alt="YSJ Logo" /></a> -->
+                <p class="display-1 mb-0">Issue 5</p>
+                <p class="fs-4 text-muted">April 2021</p>
+                <button
+                  class="btn mb-3"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#contents_offcanvas"
+                >
+                  Table of Contents
+                </button>
+                <a
+                  class="text-decoration-none text-muted small"
+                  href="pdf/5/issue-5.pdf"
+                  >Switch to PDF View</a
+                >
+              </div>
+              <div class="hero-bg col-lg-6">
+                <img
+                  loading="lazy"
+                  src="assets/imgs/issue5/issue5_bg.jpeg"
+                  alt="Issue 5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: HERO -->
+
+        <!-- <div data-bs-spy="scroll" data-bs-target="#offcanvas-nav-list" data-bs-smooth-scroll="true" tabindex="0" data-bs-rootMargin="0px 0px -10000px"> -->
+        <!-- START: SECTION 1 -->
+        <section class="section-1" id="section-1">
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Letter from the Journal
+              </h2>
+              <div class="content">
+                Dear readers,<br />
+                <span
+                  >Welcome to the biggest issue this journal has ever witnessed!
+                  With 6 articles covering topics acrossvarious fields, we are
+                  proud to release our April 2021 issue. We’ve had a lot of fun
+                  assembling this one, so we hope you have a fruitful time
+                  reading it!</span
+                >
+                <span
+                  >These past months were really busy as most of us were testing
+                  but our workflow went through smoothly, thanks to the
+                  cooperation of our many writers and their hard work, so a
+                  round of applause to Omar Ayman, Hamdy Amin, Roaa Elfishawy,
+                  Saif Taher, and Radwaa El-Ashwal for keeping up with the
+                  workload! Furthermore, to increase our audience across social
+                  media platforms, we have created an Instagram account for
+                  students to follow us: @ysciencejournal if you have not
+                  followed us yet, make sure to take a second of your time to do
+                  so!</span
+                >
+                <span
+                  >Without further ado, we hope again you have an enjoyable time
+                  reading this, and do not hesitate to reach out to us for
+                  constructive feedback!</span
+                >
+                Best Regards,<br />
+                Youth Science Journal Community
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 1 -->
+
+        <!-- START: SECTION 2 -->
+        <section
+          class="section-2"
+          id="section-2"
+          v-show="currentSection == 'section-2'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Multitasking: the solution for keeping up with themodern world
+                speed?
+              </h2>
+              <p class="section-author text-center text-muted">
+                Radwa Al-Ashwal<br />Maadi STEM High School for Girls
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >In the rush of the technology age, where most people are
+                    part of a 24/7 community, itmight seem appropriate to
+                    perform more than one job at a time. Multitasking is the
+                    idea of having multiple tasks competing for your attention.
+                    The fact that attention isa very limited resource is skipped
+                    and the overall impression is that you are savingtime,
+                    energy, and space forlaterrest. Unfortunately, the study
+                    shows otherwise. Whilein the heat of the work you might feel
+                    like the output is efficient, the actual outcome -in most
+                    cases- is not as good as if you were not
+                    “multitasking”</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >When you start an activity, it takes time to get fully
+                      focused. After some time, you will probably be doing it
+                      with higher efficiency and less effort. That is, the
+                      regions responsible for this specific action are activated
+                      and the neurons are already fired up.</span
+                    >
+                    <span
+                      >In case you want to switch tasks, there are two stages:
+                      “the Goal Shifting” which is just deciding you want to do
+                      task 2 now instead of task 1. And stage two: “rule
+                      activation” you are turning off the rules for task 1 and
+                      turning on the rules for task 2
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="C. P. Janssen, S. J. J. Gould, S. Y. W. Li, D.P. Brumby, and A. L. Cox, “Integratingknowledge of multitasking and interruptions across different perspectives and research methods,” 18- Mar-2015. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S1071581915000476. [Accessed: 10-Apr- 2021]"
+                        reference-no="1.1"
+                        >[1]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >Depending on the type and familiarity of the tasks, this
+                      process could either be flawless that you would not even
+                      be aware of or it could be not. Problems arise when
+                      switching causes conflict between the current physical and
+                      mental states. The operations required to make these
+                      changes take time and resources and thereby affect
+                      performance.Although switch costs may be relatively small,
+                      sometimes just a few tenths of a second per switch, they
+                      can add up to large amounts when people switch repeatedly
+                      back and forth between tasks. Thus, multitasking may seem
+                      efficient on the surface but may take more time in the end
+                      and involve more error.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Like a clown box, but scarier</p>
+                  <p>
+                    <span
+                      >When focused on a single task, our attentional resources
+                      are well directed and uninterrupted
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="M. Naveh-Benjamin, F. I. Craik, J. G. Perretta, and S. T. Tonev, “The effects of divided attention on encoding and retrieval processes: The resiliency of retrieval processes,” TheQuarterly Journal of Experimental Psychology A, vol. 53, no.3, pp. 609–625, 2000."
+                        reference-no="1.9"
+                        >[9]</tooltip
+                      >. Information is neatly processed, encoded, and stored.
+                      When a secondary task is added, attention must be divided,
+                      and the processing of incoming information becomes
+                      fragmented. As a result, encoding is disrupted
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" F. Sana, T. Weston, and N. J. Cepeda,“Laptop multitasking hinders classroom learning for both users and nearby peers,” Computers & Education, 30-Oct-2012. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0360131512002254. [Accessed: 10-Apr-2021]."
+                        reference-no="1.2"
+                        >[2]</tooltip
+                      >, leading to the reduction of the quantityand quality of
+                      stored information.
+                    </span>
+                    <span
+                      >How focused you are during the task determines how
+                      detailed you are likely to remember it. Information
+                      processed without interruptions is way less prone to
+                      errors than information perceived during multitasking.
+                      Performance declination is more likely to happen when
+                      attention is divided.</span
+                    >
+                    <span
+                      >When interruptions are attention-consuming,they can
+                      increase feelings of stress and anxiety bysubjective and
+                      physiological measures. For instance,when you have 18 tabs
+                      open in one window and adeadline in 47 minutes, having a
+                      mail notification popout of your screen or hearing
+                      Microsoft Team’s ringeris not really calming.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Multitasking is contagious</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article1/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure #1: The effect of multitasking on comprehension
+                        of lecture content
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Laptops are being more common in classrooms. The
+                      dependence on technological methods to facilitate the
+                      learning process and make it more interactive is
+                      increasing. However, students are more commonly found
+                      engaged with their laptops or smartphones with irrelevant
+                      actions to the learning process. In an experiment
+                      conducted at York University
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" F. Sana, T. Weston, and N. J. Cepeda,“Laptop multitasking hinders classroom learning for both users and nearby peers,” Computers & Education, 30-Oct-2012. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0360131512002254. [Accessed: 10-Apr-2021]."
+                        reference-no="1.2"
+                        >[2]</tooltip
+                      >, participants who multitasked during the lecture scored
+                      significantly lower than participants who did not
+                      multitask.</span
+                    >
+                  </div>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article1/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>
+                        Figure #2: The Effect of Peer Distraction on
+                        Comprehension of Lecture Content
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >You could predict that referring to the fact that there
+                      are limitations to how well multiple tasks can be carried
+                      out concurrently. But could viewing a multitasking peer
+                      affect performance? Another experiment by (McMaster
+                      University, Department of Psychology, Neuroscience, &
+                      Behavior)
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" F. Sana, T. Weston, and N. J. Cepeda,“Laptop multitasking hinders classroom learning for both users and nearby peers,” Computers & Education, 30-Oct-2012. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0360131512002254. [Accessed: 10-Apr-2021]."
+                        reference-no="1.2"
+                        >[2]</tooltip
+                      >
+                      investigated whether being in direct view of a
+                      multitasking peer would negatively influence learning as
+                      measured by performance on a comprehension test. A group
+                      of participants was asked to take notes using paper and
+                      pencil while attending the lecture. Some participants were
+                      strategically seated throughout the classroom so that they
+                      were in view of multitasking confederates on laptops,
+                      while others had a distraction-free view of the lecture.
+                      Confederates were typing notes on the lecture and
+                      performing other concurrent, irrelevant online tasks. The
+                      results were as follows: Participants in view of
+                      multitasking peers scored significantly lower on the test
+                      than participants, not in view of multitasking peers.
+                      Conclusion: Peer multitasking distracted participants who
+                      were attempting to pay some attention to the lecture.
+                      Those in view of a multitasking peer scored 17% lower on a
+                      post-lecture comprehension test.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Drawbacks of Multitasking</p>
+                  <p>
+                    <span
+                      >It is hard to quit multitasking, scary, and might seem
+                      unrealistic in some cases. Just to realize the trueimpact,
+                      this is a thorough review of multitasking dangers.</span
+                    >
+                    <span
+                      >A study published in Plos-One journal
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="K. K. Loh and R. Kanai, “Higher media multi-tasking activity is associated with smaller gray-matter density in theanterior cingulate cortex,” PloS one, 24-Sep-2014. [Online]. Available: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4174517/. [Accessed: 10-Apr-2021]."
+                        reference-no="1.4"
+                        >[4]
+                      </tooltip>
+                      demonstrates that multitasking can cause physical damage
+                      to the brain. Gray matter, which plays a vital role in
+                      attention, consciousness, and memory
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="“Gray Matter,” Gray Matter - an overview | ScienceDirect Topics. [Online]. Available: https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/gray-matter. [Accessed: 10- Apr-2021]."
+                        reference-no="1.5"
+                        >[5]</tooltip
+                      >
+                      can have less density in the case of heavy media
+                      multitaskers.</span
+                    >
+                    <span
+                      >A paper published in NCBI
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title=" U. M. R. K. T. M. W. AD; “Media multitasking and memory: Differences in working memory and long-termmemory,” Psychonomic bulletin & review. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/26223469/. [Accessed: 10-Apr-2021]."
+                        reference-no="1.6"
+                        >[6]
+                      </tooltip>
+                      studies the relation between working memory, long-term
+                      memory, and media multitaskers. Results show that media
+                      multitasking negatively affects both types of memories.
+                      The frequent attention division between multiple tasks
+                      weakens the ability to recall information over long -or
+                      short- periods.</span
+                    >
+                    <span
+                      >A study published in the journal Neuroimage
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="M. Moisala, V. Salmela, L. Hietajärvi, E. Salo, S. Carlson, O. Salonen, K. Lonka, K. Hakkarainen, K. Salmela-Aro, and K. Alho, “Media multitasking is associated with distractibility and increased prefrontal activity in adolescents and young adults,” NeuroImage, 08-Apr-2016. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S1053811916300441. [Accessed: 10-Apr-2021]."
+                        reference-no="1.7"
+                        >[7]</tooltip
+                      >
+                      studied the effect of distractive stimuli on performance.
+                      Results show clear performance declination when exposed to
+                      irrelevant sources of attention-capturing stimuli.</span
+                    >
+                    <span
+                      >A study of college students
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="G. Winch, “10 Real Risks of Multitasking, to Mind and Body,” Psychology Today, 22-Jun-2016. [Online]. Available: https://www.psychologytoday.com/us/blog/the-squeaky-wheel/201606/10-real-risks-multitasking-mind-and-body. [Accessed: 10-Apr-2021]."
+                        reference-no="1.8"
+                        >[8]
+                      </tooltip>
+                      found that as students multitasked more while using their
+                      computers, their stress levels elevated. The constant
+                      exposure to new information that needs to be processed
+                      escalated the stress responses.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Conclusion</p>
+                  <p>
+                    <span
+                      >To sum up, where multitasking might appear as aperfect
+                      solution for sparing time, zooming in a littlereveal that
+                      under the name of getting a variety of duties done, time
+                      is lost, efficiency is lost, and mental health is lost.
+                      Multitasking does not only affect you but those around you
+                      as well. Instead of starting alldue tasks at the same
+                      time, take them one by one.Limit distractions to increase
+                      efficiency.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VI. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="1.1"></p>
+                        <p reference-no="1.2"></p>
+                        <p reference-no="1.3"></p>
+                        <p reference-no="1.4"></p>
+                        <p reference-no="1.5"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="1.6"></p>
+                        <p reference-no="1.7"></p>
+                        <p reference-no="1.8"></p>
+                        <p reference-no="1.9"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 2 -->
+
+        <!-- START: SECTION 3 -->
+        <section
+          class="section-3"
+          id="section-3"
+          v-show="currentSection == 'section-3'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Lucid Dreams: Modifying Dream Content
+              </h2>
+              <p class="section-author text-center text-muted">
+                Ahmed Farrag<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Scientists have been recently investigating lucid dreams
+                    and their side effects because of their potential as
+                    therapeutic tools, where it is being claimed that they have
+                    positive impacts on immediate waking mood. This paper
+                    discusses several techniques of lucid dream induction, like
+                    WBTB, MILD, and reality testing. It also goes over several
+                    concepts related to lucidity, such as the REM stage, and
+                    different methods of dream content modification, such as
+                    altering the dream environment through mimicking a
+                    real-world scene. It turned out that lucidity does have
+                    promising results when being used as a therapeutic tool,
+                    except that it might increase negative psychopathologies on
+                    frequent use. It was also obvious that there is a partial
+                    dissociation between lucid dreams and the memories of the
+                    person experiencing them.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Lucidity is a state of consciousness during sleep that
+                      enables dreamers to modify their dream content. However,
+                      it has got its limitations according to various internal
+                      and external factors. For instance, it depends on the
+                      place at which the participant sleeps and to what extent
+                      he is accustomed to it. It also depends on how much light
+                      is being leaked and the noise the participant is
+                      experiencing. Though they limit the ability of lucid
+                      dreaming, external factors can be altered according to
+                      needs, but when it comes to internal ones, it becomes a
+                      bit hindering. Recent studies show that controlling dream
+                      content was hard for PTSD patients to achieve, even when
+                      lucid
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. Sleep generally consists of two phases: non-REM and REM
+                      sleep, and it is widely agreed that lucidity only occurs
+                      in the latter stage
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. For further needs of study and research, several
+                      lucidity-inducing methods were developed. These involve
+                      MILD, WBTB, and reality testing techniques
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1] </tooltip
+                      >. They have been used in a multi-case study to prove
+                      whether lucid dreams are associated with a positive waking
+                      mood or not. A dreamer’s ability to mimic a real-world
+                      scene was also in question, so similar methods were used
+                      and experimented with to check the existence of an
+                      association between lucid dreams and partial memory
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.2"
+                        >[2] </tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. REM Stage</p>
+                  <p>
+                    <span
+                      >Though the study of lucid dreams has many inconsistencies
+                      and disagreements, it is unanimouslyagreed that lucid
+                      dreams occur within the Rapid Eye Movement stage of sleep
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. The Rapid Eye Movement phase, also known as the REM
+                      stage, occurs after being in sleep for 90 minutes
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.3"
+                        >[3]</tooltip
+                      >. It is the last stage of sleep, and it’s associated with
+                      the eye being rapidly moving right and left with other
+                      phenomena such as increased heart rate, increased blood
+                      pressure, and faster breathing
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.3"
+                        >[3]</tooltip
+                      >. Muscles also become temporarily paralyzed to prevent
+                      the dreamer from acting out of his dream
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.3"
+                        >[3] </tooltip
+                      >. Mixed frequency brain wave activity becomes very
+                      similar to those seen while awake as well. It has also
+                      been hypothesized that the recognition of being in a dream
+                      occurs in the dorsolateral prefrontal cortex, which is one
+                      of the few areas that have no activity during REM sleep
+                      and is associated with working memory
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.4"
+                        >[4]</tooltip
+                      >. However, when it happens that this part of the brain
+                      becomes activated, one recognizes he is dreaming, enabling
+                      him to act as he likes. Electroencephalography is a method
+                      of monitoring the electrical activity of the brain. It has
+                      been proved that lucidity occurs within REM through this
+                      method, where it proposes that there is increased beta 1
+                      frequency band brain wave activity during this phase
+                      (13-19hz)
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.6"
+                        >[6]</tooltip
+                      >. This indicates an increased amount of activity in the
+                      parietal lobes, which makes the brain conscious.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Inducing Lucidity</p>
+                  <p>
+                    <span
+                      >Most of the lucid dreams studies were just theoretical,
+                      with no actual evidence for their authenticity. So,
+                      several lucidity-inducing techniques were developed for
+                      the sake of experimentations. One of the methods, known as
+                      reality testing, involves genuinely checking whether you
+                      are in a dream or not throughout the day by searching for
+                      any glitches or inaccuracies in the surrounding
+                      environment. Having patients do this technique will
+                      increase the likelihood that they do it when in a dream,
+                      and therefore realize they are dreaming. Two other
+                      methods, Mnemonic Induction of Lucid Dreams (MILD) and
+                      Wake Back to Bed (WBTB), are used simultaneously. They
+                      involve waking a patient up after a certain period of time
+                      to increase his mental alertness (WBTB) and having him
+                      rehearse a phrase repeatedly, such as “I’ll remember I’m
+                      dreaming” while falling back into sleep. However, recent
+                      studies showed that lucidity induction techniques may be
+                      associated with sleep disruption
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Effect of lucidity on waking mood</p>
+                  <p>
+                    <span
+                      >A recent multi-case study proved that there is a link
+                      between lucidity and positive waking mood, which means it
+                      can be used as a therapeutic tool.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. These experiments were done in a within-subjects
+                      comparison instead of a between-subject. Because the
+                      between-subject method could be explained by individual
+                      differences, that may be certain participants were
+                      naturally more positive and of a higher ability to achieve
+                      lucidity. However, using within-subject comparisons gave
+                      the advantage of fading such a problem, indicating that
+                      lucidity itself is related to a more positive waking mood,
+                      and it actually makes sense. Because, through lucid
+                      dreams, you can face something that was previously
+                      regarded as beyond your capabilities or meet someone you
+                      miss and so. In contrast, other researchers claimed that
+                      frequent lucidity induction may cause negative
+                      psychopathologies in the long term. For instance, a
+                      symptom known as dissociation, where one distances himself
+                      from surrounding people in order to fade emotional pain,
+                      is shown to increase with increased lucidity
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="2.1"
+                        >[1]</tooltip
+                      >. It’s also worth mentioning that these experiments only
+                      measured the immediate waking mood. So, determining
+                      whether lucid dreams have lasting effects on mood or not
+                      remains an important area for future research.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Accessing Episodic Memories</p>
+                  <!-- <p></p> -->
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article2/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure #1: Mimicking a real world scene
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >An experimental study of dreamers’ capability of
+                      accessing episodic memories turned out to be partially
+                      true. This will be elaborated later on. The methodology
+                      used in this case study involved exposing participants to
+                      a certain experimental scene, where specific objects were
+                      put in a certain order, and participants were asked to
+                      memorize and learn them all by heart in order for them to
+                      try and mimic it in their dream environment. Figure
+                      #1illustrates the process of interest.</span
+                    >
+                  </div>
+                  <span
+                    >Table 1 illustrates the list of objects used with a brief
+                    description for each of them:</span
+                  >
+                  <figure class="figure-block mx-auto">
+                    <img
+                      loading="lazy"
+                      src="assets/imgs/issue5/article2/table_1.jpeg"
+                      alt="Table 1"
+                    />
+                    <figcaption>
+                      Table #1: Objects used at the experimental scene
+                    </figcaption>
+                  </figure>
+                  <span
+                    >There is more to the story, the procedures followed by
+                    participants to get to the point of altering dream scenery
+                    differed greatly. For instance, some participants changed
+                    their dream environment only by wishing it so. Others needed
+                    to get through a door or a portal to do so. A portal might
+                    be a glass surface, a mirror for example. These techniques
+                    are still being studied up to this moment and remain an
+                    important field of study for future research. Unfortunately,
+                    many inconsistencies appeared in dream scene reinstatements,
+                    indicating a dissociation between the dream environment and
+                    the scenery formed during waking
+                    <tooltip
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="manual"
+                      data-bs-placement="bottom"
+                      data-bs-html="true"
+                      title="Loading ..."
+                      reference-no="2.2"
+                      >[2]</tooltip
+                    >. However, dreamers were aware of these inconsistencies
+                    while dreaming, and they actually tried altering them. Table
+                    (2) contains several dream reports for more details.</span
+                  >
+                  <figure class="figure-block mx-auto">
+                    <img
+                      loading="lazy"
+                      src="assets/imgs/issue5/article2/table_2.jpeg"
+                      alt="Table 2"
+                    />
+                    <figcaption>Table #2: Dream Reports</figcaption>
+                  </figure>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >Lucid dreams are being studied on a wide range because of
+                      their positive impact on waking mood, which means they
+                      could be used as a therapeutic tool. WBTB, MILD, and
+                      reality testing have proved their potential as lucidity
+                      induction techniques and are currently being used on
+                      larger scales than before. It was also proved that there
+                      are some inconsistencies in dream scene
+                      reinstatements.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VII. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="2.1"></p>
+                        <p reference-no="2.2"></p>
+                        <p reference-no="2.3"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="2.4"></p>
+                        <p reference-no="2.5"></p>
+                        <p reference-no="2.6"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 3 -->
+
+        <!-- START: SECTION 4 -->
+        <section
+          class="section-4"
+          id="section-4"
+          v-show="currentSection == 'section-4'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Quantum Computers & Networks: An Overview
+              </h2>
+              <p class="section-author text-center text-muted">
+                Saif Taher<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Today’s classical computers are headed to a plateau
+                    regarding performance/power increases and size decreases.
+                    Many companies are investing in quantum computers as the
+                    next generation of computers due to their vast potential.
+                    Said potential stems from their ability to exploit bizarre
+                    quantum phenomena, such as superposition and entanglement.
+                    However, the road is still long to achieve quantum computers
+                    capable of doing anything that today’s supercomputers
+                    cannot. The road is riddled with design challenges that
+                    heavily limit the extent of problems quantum computers can
+                    solve. Those challenges include error correction, increasing
+                    the number of qubits, and finding more efficient ways to
+                    create the super-cooled ultra-vacuum environments necessary
+                    for the operation of supercomputers.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >The integrated circuit present in most of today’s modern
+                      computers was first introduced in 1959. Since then,
+                      computers have been following a trend termed “Moore’s
+                      Law”: In 1965, computer engineer Gordon Moore observed
+                      that the number of components on integrated circuits had
+                      been roughly doubling every 1-2 years since circuits were
+                      invented. This allowed circuits to run at higher speeds
+                      and efficiencies per unit area for the same amount of
+                      power. Consequently, computers have both been shrinking in
+                      size and growing in computing power over the decades.
+                      However, the end to Moore’s law is looming on the horizon
+                      as the size of components on circuits is approaching the
+                      atomic scale, which means that further increases in
+                      classical computers’ power are going to be quite
+                      difficult. It’s time to start developing entirely new
+                      technology that will succeed today’s computers as our tool
+                      for moving forward, and quantum computers seem to be the
+                      perfect candidate
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.4"
+                        >[4]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >Quantum computers have the potential to revolutionize
+                      science, medicine, commerce, space exploration, and
+                      countless other industries and markets. That potential
+                      lies in their ability to easily solve problems that even
+                      the most powerful of today’s supercomputers struggle to
+                      tackle, such as chemical/biological simulations, machine
+                      learning, financial modeling, cybersecurity, and
+                      optimizing manufacturing and supply chains
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >In fact, many companies are starting to heavily invest in
+                      R&D efforts towards quantum computers: Google and IBM
+                      built and tested two quantum processors in 2017 and 2018,
+                      the European Commission devoted 1 €-billion to quantum
+                      technology research and a team in China under the lead of
+                      Professor Pan Jianwei successfully established a
+                      1200-km-long quantum connection between ground stations
+                      and satellite Micius. Furthermore, Volkswagen and Daimler
+                      are using quantum computers for simulations of the
+                      electrochemical processes in their cars’ batteries in an
+                      attempt to improve their performance. Pharmaceutical
+                      companies are also using quantum computers to accelerate
+                      the development of novel drugs. Finally, airbus calculated
+                      the most fuel-efficient ascent/descent flight paths with
+                      the help of quantum computers. These were just a few
+                      examples of how quantum computers are being used today and
+                      why so many industries are interested in them. Let’s take
+                      a look at the scientific principles behind the workings of
+                      these machines
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.5"
+                        >[5]</tooltip
+                      >.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. How Quantum Computers Work</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article3/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>
+                        Figure #2: Photo of the first case of successful quantum
+                        entanglement between photons of light. The photo was
+                        captured in the University of Glasgow, 2019.
+                        <tooltip
+                          data-bs-toggle="tooltip"
+                          data-bs-trigger="manual"
+                          data-bs-placement="bottom"
+                          data-bs-html="true"
+                          title="Loading ..."
+                          reference-no="3.2"
+                          >[2]</tooltip
+                        >
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >All “classical” computers and devices rely on the concept
+                      of 0’s and 1’s to represent data: The state of 0 means
+                      “off” and the state of 1 means “on”. Bits can only be 0 or
+                      1 at a time, and the number of combinations that can be
+                      produced by a string of bits of length n is equal to 2^n.
+                      On the other hand, quantum computers utilize the
+                      phenomenon of superposition to massively outclass
+                      classical bits: Superposition is the ability of particles
+                      to be in two states simultaneously. Quantum computers use
+                      Qubits instead of bits to represent data. Unlike bits
+                      which can only represent one out of the 2^n possible
+                      combinations, qubits can be in a superposition of all of
+                      them. In other words, a qubit of length n represents all
+                      of the 2^n combinations at the same time, which enables
+                      solving certain classes of problems, such as optimization
+                      and search problems, at exponentially faster rates than
+                      normal computers can achieve
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.6"
+                        >[6]</tooltip
+                      >.
+                    </span>
+                    <span class="order-1"
+                      >After performing all calculations, measuring qubits will
+                      yield a probabilistic result of either 0 or 1 depending on
+                      “how much” they had of each component. In other words, 0
+                      and 1 could be represented as two orthogonal vectors, and
+                      a qubit could be anything between them. For example, a
+                      vector at 45° represents a qubit with an equal amount of 0
+                      and 1, as shown in figure #1. Therefore, upon measuring
+                      there is a 50/50 probability that the outcome will be 0/1.
+                      It is also worth noting that a qubit’s quantum state
+                      collapses after measuring it and that every subsequent
+                      measurement will result in the same outcome regardless of
+                      how much 0 and 1 the qubit initially had.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      ></span
+                    >
+                  </div>
+                  <span
+                    >Quantum computers make use of another phenomenon known as
+                    quantum entanglement, shown in figure #2. A pair of
+                    entangled qubits is known as an EPR pair, and they exhibit
+                    some very interesting properties. Once one of them is
+                    measured the other one collapses to the opposite quantum
+                    state of the first one, no matter how long the distance
+                    between the two qubits is (i.e., if the first qubit
+                    collapses to 0 the other one will collapse to 1, and vice
+                    versa). This non-classical behavior could be used as the
+                    first building block of a quantum internet; a network of
+                    interconnected quantum computers. Qubits could be
+                    transferred across these networks using technologies such as
+                    Quantum Key Distribution (QKD) and SuperDense Coding.</span
+                  >
+                  <figure class="figure-block mx-auto">
+                    <img
+                      loading="lazy"
+                      src="assets/imgs/issue5/article3/figure_1.jpeg"
+                      alt="Figure 1"
+                    />
+                    <figcaption>
+                      Figure #3: Three vectors representing three qubits
+                      corresponding to 0, 1, and a vector at 45° with equal
+                      amounts of both, respectively.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.8"
+                        >[8]</tooltip
+                      >
+                    </figcaption>
+                  </figure>
+                  <p>
+                    <span
+                      >These technologies enable exchanging secret encryption
+                      keys via photons. This allows for ultra-secure connections
+                      that are impossible to hack due to something known as
+                      decoherence (discussed in the next section). In a
+                      nutshell, quantum connections cannot be hacked because any
+                      attempt by a third party to access the qubits will alter
+                      their delicate quantum state which causes them to lose
+                      their data.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]
+                      </tooltip>
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.3"
+                        >[3]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.7"
+                        >[7]</tooltip
+                      >
+                    </span>
+                    <span
+                      >While quantum computers may seem like a revolutionary
+                      breakthrough in informatics, the road is still very long
+                      for them to actually achieve any tangible results due to
+                      the numerous challenges facing them. We discuss some of
+                      those challenges in the next section.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Challenges Facing Quantum Computers
+                  </p>
+                  <p>
+                    <span
+                      >There are two main obstacles in the road to achieving
+                      quantum supremacy; that is, successfully designing and
+                      implementing a quantum computer superior to any classical
+                      supercomputer. Namely, those obstacles are noise and
+                      errors.</span
+                    >
+                    <span
+                      >The quantum state of qubits is extremely fragile, which
+                      inhibits quantum computers from operating in normal
+                      environments or communicating cubits at long distances due
+                      to something known as noise. Even the slightest of changes
+                      in environmental conditions, such as temperature or
+                      pressure, is considered as noise, and interaction with
+                      noise causes errors/decoherence; i.e., qubits tend to lose
+                      their special quantum state and subsequently lose the data
+                      they carry. Therefore, although the size of quantum chips
+                      and circuits is not too large compared with their
+                      classical counterparts, it is the equipment required for
+                      preserving the qubits that take up large space and funds.
+                      This equipment includes super-cooled fridges and
+                      ultra-vacuum chambers, and it ensures qubits retain their
+                      superposition to achieve their purpose.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      ></span
+                    >
+                    <span
+                      >The number of calculations that can be performed using
+                      classical bits scales linearly with the number of bits. On
+                      the other hand, the computing power of quantum computers
+                      increases exponentially with the number of qubits, which
+                      gives quantum computers their vast potential. However, at
+                      the moment it takes hundreds of thousands or millions of
+                      qubits to solve even a fundamental chemistry problem to
+                      correct all the errors arising from noise. To help with
+                      this, error-correction techniques and algorithms have been
+                      developed. However, further research is required to
+                      improve them. Not to mention that creating qubits is
+                      already quite a challenging engineering task.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.1"
+                        >[1]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="3.6"
+                        >[6]</tooltip
+                      >
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Conclusion</p>
+                  <p>
+                    <span
+                      >Quantum computers are the most promising tools at our
+                      hands if we are to explore the next frontiers of science
+                      and technology. Nevertheless, they are still very early in
+                      development, and we have barely scratched the surface of
+                      their power. More work is needed to decrease the size and
+                      costs of the equipment needed to shield qubits from noise
+                      and to find efficient ways of achieving superposition and
+                      entanglement. Current quantum computers haven’t exceeded
+                      double digits in terms of qubits, and there’s still a long
+                      way to go before we can accomplish anything useful with
+                      them.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">V. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="3.1"></p>
+                        <p reference-no="3.2"></p>
+                        <p reference-no="3.3"></p>
+                        <p reference-no="3.4"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="3.5"></p>
+                        <p reference-no="3.6"></p>
+                        <p reference-no="3.7"></p>
+                        <p reference-no="3.8"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 4 -->
+
+        <!-- START: SECTION 5 -->
+        <section
+          class="section-5"
+          id="section-5"
+          v-show="currentSection == 'section-5'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Prion Diseases: A Journey Through Therapeutic Strategies
+              </h2>
+              <p class="section-author text-center text-muted">
+                Roaa El-fishawy<br />Maadi STEM School for Girls
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Prions are unconventional infectious agents that cause
+                    lethal transmissible neurodegenerative diseases in humans
+                    and animals. They were the main cause of a number of
+                    diseases including Creutzfeldt-Jakob Disease (CJD), Variant
+                    Creutzfeldt-Jakob Disease (vCJD),
+                    Gerstmann-Straussler-Scheinker Syndrome, Fatal Familial
+                    Insomnia and Kuru. Prions can be distinguished from other
+                    pathogens by their lack of nucleic acids. The most important
+                    process for prion propagation is the conversion from normal
+                    cellular prion protein on the cell membrane to insoluble,
+                    limited protease digestion-resistant, pathogenic scrapie
+                    prion protein. For several years, many pharmacological and
+                    biological tools have been targeting different stages of
+                    disease progression. A very few numbers of them have been
+                    upgraded to clinical trials. Despite all these treatments
+                    being tested, none has been approved as a therapeutic drug
+                    for prion diseases in general. In this review, some of these
+                    treatments will be discussed to get a basic knowledge of
+                    different possible therapies.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Prion diseases, or transmissible spongiform
+                      encephalopathies, are fatal neurodegenerative diseases in
+                      the central nervous system
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.1"
+                        >[1]
+                      </tooltip>
+                      which include Creutzfeldt - Jakob disease (CJD), Variant
+                      Creutzfeldt-Jakob Disease (vCJD),
+                      Gerstmann-Straussler-Scheinker Syndrome, Fatal Familial
+                      Insomnia, and Kuru.</span
+                    >
+                    <span
+                      >Prions are the main infectious agents of these diseases.
+                      They behave like any other infectious pathogens, except
+                      the fact they lack the most fundamental features of any
+                      organism, in particular, genetic material (DNA, RNA). But
+                      it turns out that they are caused by the misfolding of a
+                      host-encoded prion protein (PrP). Prion Protein is a 253
+                      amino acid AA protein. After its transport to the
+                      endoplasmic reticulum in the process of synthesizing
+                      proteins, the first 22 N-terminal AA are removed from PrP,
+                      while the last 23 C-terminal AA are cleaved off after the
+                      addition of glycosylphosphatidylinositol (GPI) anchor. GPI
+                      helps the proteins attach to the outer surface of the cell
+                      membrane.</span
+                    >
+                    <span
+                      >PrP could be found in two forms: a normal cellular prion
+                      protein (PrPC) and a pathogenic misfolded conformer
+                      (PrPSc), both of which are encoded from the same sequence
+                      from base pairs 4,666,796-4,682,233. The abnormal PrPSc
+                      and the normal PrPC differ in secondary and tertiary
+                      structure, but not in primary amino acids sequence.
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.2"
+                        >[2]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.3"
+                        >[3]</tooltip
+                      >.
+                    </span>
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article4/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>Figure #1: pathogenic signaling</figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >According to the seeding-nucleation model*, the
+                      preexisting or acquired PrPSc oligomers catalyze the
+                      conversion of PrPC molecules into PrPSc fibrils. This
+                      breakage provides more PrPSc templates for the conversion
+                      process
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.4"
+                        >[4]</tooltip
+                      >. This process of conversion is self-propagating, with
+                      PrP SC acting as a conformational template forcing more
+                      PrP C to convert. The conversion reaction itself is
+                      crucial to neurotoxicity in prion diseases. Nonetheless,
+                      the exact identity of the neurotoxic prion species and the
+                      mechanism of neurotoxicity are still unknown. Figure #1
+                      illustrates the process of conversion from the cellular
+                      protein PrPc to pathogenic misfolded conformer
+                      (PrPSc).</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >Prion diseases are rare in humans, but they indeed have a
+                      unique biology that had caused them to be the focus of the
+                      scientific world for several years. There is currently no
+                      effective treatment for prion diseases or clear evidence
+                      of how they are transmitted, but mostly they are
+                      transmitted through contaminated blood products
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.5"
+                        >[5] </tooltip
+                      >.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    II. Treatments for prion diseases: Do they exist?
+                  </p>
+                  <p>
+                    <span
+                      >A short answer is that there is no effective
+                      disease-modifying treatment for prion diseases until now.
+                      None has string preclinical evidence from experiments on
+                      animals. A good understanding of the agent’s structure and
+                      mechanism is essential for discovering a decent treatment,
+                      which is improving every day.</span
+                    >
+                    <span
+                      >The most frequent targets are PrPc, PrPsc, and the
+                      conversion process between PrPc to PrPsc. The main goal of
+                      targeting PrPc is to enable knocking down or completely
+                      remove substrates for prion propagation, which can be
+                      applied for all types of prion diseases.</span
+                    >
+                    <span
+                      >Targeting PrPsc may be the most logical approach;
+                      however, such therapies could not influence disease
+                      progression, and they may even enhance or prolong the
+                      disease. Conversely, targeting the process of conversion
+                      from PrPc to PrPsc includes various pathways. Inhibition
+                      of PrPC trafficking to the plasma membrane, stabilization
+                      of the PrPC structure with chemical chaperones, and
+                      interference of the interaction between PrPC and PrPSc are
+                      examples of such therapies
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.6"
+                        >[6]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.7"
+                        >[7]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >Any successful therapy for prions would either prevent
+                      the formation or block the action of the neurotoxic
+                      species. Pathological changes and infectivity are
+                      associated with (PrPsc), but there is no evidence for in
+                      vivo toxicity caused by PrPsc
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.8"
+                        >[8]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.9"
+                        >[9]</tooltip
+                      >.
+                    </span>
+                    <span
+                      >Another reason for arguing about the toxicity of PrPsc is
+                      the existence of the subclinical disease, in which high
+                      levels of PrPsc are present, but with no clinical symptoms
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.10"
+                        >[10]</tooltip
+                      >. As well as several inherited prion diseases in which
+                      PrPsc is not detected in any significant amounts, the
+                      level of PrPsc accumulation in certain brain regions has
+                      nothing to do with any clinical features
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.11"
+                        >[11]</tooltip
+                      >. But despite all of the previous, expression of PrPsc is
+                      essential for both prion propagation and pathogenesis.
+                    </span>
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    III. Timing of treatment: Does it make a difference?
+                  </p>
+                  <p>
+                    <span
+                      >Before any neural loss in mouse scrapie, spongiform
+                      change and synapse loss occur
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.12"
+                        >[12]</tooltip
+                      >
+                      and before the end stage motor symptoms, some changes in
+                      the species’ typical behaviors take place
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.13"
+                        >[13]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.14"
+                        >[14]</tooltip
+                      >
+                      and they are associated with the early loss of presynaptic
+                      terminals in the dorsal hippocampus
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.15"
+                        >[15]</tooltip
+                      >. In other neurodegenerative disorders, such as
+                      Alzheimer's and Huntington's diseases, the loss of
+                      synapses precedes neuronal loss.
+                    </span>
+                    <span
+                      >The early spongiform change had some kind of relation
+                      with cognitive and behavioral deficits and synaptic
+                      transmission in the hippocampus in prion-infected mice
+                      with PrP depletion; these mice recovered just one week
+                      after depletion has occurred
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.16"
+                        >[16]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >Although the link between spongiosis and synaptic loss is
+                      not completely clear, it may give some information like
+                      reflecting a stage of functional impairment of synapses
+                      before they are physically lost. The recovery of early
+                      spongiform change bears with the idea of the early stage
+                      of the disease being a key for prion diseased neurons to
+                      be rescued.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">
+                    IV. Using RNAi for Therapeutic Gene Knockdown
+                  </p>
+                  <p>
+                    <span
+                      >“Transgene-mediated reduction of PrPC” is an expression
+                      that opens a new door when it comes to possible
+                      therapeutic strategies regarding prion diseases in
+                      general. It has been discussed before how the prevention
+                      of PrPsc formation may be a possible cure for prion
+                      diseases; a way to do so is by disabling or “silencing”
+                      the gene responsible for the formation of PrPsc.
+                      Nevertheless, that expression does not contain any direct
+                      therapeutic possibilities in human patients. Recent
+                      developments in the field of RNA interference (RNAi)
+                      constitute a new opportunity to achieve such therapeutic
+                      gene silencing in vivo.</span
+                    >
+                    <span
+                      >RNAi is a naturally occurring highly-conserved
+                      sequence-specific mechanism for post-transcriptional gene
+                      silencing in eukaryotes. It is associated with the
+                      presence of double-stranded RNA (dsRNA), which is
+                      exogenously introduced as viral RNA to the cell and
+                      endogenously encoded as microRNAs (miRNAs), which is an
+                      RNA responsible for regulating gene expression.
+                      Exogenously introduced dsRNA is recognized as a
+                      cytoplasmic ribonuclease known as Dicer. Its function is
+                      to cleave dsRNA into 21–23 nt sequences called short
+                      interfering RNAs (siRNAs)
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.17"
+                        >[17]</tooltip
+                      >. Both siRNAs and miRNAs interact with a multi-protein
+                      RNA-induced silencing complex (RISC) that unwinds the RNA
+                      duplex and destroys one of the strands
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.18"
+                        >[18] </tooltip
+                      >. This type is also known as passenger RNA.
+                    </span>
+                    <span
+                      >We can call the remaining “guide” strand a template,
+                      which is used to locate cellular mRNAs containing a
+                      homologous sequence. The degree of homology between the
+                      guide strand and the mRNA determines whether RISC
+                      initiates endonucleolytic cleavage or translational arrest
+                      of the target mRNA and, consequently, silences the
+                      expression of that gene. Generally, siRNAs mediate the
+                      destruction of target mRNAs whereas miRNAs silence gene
+                      expression through translational repression due to their
+                      imperfect complementarity to the target mRNA
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.19"
+                        >[19]</tooltip
+                      >
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.20"
+                        >[20]</tooltip
+                      >. Interfering RNA sequences can be designed to enter the
+                      RNAi pathway at various points. siRNA duplexes can be
+                      synthesized for direct loading into RISC without requiring
+                      further processing
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.21"
+                        >[21]</tooltip
+                      >
+                    </span>
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article4/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>
+                        Figure #2: Schematic representing virally mediated RNAi
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Targeting of brain structures has been achieved
+                      successfully with an infusion of nakedsiRNA duplexes in
+                      conjunction with transfection reagents and conjugated to a
+                      peptide derived from the rabies virus glycoprotein
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.22"
+                        >[22]
+                      </tooltip>
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="4.23"
+                        >[23]</tooltip
+                      >. Because of the promising results being attained,
+                      current technologies mean clinical translation for the
+                      treatment of many neurodegenerative diseases. The previous
+                      process will require the continuous or repeated long-term
+                      infusion of the interfering RNA directly to the CNS.
+                    </span>
+                    <span class="order-1"
+                      >Alternatively, stable, long-term expression of
+                      interfering RNA sequences can be achieved through the use
+                      of recombinant viral vectors (see schematic in Fig.
+                      2).</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Chemotherapeutic Approach</p>
+                  <p>
+                    <span
+                      >Treatments targeting early or preclinical acquired prion
+                      diseases may find success by targeting peripheral
+                      replication and blocking neuroinvasion. However, effective
+                      therapies for symptomatic disease will most likely require
+                      a combination of approaches, such as inhibiting pathogenic
+                      PrP formation, destabilizing or enhancing the clearance of
+                      existing pathogenic PrP, blocking neurotoxic effects of
+                      the infection, or promoting the recovery of lost functions
+                      in the central nervous system. There is a long list of
+                      chemical classes of compounds that have been screened and
+                      tested in vitro, and some even in vivo.</span
+                    >
+                    <span
+                      >The majority of anti-prion compounds were examined to
+                      stop the conversion of PrPC to PrPSc. This may happen
+                      through direct binding of PrPC and/or PrPSc, causing
+                      prevention of interaction or block polymerization. Hence,
+                      a compound may redistribute PrPC to a location where
+                      conversion cannot occur. Others affect conversion by
+                      interfering with important accessory molecules or by
+                      suppressing PrPC expression altogether.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >Our vision and knowledge about Prion diseases and PrPsc
+                      especially are in constant progress each day. While
+                      increasing our understanding of their structure &
+                      formation, various methods of treatment have emerged on
+                      the scene, perhaps not all of them have proven remarkable
+                      progress in vivo, but this increased knowledge will help
+                      in the future to open other doors for various biological
+                      and pharmacological tools.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VII. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="4.1"></p>
+                        <p reference-no="4.2"></p>
+                        <p reference-no="4.3"></p>
+                        <p reference-no="4.4"></p>
+                        <p reference-no="4.5"></p>
+                        <p reference-no="4.6"></p>
+                        <p reference-no="4.7"></p>
+                        <p reference-no="4.8"></p>
+                        <p reference-no="4.9"></p>
+                        <p reference-no="4.10"></p>
+                        <p reference-no="4.11"></p>
+                        <p reference-no="4.12"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="4.13"></p>
+                        <p reference-no="4.14"></p>
+                        <p reference-no="4.15"></p>
+                        <p reference-no="4.16"></p>
+                        <p reference-no="4.17"></p>
+                        <p reference-no="4.18"></p>
+                        <p reference-no="4.19"></p>
+                        <p reference-no="4.20"></p>
+                        <p reference-no="4.21"></p>
+                        <p reference-no="4.22"></p>
+                        <p reference-no="4.23"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 5 -->
+
+        <!-- START: SECTION 6 -->
+        <section
+          class="section-6"
+          id="section-6"
+          v-show="currentSection == 'section-6'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Quantum Teleportation: Applications and Challenges
+              </h2>
+              <p class="section-author text-center text-muted">
+                Hamdy Amin<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Quantum teleportation plays a crucial role in information
+                    science for its property of completely secure transmission.
+                    It was first demonstrated as a means of transferring the
+                    quantum state. Later, it has been extended greatly in the
+                    field of quantum computing, quantum network, and quantum
+                    communication, and other fields. The first part of this
+                    article will talk briefly about the basic theory of quantum
+                    teleportation and the applications that have been achieved
+                    in recent years for both commercial and scientific purposes.
+                    Next, the results of current experiments and the challenges
+                    that should be overcome in the future will be presented. The
+                    final section will be a discussion about the development of
+                    quantum teleportation and its future implementations.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <p>
+                    <span
+                      >Numerous questions about information transfer have been
+                      raised from the quantum entanglement now between EPR
+                      pairs. It is impossible to deliver information
+                      simultaneously over a long range, but it is feasible to
+                      take quantum entanglement as a protocol to encrypt
+                      information. In 1993, physicists Asher Peres and William
+                      Wootters first proposed the concept of quantum
+                      teleportation. In their paper, the way to achieve quantum
+                      teleportation could be generally explained as measuring an
+                      unknown quantum state of a system then reconstructing it
+                      at a remote location. But the teleportation is only
+                      meaningful in the perspective of quantum information for
+                      the reason that the original particle does not move
+                      physically, and the state is changed. More importantly,
+                      the process of teleportation requires two channels, a
+                      traditional one and a quantum one. The traditional channel
+                      is used to transport the result yielded from the Bell
+                      measurement. And the quantum protocol is used in the
+                      unitary transformation to retrieve the original state and
+                      information.</span
+                    >
+                    <span
+                      >The 1997 quantum teleportation was first verified by Dik
+                      Bouwmeester experimentally through pairs of entangled
+                      photons. Later, it suddenly became a hot spot in
+                      information science. Not only does quantum teleportation
+                      provide a complete secure information transmission but
+                      also it boosts the development of quantum technologies.
+                      From the perspective of traditional communication
+                      protocol, it is a revolutionary watershed. In the point of
+                      quantum technologies, it serves as an indispensable
+                      foundation. Lots of technologies like quantum gate
+                      teleportation, computing, port-based teleportation, and
+                      quantum networks are derived from the basis of quantum
+                      teleportation. Quantum teleportation has been achieved in
+                      many laboratories with different approaches. With the
+                      great progress of the experiment, some extensions of
+                      quantum teleportation have been brought to the real world
+                      for commercial and scientific purposes.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Theory of quantum teleportation</p>
+                  <p>
+                    <span
+                      >For simplicity, the sender and receiver will be called
+                      Alice and Bob. In the preparation process, Alice prepares
+                      an EPR pair (particle A, particle B) and particle C that
+                      carries the information which needs to be transferred.
+                      Then, Alice performs a joint measurement which is also
+                      known as Bell measurement with particle A and particle C,
+                      and gets a result that is used to transport. Since the
+                      state of particle C is changed, the technique survives the
+                      no-cloning principle of quantum mechanics. After Bob gets
+                      the outcome of the Bell measurement from Alice through the
+                      traditional protocol, Bob can apply the unitary
+                      transformation to the result with his particle B to
+                      retrieve the state of particle A and the information
+                      contained in particle C.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article5/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure #1: Theory of quantum teleportation
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >What is presented in figure #1 is a basic approach to
+                      teleportation. Some components like the Bell measurement
+                      and unitary transmission are compulsory for it but the
+                      approach to achieve teleportation may be various when
+                      different setups are adopted.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Applications</p>
+                  <p class="subtitle fst-italic">i. Quantum network</p>
+                  <p>
+                    <span
+                      >In 2016, a scientific team in China successfully achieved
+                      quantum teleportation in relatively long-range
+                      communication using the existing fiber network. Almost at
+                      the same time, the Canadian scientific team also achieved
+                      quantum teleportation independently for several kilometers
+                      using a slightly different from the previous one.</span
+                    >
+                    <span
+                      >And China’s ‘first commercial quantum private
+                      communication network’ was built for national defense,
+                      finance, and other aspects in 2017. Their success may
+                      serve as an important milestone in building an
+                      international quantum network in the real world.</span
+                    >
+                  </p>
+                  <p class="subtitle fst-italic">
+                    ii. Quantum computing system
+                  </p>
+                  <p>
+                    <span
+                      >In 2019, IBM revealed a quantum computing system named
+                      ‘IBM Q’ which is the first industrial-grade system built
+                      with integrated commercial universal quantum systems for
+                      business and science applications. It is a critical step
+                      towards the quantum computing system to break off from the
+                      lab.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Experimental status</p>
+                  <p class="subtitle fst-italic">
+                    i. Teleportation between light and matter
+                  </p>
+                  <p>
+                    <span
+                      >A scalable quantum network requires numerous nodes and
+                      those nodes may be far away from each other; thus,
+                      long-range teleportation is of importance.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article5/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>
+                        Figure #2: Setup of teleportation between light and
+                        matter
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >One study demonstrates the teleportation between light
+                      and matter. In this experiment, shown in figure #2, an
+                      entangled pair is generated from the interaction between
+                      pulse and coherent atoms. In the transmitting section, the
+                      entangled light transmitted by atoms and pulse is mixed
+                      with a 50/50 beam splitter. The outcome of a Bell
+                      measurement in the form of homodyne measurements of the
+                      optical fields in the two output ports of the beam
+                      splitter is sent to the receiver through the classical
+                      channel. Results of this experiment show that the fidelity
+                      of 0.58 when n=20 and fidelity of 0.60 when n=5 is
+                      achieved, where n is the photon number.</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >Another study focuses on diamonds. In this experiment,
+                      each node of teleportation is diamond with a
+                      nitrogen-vacancy center surrounded by carbon nuclei. And
+                      the nitrogen impurity provides a magnetic field to the
+                      electron enabling the entanglement between the hyperfine
+                      coupled electron and carbon spins under a zero magnetic
+                      field. In this study, the quantum state encoded in the
+                      emitted photon is transferred into carbon through
+                      theabsorption of the electron which is entangled with the
+                      carbon nucleus on another node.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article5/figure_3.jpeg"
+                        alt="Figure 3"
+                      />
+                      <figcaption>
+                        Figure #3: Process of teleportation between light and
+                        diamond
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >The teleportation works between a photon and the diamond
+                      serves as a bridge that connects microscopic particles and
+                      the macroscopic world. More applications could be realized
+                      in the field of quantum information technologies with the
+                      increasing size of teleportation.</span
+                    >
+                  </div>
+                  <p class="subtitle fst-italic">
+                    ii. High dimension teleportation
+                  </p>
+                  <p>
+                    <span
+                      >As previous experiments established, most of the
+                      experiments are limited to two-dimensional teleportation.
+                      This has been a stumbling block for the development of
+                      quantum technologies. For instance, a large number of
+                      small gates are required for simple computation, which
+                      badly influences the development of multiple qubit
+                      computers. And each particle can only carry a few pieces
+                      of information, which lowers the efficiency of
+                      communication. There is one solution that can improve the
+                      performance of the communication system and reduce the
+                      number of gates in quantum circuits, and that is to
+                      improve the dimensions of quantum states.</span
+                    >
+                  </p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article5/figure_4.jpeg"
+                        alt="Figure 4"
+                      />
+                      <figcaption>
+                        Figure #4: Experimental setup of high-dimensional
+                        teleportation
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >One study reports the experimental teleportation of a
+                      qutrit seen in figure #4 and proposes a scheme for
+                      high-dimensional quantum states. In three-dimensional
+                      teleportation, the first step is producing
+                      three-dimensional entangled pair and an ancillary photon
+                      using the nonlinear crystal. And the input qutrit states
+                      used to teleport and the ancilla photon is prepared by
+                      using the polarizationdependent beam displacers
+                      manipulated by half and quarter-waveplates. Then, Alice
+                      can transmit to Bob. And Bob implements the unitary
+                      transformation to recover the original state of Alice’s
+                      teleported photon and the original information that Alice
+                      wishes to teleport. Average fidelity of 0.75 is achieved
+                      under this condition.</span
+                    >
+                  </div>
+                  <p>
+                    <span
+                      >By using the scheme proposed in this paper, the quantum
+                      technologies could be extended to a higher dimension so
+                      that the efficiency of simulation and computation will be
+                      improved. The high-dimensional quantum states also mean
+                      large information contained in single-particle more
+                      capacity and noise resilience of the quantum communication
+                      system.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Challenges</p>
+                  <p>
+                    <span
+                      >For optimal quantum teleportation, many conditions should
+                      be satisfied.</span
+                    >
+                  </p>
+                  <ul>
+                    <li>There is no limitation to the input information.</li>
+                    <li>
+                      The input information and output can be supplied and
+                      verified by the third party except for the sender and
+                      receiver.
+                    </li>
+                    <li>A complete Bell measurement is achieved.</li>
+                    <li>
+                      Conditional unitary transmission could be performed before
+                      the verification from the third party.
+                    </li>
+                    <li>
+                      The fidelity of teleportation should be higher than the
+                      appropriate threshold of the classical protocol.
+                    </li>
+                  </ul>
+                  <p>
+                    <span
+                      >In many cases, only a few subsets of the Bell measurement
+                      are feasible and the feed-forward is either unaccomplished
+                      or simulated in post-processing, thus the conditions (3)
+                      and (4) are not satisfied generally.</span
+                    >
+                    <span
+                      >When it comes to reality, the problem that emerged in
+                      teleportation may be slightly different. While scaling up
+                      the dimension from 2 to N, for instance, one thing that
+                      should be considered carefully is whether all N dimensions
+                      still can form a coherent superposition to maintain the
+                      teleportation intact. For genuine N-dimensional
+                      teleportation, the scheme may need to combine some
+                      hypotheses that only fit in N dimensions with some basic
+                      hypotheses that can be applied to all dimensional
+                      teleportation. There are other issues to consider like the
+                      propagation losses of light and the atomic coherence
+                      lifetime raised from the classical protocol.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >More than two decades have passed since the concept of
+                      quantum teleportation was proposed and verified. Now
+                      branches of it like quantum gate teleportation, quantum
+                      computing, port-based teleportation, photonic qubits,
+                      photonic qubits, optical modes, nuclear magnetic
+                      resonance, atomic ensembles, and trapped atomic qubits are
+                      achievable both theoretically and experimentally. The
+                      technologies mentioned above performed well in some
+                      aspects and failed in others, therefore certain
+                      technologies only correspond to a certain kind of
+                      practical situation. For example, trapped atomic qubits
+                      are appreciated in the quantum circuit for their
+                      short-term interaction, high fidelity, and relatively long
+                      quantum memory. While constructing a scalable quantum
+                      network, the atomic assembly is the preferred candidate
+                      for its long-range interactions.</span
+                    >
+                    <span
+                      >Those technologies are imperfect more or less in some
+                      aspects, which raises lots of engineering questions as
+                      most of them are expected to be solved when more
+                      experiments are devised. Future aspects of quantum
+                      teleportation might focus on long-range quantum
+                      teleportation between light and macroscopic matter or even
+                      quantum energy teleportation proposed in recent
+                      years.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VII. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="5.1"></p>
+                        <p reference-no="5.2"></p>
+                        <p reference-no="5.3"></p>
+                        <p reference-no="5.4"></p>
+                        <p reference-no="5.5"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="5.6"></p>
+                        <p reference-no="5.7"></p>
+                        <p reference-no="5.8"></p>
+                        <p reference-no="5.9"></p>
+                        <p reference-no="5.10"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 6 -->
+
+        <!-- START: SECTION 7 -->
+        <section
+          class="section-7"
+          id="section-7"
+          v-show="currentSection == 'section-7'"
+        >
+          <div class="container-lg">
+            <div class="border-box">
+              <h2 class="section-title text-center">
+                <svg
+                  class="copy-section-link"
+                  section-href="5.7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M0 256C0 167.6 71.63 96 160 96H264C277.3 96 288 106.7 288 120C288 133.3 277.3 144 264 144H160C98.14 144 48 194.1 48 256C48 317.9 98.14 368 160 368H264C277.3 368 288 378.7 288 392C288 405.3 277.3 416 264 416H160C71.63 416 0 344.4 0 256zM480 416H376C362.7 416 352 405.3 352 392C352 378.7 362.7 368 376 368H480C541.9 368 592 317.9 592 256C592 194.1 541.9 144 480 144H376C362.7 144 352 133.3 352 120C352 106.7 362.7 96 376 96H480C568.4 96 640 167.6 640 256C640 344.4 568.4 416 480 416zM424 232C437.3 232 448 242.7 448 256C448 269.3 437.3 280 424 280H216C202.7 280 192 269.3 192 256C192 242.7 202.7 232 216 232H424z"
+                  />
+                </svg>
+                Industrial Scrubbers and Air pollution Control
+              </h2>
+              <p class="section-author text-center text-muted">
+                Omar Ayman<br />STEM High School for boys 6<sup>th</sup> of
+                October
+              </p>
+              <div class="content">
+                <p class="content-abstract">
+                  <span>Abstract</span>
+                  <span
+                    >Air pollution appears as a more straightforward problem
+                    which is facing the whole world, where it affects the
+                    ecosystem; it harms animals in general and humans in
+                    particular. As a result, scrubbers were used in industries
+                    to remove harmful chemicals and acids from polluted gas
+                    <tooltip
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="manual"
+                      data-bs-placement="bottom"
+                      data-bs-html="true"
+                      title="Loading ..."
+                      reference-no="6.1"
+                      >[1]</tooltip
+                    >. Scrubber is a waste gas treatment installation as it uses
+                    liquid to remove particulate substance or gases from an
+                    industrial use or flue gas stream
+                    <tooltip
+                      data-bs-toggle="tooltip"
+                      data-bs-trigger="manual"
+                      data-bs-placement="bottom"
+                      data-bs-html="true"
+                      title="Loading ..."
+                      reference-no="6.2"
+                      >[2]</tooltip
+                    >. In other words, scrubber is an air pollution device
+                    control, where an atomized liquid, typically water, drags
+                    particles and pollutant gases in order to successfully wash
+                    them out of the gas stream. Scrubbers can be used as an
+                    emission-limiting technique for many gaseous emissions. The
+                    two types of scrubbers, which are wet and dry scrubbers,
+                    mainly approach the same aim: achieving air pollution
+                    reduction.</span
+                  >
+                </p>
+                <div class="subsection">
+                  <p class="subtitle">I. Introduction</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article6/figure_1.jpeg"
+                        alt="Figure 1"
+                      />
+                      <figcaption>
+                        Figure #1: The structure of the gas scrubber
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >Every problem has its own solution and every situation
+                      must be analyzed wisely to reach a proper solution. Air
+                      pollution occurs when harmful gases enter into the
+                      atmosphere and make it difficult for plants, animals and
+                      humans to survive. Scrubbers met the technical performance
+                      standards and was used in the last decades to control the
+                      pollutant gases that emit from industries and cause air
+                      pollution. Scrubbers mainly work on transporting the
+                      components from the gas phase to the liquid phase. It was
+                      noticed that the level of gaseous particles that can reach
+                      the liquid phase is determined by the ability of these
+                      gaseous particles to dissolve in the liquid. There are
+                      distinct types of scrubbers: Wet and dry scrubbers. Wet
+                      scrubber’s process forces the polluted components to pass
+                      through a wet limestone slurry which traps sulfur
+                      particles. In contrast, dry scrubbers do not utilize any
+                      liquid to absorb inlet particles. Scrubbers prove that
+                      they are an ideal solution for industries’ emissions, but
+                      they also have some disadvantages. Apparently, corrosion
+                      is one of the biggest problems of the scrubber’s system.
+                      Corrosion takes place in microscopic cells whenever
+                      conditions are suitable, reacts with oxygen and hydroxyl
+                      ions, and then it leads the metal to corrode. However, it
+                      was found that stainless steel that is used in scrubbers
+                      can cause distinct types of corrosion.</span
+                    >
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">II. Mechanism</p>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article6/figure_2.jpeg"
+                        alt="Figure 2"
+                      />
+                      <figcaption>Figure #2: Henry’s Law</figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >During this process, components are transferred from a
+                      gas to a liquid phase. The level of gaseous components
+                      that can permit to the liquid phase is determined by the
+                      ability of these components to dissolve in the liquid as
+                      shown in figure #1. As a result, Henry's Law was used as
+                      it is applicable to low concentrations and components with
+                      a partial pressure less than 1atm. The partial pressure
+                      was calculated using the equation shown in figure #2
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="6.3"
+                        >[3]</tooltip
+                      >, where:
+                    </span>
+                    <ul class="order-1" style="list-style-type: none">
+                      <li>p = partial pressure</li>
+                      <li>x = mole fraction</li>
+                      <li>H = Henry constant</li>
+                    </ul>
+                  </div>
+                  <div class="floating-figure clearfix">
+                    <figure class="float-none float-lg-end order-last">
+                      <img
+                        loading="lazy"
+                        src="assets/imgs/issue5/article6/figure_3.jpeg"
+                        alt="Figure 3"
+                      />
+                      <figcaption>
+                        Figure #3: The operating system of wet scrubbers.
+                      </figcaption>
+                    </figure>
+                    <span class="order-0"
+                      >The importance of scrubbers lies in its ability to remove
+                      contaminants and chemicals from the process. However,
+                      scrubbers have two different mechanisms to rely on. The
+                      first mechanism involves particles wetting. This can be
+                      achieved by using the scrubbing liquid. The efficiency
+                      gets higher with smaller droplets. The smaller the
+                      droplets, the bigger the surface area for the weight of
+                      the liquid; as a result, this gives a greater chance for
+                      the particles to get wetting
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="6.4"
+                        >[4]</tooltip
+                      >. The second mechanism is basically the removal of the
+                      modified (wetted) particles to the collecting surface.
+                      Then, the separation of wetted particles from the carrying
+                      gas stream occurs in the inertial collector. Increasing
+                      the gas velocity or even the liquid droplets velocity in
+                      Venturi Scrubbers - a type of wet scrubbers - will
+                      ultimately increase the number of collisions per unit
+                      time. Thus, the efficiency will be increased to a greater
+                      extent. This makes venturi scrubbers operate at a very
+                      high gas and liquid velocities with an extreme pressure
+                      drop.
+                    </span>
+                  </div>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">III. Types of Scrubbers</p>
+                  <p>
+                    <span
+                      >There are two main types of scrubbers: Wet scrubbers and
+                      dry scrubbers. Their main use is protecting the
+                      environment by removing harmful chemicals and acids from
+                      polluted gases. Furthermore, there are multiple types of
+                      scrubbers that aim to support the process, including wet
+                      and dry scrubbers
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="6.5"
+                        >[5]</tooltip
+                      >. Concisely, with high efficiency and well-maintained
+                      industrial scrubbers, a facility can complete production
+                      and keep the environment and its workers protected. There
+                      are two main types of wet scrubbers: Venturi and Packed
+                      Tower scrubbers. The operating system of wet scrubbers
+                      differs from the other types of industrial scrubbers as
+                      demonstrated in figure #3, because of the liquid-gas
+                      association that increases the moisture level of the gas
+                      that is being excluded from the scrubber. The increased
+                      moisture in the gas will create a visible cloud exiting
+                      the scrubber. A venturi scrubber is a type of wet
+                      scrubbers and it designed to effectively use the energy
+                      from the entered gas stream to spray the liquid being used
+                      in order to purify the gas stream
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="6.6"
+                        >[6]</tooltip
+                      >. This type of devices is a part of the air pollution
+                      controls, and this together referred to as wet
+                      scrubbers.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">IV. Advantages and Disadvantages</p>
+                  <p>
+                    <span
+                      >Advantages of Scrubbers can be determined by describing
+                      their uses, which are removing the contaminants from an
+                      industrial use or flue gas stream with high efficiency.
+                      Scrubbers is an ideal solution for industries’ emissions,
+                      but they also have some disadvantages that are discussed
+                      below:</span
+                    >
+                  </p>
+                  <p class="subtitle">Advantages</p>
+                  <p>
+                    <span
+                      >1- One of the effective advantages of using scrubbers is
+                      the positive environmental impact. Actually, the removal
+                      of harmful substances from exhaust gas is important as it
+                      prevents a large number of pollutants from escaping into
+                      the air.</span
+                    >
+                    <span
+                      >2- Developments in wet scrubbers have allowed it to
+                      increase the efficiency in pollutant removal. One of the
+                      major developments has been to take full advantage of the
+                      total surface of the liquid with which the polluted gas
+                      associates, as more surface area means that more of the
+                      particles can be singled out of the gas.</span
+                    >
+                    <span
+                      >3- Dry scrubbers produce relatively little wastes.
+                      Actually, most of these materials that are sprayed into
+                      the exhaust are burned off in the heat of the stream or
+                      caught in a filter.</span
+                    >
+                    <span
+                      >4- The use of dry scrubbers is not expensive as there is
+                      no linked cost with removing, transferring, and storing
+                      waste water from wet scrubbers</span
+                    >
+                    <span
+                      >5- The design of the dry scrubber allows it to remove
+                      sulfur dioxide with high efficiency that can reach
+                      98%.</span
+                    >
+                  </p>
+                  <p class="subtitle">Disadvantages</p>
+                  <p>
+                    <span
+                      >1- The residual waste powder that used in scrubbing must
+                      be disposed of because it is a risky material. This waste
+                      must be handled by specialists because of its chemical
+                      makeup.</span
+                    >
+                    <span
+                      >2- Using scrubbers causes a high potential for corrosion
+                      problems which will cause a significant deterioration of
+                      natural and historic monuments along with increasing the
+                      risk of terrible equipment failures
+                      <tooltip
+                        data-bs-toggle="tooltip"
+                        data-bs-trigger="manual"
+                        data-bs-placement="bottom"
+                        data-bs-html="true"
+                        title="Loading ..."
+                        reference-no="6.7"
+                        >[7]</tooltip
+                      >.</span
+                    >
+                    <span
+                      >3- Scrubbers have a high potential to cause corrosion; as
+                      the selected materials of construction for scrubber system
+                      can be low corrosion resistant metals. As highly corrosion
+                      resistant metals can be expensive, choosing between the
+                      higher performing metals and the cost may have some
+                      consequences that lead to an economic analysis and
+                      demonstrate mainly what is gained from the both
+                      scenarios.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">V. Corrosion</p>
+                  <p>
+                    <span
+                      >Corrosion has been one of the biggest problems that
+                      scrubbers cause. When metal reacts with another substance
+                      such as oxygen, it corrodes. Furthermore, it can also
+                      happen when metals are put under stress. Thus, it
+                      cracks.</span
+                    >
+                    <span
+                      >Stainless steel that is used in scrubbers can cause
+                      diverse types of corrosion depending upon the nature of
+                      the agent. Corrosion actually takes place in microscopic
+                      cells wherever conditions are suitable. The typical
+                      conditions for corrosion are imperfections in metal
+                      surfaces, metal exposed to electrolytic solutions, and
+                      obviously, the presence of chemicals in solution that can
+                      react with the oxygen and hydroxyl ions.</span
+                    >
+                  </p>
+                </div>
+                <div class="subsection">
+                  <p class="subtitle">VI. Conclusion</p>
+                  <p>
+                    <span
+                      >As a matter of fact, the effects of air pollution are
+                      alarming. They are known to create several respiratory and
+                      heart conditions along with cancer and other threats to
+                      the human body.</span
+                    >
+                    <span
+                      >Scrubbers have two main types: Wet and dry scrubbers.
+                      Those two types of scrubbers approach achieving air
+                      pollution reduction through different mechanisms. Using
+                      scrubbers to remove harmful chemicals and acids from
+                      polluted air made it much easier to reduce air pollution.
+                      Scrubbers appear as an ideal solution for industries’
+                      emissions. However, it causes corrosion which is one of
+                      the biggest problems of the scrubbers as in most cases,
+                      they use stainless steel.</span
+                    >
+                  </p>
+                </div>
+                <div class="references">
+                  <div class="subsection">
+                    <p class="subtitle">VII. References</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p reference-no="6.1"></p>
+                        <p reference-no="6.2"></p>
+                        <p reference-no="6.3"></p>
+                        <p reference-no="6.4"></p>
+                      </div>
+                      <div class="col-md-6">
+                        <p reference-no="6.5"></p>
+                        <p reference-no="6.6"></p>
+                        <p reference-no="6.7"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END: SECTION 7 -->
+
+        <!--start footer section-->
+        <footer class="mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 pb-3">
+                <img
+                  loading="lazy"
+                  src="../images/Logo-rev.png"
+                  class="img-fluid"
+                />
+                <h4>Contact Us</h4>
+                <p>
+                  Reach to us about ideas, suggestion or any questions you have!
+                </p>
+              </div>
+
+              <div class="col-md-8">
+                <div class="jobs">
+                  <p class="text-center">
+                    Website Managers:
+                    <span>Mikhael Mounay | Mohanad Elagan</span>
+                  </p>
+                </div>
+                <div class="social text-center">
+                  <a href="https://www.facebook.com/YouthScienceJournall/"
+                    ><i class="fa-brands fa-facebook"></i>&nbsp; Facebook</a
+                  >
+                  <a href="https://www.instagram.com/ysciencejournal/"
+                    ><i class="fa-brands fa-instagram"></i>&nbsp; Instagram</a
+                  >
+                  <a href="https://www.linkedin.com/company/ysj/"
+                    ><i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="rights">
+              &copy; 2020-2024 All Rights reserved | Youth Science Journal
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- </div> -->
+      <!-- ScrollSpy -->
+
+      <!-- START: TOAST (CLIPBOARD) -->
+      <div class="toast-container position-fixed bottom-0 end-0 pb-4 pe-3">
+        <div
+          class="toast align-items-center"
+          id="copied-toast"
+          role="alert"
+          data-bs-delay="2000"
+        >
+          <div class="d-flex">
+            <div class="toast-body">Link copied to clipboard!</div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <!-- END: TOAST (CLIPBOARD) -->
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+    <!-- SCRIPT -->
+    <script src="../js/code.jquery.com_jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script> -->
+    <script src="../js/vue.global.prod.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "issueNo": "6",
+  "noofArticles": "7",
+  "articles": {
+    "article1": {
+      "articleNo": "1",
+      "noofreferences": "4",
+      "references": ["[1] D. P. B. Paul B. Wignall, The end-Triassic and Early Jurassic mass extinction records in the British Isles, Leeds: Science Direct, 2008.", "[2] R. A. Freedman, Universe, San Diego: W.H. Freeman, 2009.", "[3] I. J. O. a. J. Handal, NASA Analysis: Earth Is Safe From Asteroid Apophis for 100-Plus Years, California, 2021.", "[4] D. J. T. a. F. B. a. K. P. R. A. Tucker, \"Database of Apophis by JPL,\" California, 2005."]
+    },
+    "article2": {
+      "articleNo": "2",
+      "noofreferences": "11",
+      "references": [
+        "[1] “Eidetic memory,” Eidetic_memory. [Online]. Available: <a href=\"https://www.bionity.com/en/encyclopedia/Eidetic_memory.html\" target=\"_blank\">https://www.bionity.com/en/encyclopedia/Eidetic_memory.html</a>. [Accessed: 12-May-2021].",
+        "[2] “Exceptional memory,” Wikipedia, Dec-2019. [Online]. Available: <a href=\"https://en.wikipedia.org/wiki/Exceptional_memory#:~:text=Eidetic%20memory%E2%80%94total%20recall%20memory,of%20visual%20images%22%20in%20Greek\" target=\"_blank\">https://en.wikipedia.org/wiki/Exceptional_memory#:~:text=Eidetic%20memory%E2%80%94total%20recall%20memory,of%20visual%20images%22%20in%20Greek</a>. [Accessed: 12-May-2021].",
+        "[3] M. E. Berryhill, L. Phuong, L. Picasso, R. Cabeza, and I. R. Olson, “Parietal Lobe and Episodic Memory: Bilateral Damage Causes Impaired Free Recall of Autobiographical Memory,” Journal of Neuroscience, 26-Dec-2007. [Online]. Available: <a href=\"https://www.jneurosci.org/content/27/52/14415\" target=\"_blank\">https://www.jneurosci.org/content/27/52/14415</a>. [Accessed: 14-May-2021].",
+        "[4] M. Husain, “Hemineglect,” Scholarpedia. [Online]. Available: <a href=\"http://www.scholarpedia.org/article/Hemineglect\" target=\"_blank\">http://www.scholarpedia.org/article/Hemineglect</a>. [Accessed: 14-May-2021].",
+        "[5] R. Cabeza, E. Ciaramelli, I. R. Olson, and M. Moscovitch, “The parietal cortex and episodic memory: an attentional account,” Nature reviews. Neuroscience, Aug-2008. [Online]. Available: <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2692883/\" target=\"_blank\">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2692883/</a>. [Accessed: 16-May-2021].",
+        "[6] Bellezza, Francis. (1996). Mnemonic Methods to Enhance Storage and Retrieval. 10.1016/B978-012102570-0/50012-4.",
+        "[7] “Accelerated Learning: Learn 10x Faster, Improve Memory, Speed Reading, Boost Productivity &amp; Transform Yourself Into A Super Learner,” Google. [Online]. Available: shorturl.at/awzOT. [Accessed: 14-May-2021].",
+        "[8] R. Cabeza, E. Ciaramelli, I. R. Olson, and M. Moscovitch, “The parietal cortex and episodic memory: an attentional account,” Nature reviews. Neuroscience, Aug-2008. [Online]. Available: <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2692883/\" target=\"_blank\">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2692883/</a>. [Accessed: 16-May-2021].",
+        "[9] A. K. R. LePort, S. M. Stark, J. L. McGaugh, and C. E. L. Stark, “A cognitive assessment of highly superior autobiographical memory,” Memory (Hove, England), Feb-2017. [Online]. Available: <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488704/\" target=\"_blank\">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5488704/</a>. [Accessed: 19-May-2021].",
+        "[10] H. Blumenfeld, Neuroanatomy through clinical cases. New York, NY: Sinauer Associates, an imprint of Oxford University Press, 2010.",
+        "[11] M. F. Bear, B. W. Connors, and M. A. Paradiso, Neuroscience: exploring the brain. Burlington: Jones &amp; Bartlett Learning, 2020."
+      ]
+    },
+    "article3": {
+      "articleNo": "3",
+      "noofreferences": "4",
+      "references": [
+        "[1] Mishra, A., Patni, P., Hegde, S., Aleya, L., & Tewari, D. (2020). Neuroplasticity and environment: A pharmacotherapeutic approach towards preclinical and clinical understanding. Current Opinion in Environmental Science & Health. doi:10.1016/j.coesh.2020.09.004",
+        "[2] Bassett, D. S., & Gazzaniga, M. S. (2011). Understanding complexity in the human brain. Trends in Cognitive Sciences, 15(5), 200–209. doi:10.1016/j.tics.2011.03.006",
+        "[3] Gao, L., Pan, H., Li, Q., Xie, X., Zhang, Z., … Zhai, X. (2017). Brain medical image diagnosis based on corners with importance-values. BMC Bioinformatics, 18(1). doi:10.1186/s12859-017-1903-6",
+        "[4] Li, P., Legault, J., & Litcofsky, K. A. (2014). Neuroplasticity as a function of second language learning: Anatomical changes in the human brain. Cortex, 58, 301–324. doi:10.1016/j.cortex.2014.05.001"
+      ]
+    },
+    "article4": {
+      "articleNo": "4",
+      "noofreferences": "3",
+      "references": [
+        "[1] International Coastal Cleanup. Turning the Tide on Trash: 2014 Report. Washington, DC: Ocean Conservancy (undated). Available: <a href=\"http://goo.gl/oae7kJ\" target=\"_blank\">http://goo.gl/oae7kJ</a> [accessed 12 December 2021]",
+        "[2] Thompson RC, et al. Marine Debris as a Global Environmental Problem. Washington, DC: Scientific and Technical Advisory Panel, Global Environment Facility (2011). Available: <a href=\"http://goo.gl/VixKsS\" target=\"_blank\">http://goo.gl/VixKsS</a> [accessed 12 December 2021]",
+        "[3] Seltenrich N.New link in the food chain? Marine plastic pollution and seafood safety. Environ Health Perspect 1232A34–A41.2015; 10.1289/ehp.123-A34 [PMC free article] [PubMed] [ CrossRef ] [Google Scholar]"
+      ]
+    },
+    "article5": {
+      "articleNo": "5",
+      "noofreferences": "4",
+      "references": [
+        "[1]O. Koren, “A study of the Linux kernel evolution,” ACM SIGOPS Operating Systems Review, vol. 40, no. 2, pp. 110–112, 2006.",
+        "[2]D. R and R. S., “Open Source Software in Computer Science and IT Higher Education: A Case Study,” International Journal of Advanced Computer Science and Applications, vol. 2, no. 1, Jan. 2011.",
+        "[3]G. Passaretta and M. Triventi, “Work experience during higher education and post-graduation occupational outcomes: A comparative study on four European countries,” International Journal of Comparative Sociology, vol. 56, no. 3-4, pp. 232–253, 2015.",
+        "[4]K. A. Dawood, K. Y. Sharif, A. A. Zaidan, A. A. Abd Ghani, H. B. Zulzalil, and B. B. Zaidan, “Mapping and Analysis of Open Source Software (OSS) Usability for Sustainable OSS Product,” IEEE Access, vol. 7, pp. 65913–65933, 2019."
+      ]
+    },
+    "article6": {
+      "articleNo": "6",
+      "noofreferences": "7",
+      "references": [
+        "[1] Anglada-Escudé, G., Amado, P., Barnes, J., Berdiñas, Z., Butler, R., Coleman, G., de la Cueva, I., Dreizler, S., Endl, M., Giesers, B., Jeffers, S., Jenkins, J., Jones, H., Kiraga, M., Kürster, M., López-González, M., Marvin, C., Morales, N., Morin, J., Nelson, R., Ortiz, J., Ofir, A., Paardekooper, S., Reiners, A., Rodríguez, E., Rodrίguez-López, C., Sarmiento, L., Strachan, J., Tsapras, Y., Tuomi, M. and Zechmeister, M., 2021. A terrestrial planet candidate in a temperate orbit around Proxima Centauri.",
+        "[2] The Planetary Society. 2021. Proxima Centauri b: Have we just found Earth’s cousin right on our…. [online] Available at: <a href=\"https://www.planetary.org/articles/0824-proxima-centauri-b-have-we\" target=\"_blank\">https://www.planetary.org/articles/0824-proxima-centauri-b-have-we</a> ",
+        "[3] Ashley Strickland, C., 2021. Closest rocky planet to our solar system found. [online] CNN. Available at: <a href=\"https://edition.cnn.com/2016/08/24/health/proxima-b-centauri-rocky-planet-habitable-zone-neighbor-star/\" target=\"_blank\">https://edition.cnn.com/2016/08/24/health/proxima-b-centauri-rocky-planet-habitable-zone-neighbor-star/</a>",
+        "[4] Ribas, I., Bolmont, E., Selsis, F., Reiners, A., Leconte, J., Raymond, S., Engle, S., Guinan, E., Morin, J., Turbet, M., Forget, F. and Anglada-Escudé, G., 2016. The habitability of Proxima Centauri b. Astronomy & Astrophysics, 596, p.A111.",
+        "[5] Kreidberg, L. and Loeb, A., 2016. PROSPECTS FOR CHARACTERIZING THE ATMOSPHERE OF PROXIMA CENTAURI b. The Astrophysical Journal, 832(1), p.L12.",
+        "[6] www.eso.org. 2021. Follow a Live Planet Hunt! - Pale Red Dot campaign launched. [online] Available at: <a href=\"https://www.eso.org/public/announcements/ann16002/\" target=\"_blank\">https://www.eso.org/public/announcements/ann16002/</a> [Accessed 24 May 2021].",
+        "[7] Bixel, A. and Apai, D., 2017. Probabilistic Constraints on the Mass and Composition of Proxima b. The Astrophysical Journal, 836(2), p.L31."
+      ]
+    },
+    "article7": {
+      "articleNo": "7",
+      "noofreferences": "5",
+      "references": [
+        "[1] B.Carey, \"Neuroscience: Your Brain on Math.,\" The New York Times, 2 August 2016.",
+        "[2] J.Anderson & A.Ghuman & J.Borst, \"Tracking cognitive processing stages with MEG: A spatio-temporal model of associative recognition in the brain,\" NeuroImage, vol. 141, no. 11, pp. 416-430, 2016.",
+        "[3] K.Hartnett, \"This is your brain on math,\" Brainiac, 2015.",
+        "[4] M.Amalric & S.Dehaene, \"Origins of the brain networks for advanced mathematics in expert mathematicians,\" Proceedings of the National Academy of Sciences, 2016.",
+        "[5] M.Amarlic & S.Dehaene, \"Origins of the brain networks for advanced mathematics in expert mathematicians,\" Proceedings of the National Academy of Sciences, 2016."
+      ]
+    }
+  }
+}

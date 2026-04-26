@@ -1,0 +1,55 @@
+{
+  "issueNo": "2",
+  "noofArticles": "4",
+  "articles": {
+    "article1": {
+      "articleNo": "1",
+      "noofreferences": "7",
+      "references": [
+        "[1] M. N. Sweeting, “Modern Small Satellites-Changing the Economics of Space,” Proceedings of the IEEE, vol. 106, no. 3, pp. 343–361, 2018.",
+        "[2] M. Ansdell, P. Ehrenfreund, and C. Mckay, “Stepping stones toward global space exploration,” Acta Astronautica, vol. 68, no. 11-12, pp. 2098–2113, 2011.",
+        "[3] M. B. Argoun, “Recent design and utilization trends of small satellites in developing countries,” Acta Astronautica, vol. 71, pp. 119–128, 2012.",
+        "[4] R. Sandau, “Status and trends of small satellite missions for Earth observation,” Acta Astronautica, vol. 66, no. 1-2, pp. 1–12, 2010.",
+        "[5] W. Shiroma, L. Martin, J. Akagi, J. Akagi, B. Wolfe, B. Fewell, and A. Ohta, “CubeSats: A bright future for nanosatellites,” Open Engineering, vol. 1, no. 1, 2011.25, 2020, from <a href=\"https://science.jpl.nasa.gov/PlanetaryScience/PlanetaryAtmospheres/projects.cfm\" target=\"_blank\">https://science.jpl.nasa.gov/PlanetaryScience/PlanetaryAtmospheres/projects.cfm</a>",
+        "[6] R. Sandau, H.-P. Roeser, and A. Valenzuela, Small Satellite Missions for Earth Observation New Developments and Trends. Berlin: Springer Berlin, 2014.",
+        "[7] R. Sandau, “High-resolution imaging with small satellites: what are the possibilities and limitations?,” Sensors and Systems for Space Applications, 2007."
+      ]
+    },
+    "article2": {
+      "articleNo": "2",
+      "noofreferences": "7",
+      "references": [
+        "[1] Richardson, R. B. (2018, August 1). Depleting Earth's resources. Retrieved from <a href=\"https://msutoday.msu.edu/news/2018/depleting-earths-resources/\" target=\"_blank\">https://msutoday.msu.edu/news/2018/depleting-earths-resources/</a>",
+        "[2] Seager, S. (2013). Exoplanet Habitability. Science, 340, 577-581. doi:10.1126/science.1232226",
+        "[3] Seager, S., Kuchner, M., Hier-Majumder, C. A., & Militzer, B. (2007). MASS-RADIUS RELATIONSHIPS FOR SOLID EXOPLANETS. The Astrophysical Journal, 669, 1279-1297.",
+        "[4] Science - Planetary And Exoplanetary Atmospheres: Projects. (n.d.). Retrieved September 25, 2020, from <a href=\"https://science.jpl.nasa.gov/PlanetaryScience/PlanetaryAtmospheres/projects.cfm\" target=\"_blank\">https://science.jpl.nasa.gov/PlanetaryScience/PlanetaryAtmospheres/projects.cfm</a>",
+        "[5] Madhusudan, N., & Seager, S. (2009). A TEMPERATURE AND ABUNDANCE RETRIEVAL METHOD FOR EXOPLANET ATMOSPHERES. The Astrophysical Journal, 707, 24-39.",
+        "[6] Ricker, G., Winn, J., & Vanderspek, R. (2014). Transiting Exoplanet Survey Satellite. Journal of Astronomical Telescopes, Instruments, and Systems, 1(1), 1-10",
+        "[7] Seager, S. (n.d.). Exoplanets. Retrieved September 25, 2020, from <a href=\"http://seagerexoplanets.mit.edu/research.htm\" target=\"_blank\">http://seagerexoplanets.mit.edu/research.htm</a>"
+      ]
+    },
+    "article3": {
+      "articleNo": "3",
+      "noofreferences": "7",
+      "references": [
+        "[1] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole,” The Astrophysical Journal Letters.",
+        "[2] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. II. Array and Instrumentation.",
+        "[3] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. III. Data Processing and Calibration.",
+        "[4] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. IV. Imaging the Central Supermassive Black Hole.",
+        "[5] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. V. Physical Origin of the Asymmetric Ring.",
+        "[6] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results. VI. The Shadow and Mass of the Central Black Hole.",
+        "[7] The Event Horizon Telescope Collaboration, “First M87 Event Horizon Telescope Results."
+      ]
+    },
+    "article4": {
+      "articleNo": "4",
+      "noofreferences": "4",
+      "references": [
+        "[1] Levchenko, I., Bazaka, K., Belmonte, T., Keidar, M., & Xu, S. (2018). Advanced Materials for Next‐Generation Spacecraft. Advanced Materials, 30(50), 1802201. doi:10.1002/adma.201802201",
+        "[2] a) Boeing introduces all-electric propulsion commsats, <a href=\"http://www.boeing.com/space/boeing-satellite-family\" target=\"_blank\">http://www.boeing.com/space/boeing-satellite-family</a> (accessed: April 2018); b) The International Afternoon Constellation, <a href=\"https://atrain.nasa.gov/\" target=\"_blank\">https://atrain.nasa.gov/</a> (accessed: March 2018); c) NASA’s Cyclone Global Navigation Satellite System started the Public Data Release, https://www. nasa.gov/cygnss (accessed: June 2018).",
+        "[3] M. Askari, V. Mirzaei Mahmoud Abadi and M. Mirhabibi, \"Types of Solar Cells and Application,\" American Journal of Optics and Photonics, vol. 3, 2015.",
+        "[4] M. Jørgensen, K. Norrman and F. C.Krebs, \"Stability/degradation of polymer solar cells,\" Solar Energy Materials and Solar Cells, vol. 92, no. 7, pp. 686-714, 2008"
+      ]
+    }
+  }
+}
